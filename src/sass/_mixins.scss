@@ -1,0 +1,37 @@
+/* Border radius */
+@mixin border-radius($radius) {
+  border-radius: $radius;
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+}
+/* Transitions */
+@mixin transition($transition) {
+  transition: $transition;
+  -o-transition: $transition;
+  -moz-transition: $transition;
+  -webkit-transition: $transition;
+}
+@mixin transition-duration($transition-duration) {
+  transition-duration: $transition-duration;
+  -o-transition-duration: $transition-duration;
+  -moz-transition-duration: $transition-duration;
+  -webkit-transition-duration: $transition-duration;
+}
+@mixin transition-delay($transition-delay) {
+  transition-delay: $transition-delay;
+  -o-transition-delay: $transition-delay;
+  -moz-transition-delay: $transition-delay;
+  -webkit-transition-delay: $transition-delay;
+}
+@mixin transition-property($transition-property) {
+  transition-property: $transition-property;
+  -o-transition-property: $transition-property;
+  -moz-transition-property: $transition-property;
+  -webkit-transition-property: $transition-property;
+}
+@mixin transition-timing-function($transition-timing-function) {
+  transition-timing-function: $transition-timing-function;
+  -o-transition-timing-function: $transition-timing-function;
+  -moz-transition-timing-function: $transition-timing-function;
+  -webkit-transition-timing-function: $transition-timing-function;
+}

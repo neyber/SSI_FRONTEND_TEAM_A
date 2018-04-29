@@ -1,0 +1,234 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code,  del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset,  form, label, legend, input, textarea, button, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, address, section, video, audio {
+	font-family: inherit;
+	font-size: 100%;
+	font-style: inherit;
+	font-weight: inherit;
+	line-height: inherit;
+	border: 0;
+	outline: 0;
+	-webkit-font-smoothing: antialiased;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
+}
+html {
+	height: 100%;
+	font-size: 100%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+html, body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+body {
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	width: 100%;
+	height: 100%;
+	text-rendering: optimizeLegibility;
+	background-color: #d1d1d1;
+	margin: 0;
+	padding: 0;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-size-adjust: 100%;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
+	display: block;
+}
+h1, h2, h3, h4, h5, h6 {
+	line-height: 120%;
+}
+h1, h2, h3, h4, h5, h6, p, ul, ol, dl, blockquote, address {
+	margin: 0;
+}
+h1+h2, h1+h3, h1+h4, h1+h5, h1+h6, h2+h3, h2+h4, h2+h5, h2+h6, h3+h4, h3+h5, h3+h6, h4+h5, h4+h6, h5+h6 {
+	margin-top: 0;
+}
+dt, b, strong {
+	font-weight: 500;
+}
+p, ul, ol, dl, blockquote, address {
+	margin-bottom: 1.75em;
+}
+li>ol, li>ul {
+	margin-bottom: 0;
+}
+ul>li, ol>li, dl>dd {
+	margin-bottom: 0.5em;
+}
+li>ul, li>ol, dd>dl {
+	margin-top: 0.5em;
+}
+li>p {
+	margin-bottom: 0;
+}
+li>p+p {
+	margin-top: 0.5em;
+}
+ol,  ul {
+	padding-left: 1.5em;
+}
+a {
+	text-decoration: none;
+	background: transparent;
+	color:#3f8fd2;
+	-webkit-transition-delay: 1s; /* Safari */
+	-moz-transition-delay: 1s;
+    transition-delay: 1s;
+}
+a,  a:hover,  a:focus,  a:active {
+	outline: 0;
+}
+
+a:hover,  a:focus,  a:active{
+	color: #36bbce;
+	-webkit-transition-delay: 1s; /* Safari */
+	-moz-transition-delay: 1s;
+    transition-delay: 1s;
+}
+
+
+a img {
+	border: none;
+}
+a,  button {
+	-webkit-transition: all 0.3s ease 0s;
+	-moz-transition: all 0.3s ease 0s;
+	-ms-transition: all 0.3s ease 0s;
+	-o-transition: all 0.3s ease 0s;
+	transition: all 0.3s ease 0s;
+}
+:active, 	:focus {
+	outline: 0;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+td,  th {
+	border: none;
+	padding: 4px;
+}
+caption,  th {
+	font-weight: bold;
+	text-align: center;
+}
+#container {
+	width: 100%;
+	color: #6d7275;
+}
+#page_wrap {
+	margin: 0 auto;
+	width: 70%;
+	background: #fff;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	height: 100%;
+	margin-bottom:2%;
+}
+#page_spacing {
+	margin: 2% 0;
+}
+.logosec {
+	margin: 0px;
+	padding: 20px;	
+	width: 98%;
+}
+.logoleft {
+	display: inline-block;
+	float: left;
+}
+.topheading {
+	display: inline-block;
+	width: 60%;
+	text-align: center;
+	margin-top: 70px;
+}
+.logoright {
+	float: right;
+	display: inline-block;
+}
+.statetext {
+	font-size: 16px;
+}
+.departmenttext {
+	font-size: 26px;
+}
+.approvaltext {
+	color: #28262b;
+	text-align: center;
+	font-size: 1.5em;
+	margin-bottom: 5%;
+	font-weight:bold;
+}
+.centercontent {
+	margin-bottom: 3%;
+	padding: 20px;
+	color: #28262b;
+	font-size: 1.2em;
+}
+.centercontent div {
+	margin: 1% 0 0 0;
+}
+#footersec {
+	margin: 0px;
+	background: #313131;
+	padding: 20px;
+	-webkit-border-bottom-right-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-moz-border-radius-bottomright: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	color: #fff;
+	text-align: center;
+}
+.texteditor {
+	margin: 0px;
+	padding: 20px;
+}
+.texteditor div {
+	margin: 2% 0 0 0;
+}
+
+.centeralign{
+	text-align:center;
+}
+
+/* ----------- Table converting into div ------------*/
+
+.sacTable {
+  	display: table;
+  	width: 100%;
+}
+.sacTableRow {
+  	display: table-row;
+}
+.sacTableHeading {
+  	display: table-header-group;
+  	background-color: #ddd;
+}
+.sacTableCell, .rTableHead {
+  	display: table-cell;
+  	padding: 3px 10px;
+  	/*border: 1px solid #999999;*/
+	vertical-align:middle;
+	text-align:center;
+}
+.sacTableHeading {
+  	display: table-header-group;
+  	background-color: #ddd;
+  	font-weight: bold;
+}
+.sacTableFoot {
+  	display: table-footer-group;
+  	font-weight: bold;
+  	background-color: #ddd;
+}
+.sacTableBody {
+  	display: table-row-group;
+}

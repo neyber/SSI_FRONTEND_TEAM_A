@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+	@media print {
+            .page-break { height:0; page-break-before:always; margin:0; border-top:none; }
+        }
+     body, p, span, td, a {font-size:9pt;font-family: Arial, Helvetica, sans-serif;}
+     body{margin-left:2em; margin-right:2em;}
+    .page{
+    height:842px;
+    padding-top:5px;
+    page-break-after : always;   
+    font-family: Arial, Helvetica, sans-serif;
+    position:relative;
+	border-bottom:1px solid #000;
+  }
+
+    </style>
+  </head>
+	<body>
+		<TABLE align='center' BORDER='0' WIDTH='98%' height='842px'>
+			<tr height='150px'><td width='150px' align='left'><img src='assets/images/templatelogo.png' width='120' height='150px' alt=''/>    </td>    <td align='center'>     <span class='statetext'>State of California - Health and Human Services Agency</span><br/>                <span class='departmenttext'>Department of Health Care Services</span>    </td>    <td width='150px' align='right'>     <img src='assets/images/gov_logo.png' width='150px' alt=''/>    </td>   
+			</TR>
+			<TR height='10px'>
+					 <td  valign='top' align='center'colspan='3'style='color: black;font-family:verdana'>     <SRTONG><h2> APPROVAL LETTER</h2></SRTONG>    </td> 
+			</TR>
+					<TR height='10px' valign='top' 	>
+					<TD colspan='3'>
+					 <span id='today'></span> <br/>    <span id='providerName'></span> <br/><span id='address'></span><br/><span id='location'></span><br/>Application Identification Number: <span id='applicationNumber'></span><br/>     DATE APPLICATION RECEIVED: <span id='dateCreated'></span><br/><br/><br/>
+					</TD>
+			</TR>
+					<TR>
+					<TD colspan='3' valign='top'>
+					<p text-align='justify'>    Approval ID: $AliasApprovalLetter.ApprovalID <br/>
+Approval Letter Date: $AliasApprovalLetter.ApprovalLetterDate <br/>
+Approval Letter Sent: $AliasApprovalLetter.ApprovalLetterSent <br/>
+Created By: $AliasApprovalLetter.CreatedBy <br/>
+Date Created: $AliasApprovalLetter.DateCreated <br/>
+Date Modified: $AliasApprovalLetter.DateModified    <br/> </p> 
+					</TD>
+			</TR>
+			<TR height='10px' valign="bottom">
+				<TD align='center' colspan='3' style='background: #313131;color: white;font-family:verdana'> <STRONG>Provider Enrollment Division<br/>MS 4704<br/>P.O. Box 997412, Sacramento, CA 95899-7412<br/>(916) 323-1945<br/>Internet Address: <a href='#'> http://www.DHCS.ca.gov </a></STRONG>    </TD>
+			</TR>
+		</TABLE>
+	</body>
+</html>

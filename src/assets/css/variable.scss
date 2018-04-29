@@ -1,0 +1,155 @@
+$font-stack: Roboto;
+$primary-color: #252e4f; /*Primary Color*/
+$body-text: #354052; /*Text Color*/
+$secondary-color: #00CED1; /*Theme Color - turquoise blue*/
+$color4: #dfae46; /*Theme Color - Gold */
+$color5: #ef5552; /*Theme Color - Red*/
+$color6: #13b331; /*Theme Color - Green*/
+$border_color: #dde1ed; /*Border Color*/
+$border_color1: #dce3e7;
+$tab_bg_color: #eaeef9; /*Tab Back Color*/
+
+$btn-primary-color: #fff !default;
+$btn-primary-bg: $secondary-color !default;
+$btn-primary-border: darken($btn-primary-bg, 2%) !default;
+
+$btn-default-color: #858a9d !default;
+$btn-default-bg: #ffffff !default;
+$btn-default-border: darken($btn-default-bg, 20%) !default;
+
+$break-xlarge: 1400px;
+$break-large: 1199px;
+$break-medium: 991px;
+$break-small: 767px;
+$break-s_small: 640px;
+$break-xsmall: 480px;
+$break_hgt-small: 690px;
+$break_hgt-xsmall: 600px;
+
+$break-hgt-xlarge: 700px;
+$break-hgt-large: 640px;
+$break-hgt-medium: 480px;
+
+/* Mixin For Radius*/
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin Opacity($value) {
+  $IEValue: $value*100;
+  opacity: $value;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$IEValue+")";
+  filter: alpha(opacity=$IEValue);
+}
+
+/* Mixin For Center*/
+@mixin center-align() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+/* Mixin For Transistion*/
+@mixin transition($transition) {
+  -moz-transition: $transition;
+  -o-transition: $transition;
+  -webkit-transition: $transition;
+  transition: $transition;
+}
+
+// generic transform
+@mixin transform($transforms) {
+  -moz-transform: $transforms;
+  -o-transform: $transforms;
+  -ms-transform: $transforms;
+  -webkit-transform: $transforms;
+  transform: $transforms;
+}
+
+// rotate
+@mixin rotate($deg) {
+  @include transform(rotate(#{$deg}deg));
+}
+
+// scale
+@mixin scale($scale) {
+  @include transform(scale($scale));
+}
+
+// translate
+@mixin translate($x, $y) {
+  @include transform(translate($x, $y));
+}
+
+// skew
+@mixin skew($x, $y) {
+  @include transform(skew(#{$x}deg, #{$y}deg));
+}
+
+//transform origin
+@mixin transform-origin($origin) {
+  moz-transform-origin: $origin;
+  -o-transform-origin: $origin;
+  -ms-transform-origin: $origin;
+  -webkit-transform-origin: $origin;
+  transform-origin: $origin;
+}
+
+@mixin button-variant($color, $background, $border) {
+  color: $color;
+  background-color: $background;
+  border-color: $border;
+
+  &:focus,
+  &.focus {
+    color: $color;
+    background-color: darken($background, 10%);
+    border-color: darken($border, 5%);
+  }
+  &:hover {
+    color: $color;
+    background-color: darken($background, 10%);
+    border-color: darken($border, 5%);
+  }
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    color: $color;
+    background-color: darken($background, 10%);
+    border-color: darken($border, 5%);
+
+    &:hover,
+    &:focus,
+    &.focus {
+      color: $color;
+      background-color: darken($background, 17%);
+      border-color: darken($border, 5%);
+    }
+  }
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    background-image: none;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &:hover,
+    &:focus,
+    &.focus {
+      background-color: $background;
+      border-color: $border;
+    }
+  }
+
+  .badge {
+    color: $background;
+    background-color: $color;
+  }
+}

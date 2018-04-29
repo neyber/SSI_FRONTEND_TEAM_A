@@ -1,0 +1,372 @@
+{
+	"HP_": 
+		{
+			"CVisible": true,
+			"CEnabled": true,
+			"CMasking": true
+		}
+	,
+	"APP_": 
+		{
+			"CVisible": true,
+			"CEnabled": true,
+			"CMasking": true
+		}
+	,
+	"ACC_": 
+		{
+			"CVisible": true,
+			"CEnabled": true,
+			"CMasking": true
+		}
+	,
+	"WHLST_": 
+		{
+			"CVisible": true,
+			"CEnabled": true,
+			"CMasking": true
+		}
+	,
+	"SRH_": 
+		{
+			"CVisible": true,
+			"CEnabled": true,
+			"CMasking": true
+		}
+	,
+	"APP_CL_AQ_": 
+		{
+			"CVisible": true,
+			"CEnabled": true,
+			"CMasking": true
+		}
+	,
+	"APP_CL_UQ_": 
+		{
+			"CVisible": true,
+			"CEnabled": true,
+			"CMasking": true
+		}
+	,
+	"APP_CL_TQ_": 
+		{
+			"CVisible": true,
+			"CEnabled": true,
+			"CMasking": true
+		}
+	,
+	"APP_CL_CQ_": 
+		{
+			"CVisible": true,
+			"CEnabled": true,
+			"CMasking": true
+		}
+	,
+	"HP_WAC_": 
+		{
+			"CVisible": true,
+			"CEnabled": true,
+			"CMasking": true
+		}
+	
+	,
+	"HP_HRP_": 
+		{
+			"CVisible": true,
+			"CEnabled": true,
+			"CMasking": true
+		}
+	,
+	"HP_Mail_": 
+		{
+			"CVisible": true,
+			"CEnabled": true,
+			"CMasking": true
+		}
+	,
+	"HP_Chat_": 
+		{
+			"CVisible": true,
+			"CEnabled": true,
+			"CMasking": true
+		}
+	,
+	"APP_CL_SC_": 
+		{
+			"CVisible": true,
+			"CEnabled": true,
+			"CMasking": true
+		}
+	,
+	"APP_CL_": 
+		{
+			"CVisible": true,
+			"CEnabled": true,
+			"CMasking": true
+		}
+	,	
+	"APP_SUMM_": 
+		{
+			"CVisible": true,
+			"CEnabled": true,
+			"CMasking": true
+		}
+	,
+	"APP_SCR_": 
+		{
+			"CVisible": true,
+			"CEnabled": true,
+			"CMasking": true
+		}
+	,
+	"APP_APRev_": 
+		{
+			"CVisible": true,
+			"CEnabled": true,
+			"CMasking": true
+		}
+	,
+	"APP_RESLN_": 
+		{
+			"CVisible": true,
+			"CEnabled": true,
+			"CMasking": true
+		},
+	"APP_CL_AQ_AAC_": 
+		{
+			"CVisible": true,
+			"CEnabled": true,
+			"CMasking": true
+		},
+	"APP_CL_AQ_ARC_": 
+		{
+			"CVisible": true,
+			"CEnabled": true,
+			"CMasking": true
+		},
+	"APP_CL_AQ_AC_": 
+		{
+			"CVisible": true,
+			"CEnabled": true,
+			"CMasking": true
+		},
+	"APP_CL_AQ_AE_": 
+		{
+			"CVisible": true,
+			"CEnabled": true,
+			"CMasking": true
+		},
+	"APP_CL_AQ_ARS_": 
+		{
+			"CVisible": true,
+			"CEnabled": true,
+			"CMasking": true
+		},
+		"APP_CL_AQ_CS_": 
+		{
+			"CVisible": true,
+			"CEnabled": true,
+			"CMasking": true
+		},
+			"APP_CL_AQ_CS_AVCS_": 
+		{
+			"CVisible": true,
+			"CEnabled": true,
+			"CMasking": true
+		},
+	"APP_CL_AQ_CS_AVM_": 
+		{
+			"CVisible": true,
+			"CEnabled": true,
+			"CMasking": true
+		},
+	"APP_CL_AQ_CS_AVF_": 
+		{
+			"CVisible": true,
+			"CEnabled": true,
+			"CMasking": true
+		},
+	"APP_CL_AQ_CS_AVC_": 
+		{
+			"CVisible": true,
+			"CEnabled": true,
+			"CMasking": true
+		},
+		"APP_CL_AQ_CS_AVA_": 
+		{
+			"CVisible": true,
+			"CEnabled": true,
+			"CMasking": true
+		},
+		"APP_CL_UQ_AssM_":
+		{
+			"CVisible": true,
+			"CEnabled": true,
+			"CMasking": true
+		},"APP_ALV_":
+		{
+			"CVisible": true,
+			"CEnabled": true,
+			"CMasking": true
+		},
+"APP_ALV_AVCC_":
+		{
+			"CVisible": true,
+			"CEnabled": true,
+			"CMasking": true
+		},
+"APP_ALV_AVWH_":
+		{
+			"CVisible": true,
+			"CEnabled": true,
+			"CMasking": true
+		},
+"APP_ALV_ACF_":
+		{
+			"CVisible": true,
+			"CEnabled": true,
+			"CMasking": true
+		},
+"APP_ALV_ACM_":
+		{
+			"CVisible": true,
+			"CEnabled": true,
+			"CMasking": true
+		},
+"APP_ALV_AV360_":
+		{
+			"CVisible": true,
+			"CEnabled": true,
+			"CMasking": true
+		},
+"APP_ALV_AVWO_":
+		{
+			"CVisible": true,
+			"CEnabled": true,
+			"CMasking": true
+		},
+"APP_SUMM_AVRP_":
+		{
+			"CVisible": true,
+			"CEnabled": true,
+			"CMasking": true
+		},
+"APP_SUMM_AVAA_":
+		{
+			"CVisible": true,
+			"CEnabled": true,
+			"CMasking": true
+		},
+"APP_SUMM_AVSA_":
+		{
+			"CVisible": true,
+			"CEnabled": true,
+			"CMasking": true
+		},
+		"APP_SUMM_AVPI_":
+		{
+			"CVisible": true,
+			"CEnabled": true,
+			"CMasking": true
+		},
+
+"APP_SUMM_AVAI_":
+		{
+			"CVisible": true,
+			"CEnabled": true,
+			"CMasking": true
+		},
+		
+		
+		"APP_SCR_ARSA_":
+		{
+			"CVisible": true,
+			"CEnabled": true,
+			"CMasking": true
+		},
+		
+		"APP_SCR_AVS_":
+		{
+			"CVisible": true,
+			"CEnabled": true,
+			"CMasking": true
+		},
+		"APP_SCR_AVPro_":
+		{
+			"CVisible": true,
+			"CEnabled": true,
+			"CMasking": true
+		},
+			"APP_SCR_AVO_":
+		{
+			"CVisible": true,
+			"CEnabled": true,
+			"CMasking": true
+		},
+		
+		"APP_SCR_AVP_":
+		{
+			"CVisible": true,
+			"CEnabled": true,
+			"CMasking": true
+		},
+		"APP_SCR_AVPro_IM_":
+		{
+			"CVisible": true,
+			"CEnabled": true,
+			"CMasking": true
+		},
+		"APP_SCR_AVPro_RDP_":
+		{
+			"CVisible": true,
+			"CEnabled": true,
+			"CMasking": true
+		},
+"APP_SCR_AVO_MDB_": 
+		{
+			"CVisible": true,
+			"CEnabled": true,
+			"CMasking": true
+		},
+"APP_SCR_AVO_MDB_DBCHK_": 
+		{
+			"CVisible": false,
+			"CEnabled": true,
+			"CMasking": true
+		},
+"APP_SCR_AVO_MDB_InvMis_": 
+		{
+			"CVisible": true,
+			"CEnabled": true,
+			"CMasking": true
+		},
+"APP_SCR_AVO_MDB_RDO_": 
+		{
+			"CVisible": true,
+			"CEnabled": true,
+			"CMasking": true
+		},
+"APP_SCR_AVO_MCHK_": 
+		{
+			"CVisible": true,
+			"CEnabled": true,
+			"CMasking": true
+		},
+		"APP_SCR_AVO_MCHK_MChk_": 
+		{
+			"CVisible": true,
+			"CEnabled": true,
+			"CMasking": true
+		},
+"APP_SCR_AVO_MCHK_RDOrg_": 
+		{
+			"CVisible": true,
+			"CEnabled": true,
+			"CMasking": true
+		}
+		
+	
+
+}
+
+

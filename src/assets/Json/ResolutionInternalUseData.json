@@ -1,0 +1,78 @@
+[
+  {
+    "ApplicationNo": "172JBL4D",
+    "EnrollmentStatus": "7 - Active Rendering (indirect)",
+    "EnrollmentBeginDate": "2008-01-06",
+    "EnrollmentComment": "Dummy Comment",
+    "BillingStatus": "3 - Active Rendering (direct)",
+    "BillingBeginDate": "2004-01-06",
+    "BillingComment": "Testing",   
+    "ServiceCodes": [
+      {
+        "Heading": "1-Dummy text  it will be replace",
+        "BeginDate": "2089-01-06",
+        "EndDate": "2089-01-16"
+      },
+      {
+        "Heading": "2-Dummy text  it will be replace",
+        "BeginDate": "2089-01-06",
+        "EndDate": "2089-01-16"
+      },
+      {
+        "Heading": "3-Dummy text  it will be replace",
+        "BeginDate": "2089-01-06",
+        "EndDate": "2089-01-16"
+      }
+    ],
+    "ProvisionalCode": "3 - Active Rendering (direct)",
+    "ProvisionalBeginDate": "2010-10-24",
+    "PracticeEntityType": "7 - Active Rendering (indirect)",
+    "RegisterAs": "1 - Sole Proprietor",
+    "TINType": "1 - Active Rendering (indirect)",
+    "TINDate": "2009-01-26",
+    "OutOfState": "0 - In State",
+    "SpecialityProcessingType": "Dummy text",
+    "CHDPProviderNumber": "Dummy 123456896",
+    "EFTIndicator": "Dummy text",
+    "ReEnrollmentStatus": "1 - IRS Letter 147C",
+    "ReEnrollmentBeginDate": "2005-01-16"
+  },
+  {
+    "ApplicationNo": "168QK7M2",
+    "EnrollmentStatus": "7 - Active Rendering (indirect)",
+    "EnrollmentBeginDate": "06-01-2008",
+    "EnrollmentComment": "",
+    "BillingStatus": "3 - Active Rendering (direct)",
+    "BillingBeginDate": "06-01-2008",
+    "BillingComment": "",
+    "ServiceCodes": [
+      {
+        "Heading": "1-Dummy text  it will be replace",
+        "BeginDate": "2089-01-06",
+        "EndDate": "2089-01-16"
+      },
+      {
+        "Heading": "2-Dummy text  it will be replace",
+       "BeginDate": "2089-01-06",
+        "EndDate": "2089-01-16"
+      },
+      {
+        "Heading": "3-Dummy text  it will be replace",
+       "BeginDate": "2089-01-06",
+        "EndDate": "2089-01-16"
+      }
+    ],
+    "ProvisionalCode": "3 - Active Rendering (direct)",
+    "ProvisionalBeginDate": "2010-01-16",
+    "PracticeEntityType": "7 - Active Rendering (indirect)",
+    "RegisterAs": "1 - Sole Proprietor",
+    "TINType": "1 - Active Rendering (indirect)",
+    "TINDate": "2009-01-16",
+    "OutOfState": "0 - In State",
+    "SpecialityProcessingType": "Dummy text",
+    "CHDPProviderNumber": "Dummy 123456896",
+    "EFTIndicator": "Dummy text",
+    "ReEnrollmentStatus": "1 - IRS Letter 147C",
+    "ReEnrollmentBeginDate": "2008-01-16"
+  }
+]

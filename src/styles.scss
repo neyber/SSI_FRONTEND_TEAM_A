@@ -1,0 +1,67 @@
+
+
+/*-------------------------------------
+                  Status column
+ --------------------------------------*/
+.orange_color_custom {
+  color: #FF9900;
+}
+
+.black_color_custom {
+  color: #000;
+}
+
+.red_dark_color_custom {
+  color: #c62c0d;
+}
+
+.sky_blue_bg_custom {
+  background: #9FC5F8 !important;
+}
+
+.brown_bg_custom {
+  background: #84394a !important;
+}
+
+.orange_bg_custom {
+  background: #FF9900 !important;
+}
+
+.dark_orange__bg_custom {
+  background: #FF7F28 !important;
+}
+
+.red_dark_bg_custom,
+.default_bg_custom {
+  background: #ef5552;
+}
+
+.status_icon_size img {
+  height: 25px;
+  width: 25px;
+}
+
+.wrapper {
+  min-height: 480px !important;
+}
+
+/*for  Loader  */
+/* .ng4-loader-bar-progress { width: 0%; background-color: green; color: green; height: 6px;opacity: 0;} */
+.table-case .ng4-loader-bar{top:-11px !important;position:relative}
+/* .navbar-fixed-top{top:1px !important} */
+.ng4-loader-bar-progress{transition:.5s all}
+.accountlist_wrap .profileWrap .tab-content{position:relative}
+.accountlist_wrap .profileWrap .tab-content .ng4-loader-bar{ position:absolute;top:0;left:0;right:0}
+.case_summary .ng4-loader-bar{position:relative !important ;top:-12px}
+.screeningpage .ng4-loader-bar{position:relative;top:-8px}
+.case_summary.summarypage .ng4-loader-bar { position: relative;
+  top: -10px;}
+
+
+
+
+
+
+
+
+

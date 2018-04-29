@@ -1,0 +1,88 @@
+<!-- main app container -->
+<div class="container-fluid">
+  <div class="row">
+    <!-- Start Main Loader Screen -->
+    <div id="loader">
+      <div class="loader">
+        <div class="loader--dot">1</div>
+        <div class="loader--dot">2</div>
+        <div class="loader--dot">3</div>
+        <div class="loader--dot">4</div>
+        <div class="loader--dot">5</div>
+        <div class="loader--dot">6</div>
+        <div class="loader--text">7</div>
+      </div>
+    </div>
+    <!-- End Main Loader Screen -->
+
+
+    <div class="wrapper">
+      <div class="main">
+        <header class="navbar-fixed-top" *ngIf="showMenu">
+          <nav class="navbar navbar-primary">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <!-- Start Header Links Button in Responsive -->
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-main" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                <!-- End Header Links Button in Responsive -->
+                <!-- Start Brand Logo -->
+                <a [routerLink]="['/home']" class="navbar-brand" ui-sref="Home"><img src="assets/images/safetylogo.png" alt="Logo"></a>
+                <!-- End Brand Logo -->
+
+              </div>
+
+              <!-- Collect the nav links, forms, and other content for toggling -->
+
+             <div class="collapse navbar-collapse" id="nav-main">
+               <ul class="nav navbar-nav">
+                 <li>
+                   <a [routerLink]="['/home']"><span class="flaticon icomoon icon-buildings"></span> Home</a></li>
+                 <li> <a [routerLink]="['/catalog']" style=""><span class="flaticon icomoon icon-list-with-one-cross"></span> Catalog</a></li>
+                 <li><a [routerLink]="['/report']" style=""><span class="flaticon icomoon  icon-checked-files"></span> Reports</a></li>
+                 <li><a [routerLink]="['/function']" style=""><span class="flaticon icomoon  icon-checked-files"></span> Function Manual</a></li>
+                 <li><a [routerLink]="['/personal']" style=""><span class="flaticon icomoon  icon-checked-files"></span> Personal</a></li>
+                 <li><a [routerLink]="['/personalE']" style=""><span class="flaticon icomoon  icon-checked-files"></span> Personal protection</a></li>
+
+               </ul>
+
+             </div>
+             <!-- Start Login Links -->
+              <ul class="nav navbar-nav navbar-right logsect">
+                <li>
+                  <div class="profile-element">
+                    <div class="img-circle profileimg">
+                      <img *ngIf="userImage" [src]="userImage" (error)="setDefaultUserImage()">
+                    </div>
+                    <div class="profile_details">
+                      <span class="log_person">User Name</span>
+                      <span class="log_time">Login : </span>
+                    </div>
+                  </div>
+                </li>
+                <li><a class="logoutbtn" (click)="logout()" style="cursor:pointer" ><i class="flaticon-logout"></i></a></li>
+              </ul>
+              <!-- End Login Links -->
+              <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+          </nav>
+
+        </header>
+        <!--<toaster-container toaster-options="{'time-out': 3000,'position-class': 'toast-top-center','close-button': true}"></toaster-container>-->
+        <!-- Start Pages Views  -->
+        <router-outlet></router-outlet>
+        <!-- End Pages Views  -->
+      </div>
+    </div>
+
+
+  </div>
+
+
+
+</div>
+<footer>
+    <div class="container-fluid">
+        <div class="text-right">© 2018  SSI-A</div>
+    </div>
+</footer>
