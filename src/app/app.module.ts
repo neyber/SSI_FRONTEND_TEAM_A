@@ -13,6 +13,8 @@ import { PersonnelComponent } from './personnel/personnel.component';
 import { PersonalProtectionComponent } from './personal-protection/personal-protection.component';
 import { SicknessComponent } from './sickness/sickness.component';
 import { FunctionalManualComponent } from './functional-manual/functional-manual.component';
+import {ReportService} from './shared/services/report.service';
+import {HttpClient} from '@angular/common/http';
 
 
 @NgModule({
@@ -34,7 +36,9 @@ import { FunctionalManualComponent } from './functional-manual/functional-manual
     routing
   ],
   providers: [
-    appRoutingProviders
+    appRoutingProviders,
+    ReportService,
+    HttpClient
 
   ],
   bootstrap: [AppComponent]

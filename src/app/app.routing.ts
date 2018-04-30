@@ -1,5 +1,6 @@
 ﻿import {ModuleWithProviders} from '@angular/compiler/src/core';
 import {Routes, RouterModule} from '@angular/router';
+import { Headers } from '@angular/http'
 // Components
 
 import { CatalogComponent } from './catalog/catalog.component';
@@ -23,4 +24,5 @@ const appRoutes: Routes = [
 
   export const appRoutingProviders: any[] = [];
   export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);
+
 
