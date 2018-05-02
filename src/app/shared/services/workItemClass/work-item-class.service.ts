@@ -21,8 +21,14 @@ export class WorkItemClassService {
 
   }
   addWorkItemClassification(workItemC: WorkItemClass){
+
     const json = JSON.stringify(workItemC);
+    console.log('Description.............', workItemC.name);
+    let aux  =  { description: json['description'],
+      name: json['name']
+    }
     const  params = 'json=' + json;
+
     const headers = new Headers({'Content-Type': 'application/x-www-form-urlencoded'});
     console.log("los parametros enviados"+params);
     return this.http.post(global.url + 'workItemClassifications', params, {headers: headers})
