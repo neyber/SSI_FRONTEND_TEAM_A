@@ -5,18 +5,18 @@ import {Headers, Http} from '@angular/http';
 @Injectable()
 export class WorkItemClassService {
   private headers;
-  private url_= global.url + 'workItemClassifications';
-  //console.log("mi url es "+url_);
+  public url_: string;
   constructor(private http: Http) {
 
     this.headers = new Headers({'Content-Type': 'application/json'});
+  console.log()
   }
 
 
 
   getWorkItemClassification() {
 
-    return this.http.get(this.url_);
+    return this.http.get(global.url+'workItemClassifications').map(res => res.json());
 
   }
 

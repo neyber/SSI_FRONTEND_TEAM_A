@@ -14,15 +14,19 @@ export class ViewWorkItemClassComponent implements OnInit {
   public title: string;
   constructor(private workItemClassService: WorkItemClassService) {
 
-    this.workItemClassService.getWorkItemClassification().subscribe(
-      data => console.log(this.workItemsC = JSON.parse(JSON.parse(JSON.stringify(data))._body)),
-      error => console.log(error)
-    );
-
-
   }
 
   ngOnInit() {
+    this.workItemClassService.getWorkItemClassification().subscribe(
+      result =>{
+            this.workItemsC = result.data;
+        console.log("workItems:::::::::::::"+ JSON.stringify(result))
+      },
+      error =>{
+        console.log("error");
+      }
+    )
+
   }
 
 }

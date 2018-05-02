@@ -1,3 +1,23 @@
-<p>
-  view-work-item-class works!
-</p>
+<div class="container">
+  <br>
+  <div class="table-case">
+
+    <table class="table">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor = "let workItem of workItemsC">
+        <td>{{workItem.name}}</td>
+        <td>{{workItem.description}}</td>
+      </tr>
+
+
+      </tbody>
+    </table>
+
+  </div>
+</div>
