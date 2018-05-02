@@ -17,9 +17,13 @@ import {ReportService} from './shared/services/report.service';
 import {HttpClient} from '@angular/common/http';
 import { ViewWorkItemClassComponent } from './catalog/view-work-item-class/view-work-item-class.component';
 import { CreateWorkItemClassComponent } from './catalog/create-work-item-class/create-work-item-class.component';
+
 import { PpeComponent } from './ppe/ppe.component';
 import { PpeClassificationComponent } from './ppe/ppe-classification/ppe-classification.component';
 import { CreatePpeClassificationComponent } from './ppe/ppe-classification/create-ppe-classification/create-ppe-classification.component';
+
+import {WorkItemClassService} from './shared/services/workItemClass/work-item-class.service';
+
 
 
 @NgModule({
@@ -48,6 +52,7 @@ import { CreatePpeClassificationComponent } from './ppe/ppe-classification/creat
   providers: [
     appRoutingProviders,
     ReportService,
+    WorkItemClassService,
     HttpClient
 
   ],
