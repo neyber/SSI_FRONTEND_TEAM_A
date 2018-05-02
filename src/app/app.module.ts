@@ -17,6 +17,7 @@ import {ReportService} from './shared/services/report.service';
 import {HttpClient} from '@angular/common/http';
 import { ViewWorkItemClassComponent } from './catalog/view-work-item-class/view-work-item-class.component';
 import { CreateWorkItemClassComponent } from './catalog/create-work-item-class/create-work-item-class.component';
+import {WorkItemClassService} from './shared/services/workItemClass/work-item-class.service';
 
 
 @NgModule({
@@ -42,6 +43,7 @@ import { CreateWorkItemClassComponent } from './catalog/create-work-item-class/c
   providers: [
     appRoutingProviders,
     ReportService,
+    WorkItemClassService,
     HttpClient
 
   ],
