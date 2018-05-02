@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import {FunctionalManualComponent} from './functional-manual/functional-manual.component';
 import {PersonnelComponent} from './personnel/personnel.component';
 import {PersonalProtectionComponent} from './personal-protection/personal-protection.component';
+import {PpeComponent} from './ppe/ppe.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent},
@@ -18,6 +19,7 @@ const appRoutes: Routes = [
   { path: 'function', component: FunctionalManualComponent},
   { path: 'personal', component: PersonnelComponent},
   { path: 'personalE', component: PersonalProtectionComponent},
+  { path: 'ppe', component: PpeComponent},
   { path: '**', component: HomeComponent }
 ];
 

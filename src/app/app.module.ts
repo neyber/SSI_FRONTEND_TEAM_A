@@ -17,6 +17,9 @@ import {ReportService} from './shared/services/report.service';
 import {HttpClient} from '@angular/common/http';
 import { ViewWorkItemClassComponent } from './catalog/view-work-item-class/view-work-item-class.component';
 import { CreateWorkItemClassComponent } from './catalog/create-work-item-class/create-work-item-class.component';
+import { PpeComponent } from './ppe/ppe.component';
+import { PpeClassificationComponent } from './ppe/ppe-classification/ppe-classification.component';
+import { CreatePpeClassificationComponent } from './ppe/ppe-classification/create-ppe-classification/create-ppe-classification.component';
 
 
 @NgModule({
@@ -31,7 +34,10 @@ import { CreateWorkItemClassComponent } from './catalog/create-work-item-class/c
     SicknessComponent,
     FunctionalManualComponent,
     ViewWorkItemClassComponent,
-    CreateWorkItemClassComponent
+    CreateWorkItemClassComponent,
+    PpeComponent,
+    PpeClassificationComponent,
+    CreatePpeClassificationComponent
   ],
   imports: [
     BrowserModule,
