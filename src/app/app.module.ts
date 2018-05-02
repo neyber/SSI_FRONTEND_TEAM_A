@@ -15,6 +15,8 @@ import { SicknessComponent } from './sickness/sickness.component';
 import { FunctionalManualComponent } from './functional-manual/functional-manual.component';
 import {ReportService} from './shared/services/report.service';
 import {HttpClient} from '@angular/common/http';
+import { ViewWorkItemClassComponent } from './catalog/view-work-item-class/view-work-item-class.component';
+import { CreateWorkItemClassComponent } from './catalog/create-work-item-class/create-work-item-class.component';
 
 
 @NgModule({
@@ -27,7 +29,9 @@ import {HttpClient} from '@angular/common/http';
     PersonnelComponent,
     PersonalProtectionComponent,
     SicknessComponent,
-    FunctionalManualComponent
+    FunctionalManualComponent,
+    ViewWorkItemClassComponent,
+    CreateWorkItemClassComponent
   ],
   imports: [
     BrowserModule,

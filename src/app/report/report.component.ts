@@ -9,8 +9,10 @@ import {Router} from '@angular/router';
   styleUrls: ['./report.component.scss']
 })
 export class ReportComponent implements OnInit {
+
   workItems: WorkItem[];
   public title: string;
+
   constructor(private router: Router,  private reportService: ReportService) {
 
     this.reportService.getReport().subscribe(
