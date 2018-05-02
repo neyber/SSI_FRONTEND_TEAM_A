@@ -1,5 +1,8 @@
 export class WorkItemClass {
-  description: string;
-  id: number;
-  name: string;
+  constructor(
+    public id: number,
+    public name: string,
+    public description: string,
+  ) {}
+
 }

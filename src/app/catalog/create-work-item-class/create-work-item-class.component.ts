@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { WorkItemClass } from '../../shared/models/workItemClass/WorkItemClass';
+import { WorkItemClassService } from '../../shared/services/workItemClass/work-item-class.service';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-create-work-item-class',
@@ -7,9 +10,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateWorkItemClassComponent implements OnInit {
 
-  constructor() { }
+  public workItemsC: WorkItemClass;
+  constructor( private workItemClassService: WorkItemClassService,
+               private _route: ActivatedRoute,
+               private _router: Router ) {
+   // this.workItemsC = new WorkItemClass('name','description');
+    this.workItemsC = new WorkItemClass (0, ' ', ' ');
+  }
 
   ngOnInit() {
   }
-
+  onSubmit() {
+      console.log("onsubmit "+this.workItemsC);
+      this.workItemClassService.addWorkItemClassification(this.workItemsC).subscribe(
+        response => {
+            console.log('respuesta post' + response);
+        },
+        error => {
+          console.log(error);
+        }
+      );
+  }
 }
