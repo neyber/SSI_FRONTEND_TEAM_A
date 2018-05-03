@@ -41,6 +41,11 @@ import { CreateExistingWorkItemComponent } from './catalog/existing-work-item/cr
 import { DeleteExistingWorkItemComponent } from './catalog/existing-work-item/delete-existing-work-item/delete-existing-work-item.component';
 import { UpdateExistingWorkItemComponent } from './catalog/existing-work-item/update-existing-work-item/update-existing-work-item.component';
 import { ViewExistingWorkItemComponent } from './catalog/existing-work-item/view-existing-work-item/view-existing-work-item.component';
+import { DepartmentComponent } from './personnel/department/department.component';
+import { CreateDepartmentComponent } from './personnel/department/create-department/create-department.component';
+import { DeleteDepartmentComponent } from './personnel/department/delete-department/delete-department.component';
+import { UpdateDepartmentComponent } from './personnel/department/update-department/update-department.component';
+import { ViewDepartmentComponent } from './personnel/department/view-department/view-department.component';
 
 
 
@@ -76,7 +81,12 @@ import { ViewExistingWorkItemComponent } from './catalog/existing-work-item/view
     CreateExistingWorkItemComponent,
     DeleteExistingWorkItemComponent,
     UpdateExistingWorkItemComponent,
-    ViewExistingWorkItemComponent
+    ViewExistingWorkItemComponent,
+    DepartmentComponent,
+    CreateDepartmentComponent,
+    DeleteDepartmentComponent,
+    UpdateDepartmentComponent,
+    ViewDepartmentComponent
   ],
   imports: [
     BrowserModule,

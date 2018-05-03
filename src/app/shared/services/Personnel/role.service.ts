@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {global} from '../global';
 import {Headers, Http, RequestOptions} from '@angular/http';
-import {RoleRequest} from '../../models/Personnel/roleRequest';
+import {RoleRequest} from '../../models/Personnel/RoleRequest';
 
 @Injectable()
 export class RoleService {
@@ -11,7 +11,7 @@ export class RoleService {
   getRoles() {
     return this.http.get(global.url + 'roles').map(res => res.json());
   }
-  getRoleById(roleId: number){
+  getRoleById(roleId: number) {
     return this.http.get(global.url + 'roles/' + roleId).map(res => res.json());
   }
   addRole(role: RoleRequest) {
@@ -20,7 +20,7 @@ export class RoleService {
     return this.http.post(global.url + 'roles', role, options)
       .map(res => res.json());
   }
-  deleteRole(roleId: number){
+  deleteRole(roleId: number) {
     return this.http.delete(global.url + 'roles/' + roleId).map(res => res.json());
   }
 
