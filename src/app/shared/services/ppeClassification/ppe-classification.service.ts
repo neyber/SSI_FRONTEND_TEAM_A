@@ -12,14 +12,18 @@ export class PpeClassificationService {
   }
 
   getPpeClassification() {
-
     return this.http.get(global.url + 'ppeClassifications').map(res => res.json());
-
+  }
+  getPpeClassificationById(ppeClassificationId:number){
+    return this.http.get(global.url + 'ppeClassifications/' + ppeClassificationId).map(res => res.json());
   }
   addPpeClassification(ppeClassification: PpeClassificationRequest) {
     const headers = new Headers({ 'Content-Type': 'application/json' });
     const options = new RequestOptions({ headers: headers });
     return this.http.post(global.url + 'ppeClassifications', ppeClassification, options)
       .map(res => res.json());
+  }
+  deletePpeClassification(ppeClassificationId:number){
+    return this.http.delete(global.url + 'ppeClassifications/' + ppeClassificationId).map(res => res.json());
   }
 }

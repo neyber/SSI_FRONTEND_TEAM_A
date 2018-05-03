@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {PpeClassificationService} from '../../../shared/services/ppeClassification/ppe-classification.service';
-import {ActivatedRoute, Router} from '@angular/router';
 import {PpeClassificationRequest} from '../../../shared/models/ppeClassification/PpeClassificationRequest';
 
 @Component({
