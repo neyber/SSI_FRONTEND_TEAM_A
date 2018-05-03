@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { global } from '../global';
-import {Headers, Http} from '@angular/http';
+import {Headers, Http, RequestOptions} from '@angular/http';
 import {PpeClassificationRequest} from '../../models/ppeClassification/PpeClassificationRequest';
 
 @Injectable()
@@ -16,12 +16,10 @@ export class PpeClassificationService {
     return this.http.get(global.url + 'ppeClassifications').map(res => res.json());
 
   }
-  addPpeClassification(ppeClassification: PpeClassificationRequest){
-    const json = JSON.stringify(ppeClassification);
-    const  params = 'json=' + json;
-    const headers = new Headers({'Content-Type': 'application/json;'});
-    console.log('los parametros enviados ' + params);
-    return this.http.post(global.url + 'ppeClassifications', params, {headers: headers})
+  addPpeClassification(ppeClassification: PpeClassificationRequest) {
+    const headers = new Headers({ 'Content-Type': 'application/json' });
+    const options = new RequestOptions({ headers: headers });
+    return this.http.post(global.url + 'ppeClassifications', ppeClassification, options)
       .map(res => res.json());
   }
 }
