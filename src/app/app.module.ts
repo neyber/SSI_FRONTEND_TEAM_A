@@ -32,6 +32,10 @@ import { CreateRoleComponent } from './personnel/role/create-role/create-role.co
 import { DeleteRoleComponent } from './personnel/role/delete-role/delete-role.component';
 import { UpdateRoleComponent } from './personnel/role/update-role/update-role.component';
 import { ViewRoleComponent } from './personnel/role/view-role/view-role.component';
+import { CreateAuditComponent } from './audit/create-audit/create-audit.component';
+import { UpdateAuditComponent } from './audit/update-audit/update-audit.component';
+import { DeleteAuditComponent } from './audit/delete-audit/delete-audit.component';
+import { ViewAuditComponent } from './audit/view-audit/view-audit.component';
 
 
 
@@ -59,6 +63,10 @@ import { ViewRoleComponent } from './personnel/role/view-role/view-role.componen
     DeleteRoleComponent,
     UpdateRoleComponent,
     ViewRoleComponent
+    CreateAuditComponent,
+    UpdateAuditComponent,
+    DeleteAuditComponent,
+    ViewAuditComponent
   ],
   imports: [
     BrowserModule,
