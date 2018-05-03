@@ -46,6 +46,11 @@ import { CreateDepartmentComponent } from './personnel/department/create-departm
 import { DeleteDepartmentComponent } from './personnel/department/delete-department/delete-department.component';
 import { UpdateDepartmentComponent } from './personnel/department/update-department/update-department.component';
 import { ViewDepartmentComponent } from './personnel/department/view-department/view-department.component';
+import {ViewSaClassificationClassComponent} from './catalog/view-sa-classification-class/view-sa-classification-class.component';
+import {DeleteSaClassificationClassComponent} from './catalog/delete-sa-classification-class/delete-sa-classification-class.component';
+import {CreateSaClassificationClassComponent} from './catalog/create-sa-classification-class/create-sa-classification-class.component';
+import {SaClassificationService} from './shared/services/saClassification/sa-classification.service';
+import { UpdateSaClassificationClassComponent } from './catalog/update-sa-classification-class/update-sa-classification-class.component';
 
 
 
@@ -86,7 +91,11 @@ import { ViewDepartmentComponent } from './personnel/department/view-department/
     CreateDepartmentComponent,
     DeleteDepartmentComponent,
     UpdateDepartmentComponent,
-    ViewDepartmentComponent
+    ViewDepartmentComponent,
+    DeleteSaClassificationClassComponent,
+    ViewSaClassificationClassComponent,
+    CreateSaClassificationClassComponent,
+    UpdateSaClassificationClassComponent
   ],
   imports: [
     BrowserModule,
@@ -99,6 +108,7 @@ import { ViewDepartmentComponent } from './personnel/department/view-department/
     ReportService,
     WorkItemClassService,
     PpeClassificationService,
+    SaClassificationService,
     HttpClient
 
   ],

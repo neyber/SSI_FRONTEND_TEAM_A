@@ -1,0 +1,53 @@
+
+<p>
+  View all Sickness and Accident Classification
+</p>
+<div class="container">
+  <br>
+  <div class="table-case">
+
+    <table class="table">
+      <thead>
+      <tr>
+        <th>Category</th>
+        <th>TotalDaysOutOfWork</th>
+        <th>TotalDaysRestrictedTransferredWork</th>
+        <th>Type</th>
+        <th>Actions</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor = "let saClassification of saClassifications">
+        <td>{{saClassification.category}}</td>
+        <td>{{saClassification.totalDaysOutOfWork}}</td>
+        <td>{{saClassification.totalDaysRestrictedTransferredWork}}</td>
+        <td>{{saClassification.type}}</td>
+        <td>
+          <button type="button" class="btn btn-default btn-sm">
+            <span class="glyphicon glyphicon-trash" onclick="deleteSaClassificationById(saClassification.id)"></span> Trash
+          </button>
+
+          <!--<button (click)="deleteSaClassificationById(saClassification.id)">DELETE</button>-->
+
+
+          <button type="button" class="btn btn-default btn-sm">
+            <span class="glyphicon glyphicon-eye-open"></span> Eye-open
+          </button>
+        </td>
+      </tr>
+
+
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<script>
+  function deleteMethodPopup(itemId){
+    window.alert("sdd");
+
+  }
+
+</script>
+
