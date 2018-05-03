@@ -77,7 +77,7 @@ import { UpdateSaClassificationClassComponent } from './catalog/update-sa-classi
     UpdatePpeClassificationComponent,
     DeletePpeClassificationComponent,
     CreatePpeComponent,
-    PpePpeComponent
+    PpePpeComponent,
     DeletePpeClassificationComponent,
     RoleComponent,
     CreateRoleComponent,
