@@ -6,12 +6,16 @@ import {Routes, RouterModule} from '@angular/router';
 import { CatalogComponent } from './catalog/catalog.component';
 import { ReportComponent } from './report/report.component';
 import { HomeComponent } from './home/home.component';
+
 import { FunctionalManualComponent } from './functional-manual/functional-manual.component';
 import { PersonnelComponent } from './personnel/personnel.component';
 import { PersonalProtectionComponent } from './personal-protection/personal-protection.component';
 import { PpeComponent } from './ppe/ppe.component';
 
 import { CATALOG_ROUTES } from './catalog/catalog.routes';
+import {AuditComponent} from './audit/audit.component';
+
+
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent},
@@ -25,6 +29,7 @@ const appRoutes: Routes = [
   { path: 'personal', component: PersonnelComponent},
   { path: 'personalE', component: PersonalProtectionComponent},
   { path: 'ppe', component: PpeComponent},
+  { path: 'audit', component: AuditComponent },
   { path: '**', component: HomeComponent }
 ];
 

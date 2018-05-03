@@ -27,6 +27,33 @@ import { ViewPpeClassificationComponent } from './ppe/ppe-classification/view-pp
 import { UpdatePpeClassificationComponent } from './ppe/ppe-classification/update-ppe-classification/update-ppe-classification.component';
 import { DeletePpeClassificationComponent } from './ppe/ppe-classification/delete-ppe-classification/delete-ppe-classification.component';
 import {PpeClassificationService} from './shared/services/ppeClassification/ppe-classification.service';
+import {PpeService} from './shared/services/ppe/ppe.service';
+import { CreatePpeComponent } from './ppe/ppe-ppe/create-ppe/create-ppe.component';
+import { PpePpeComponent } from './ppe/ppe-ppe/ppe-ppe.component';
+import { RoleComponent } from './personnel/role/role.component';
+import { CreateRoleComponent } from './personnel/role/create-role/create-role.component';
+import { DeleteRoleComponent } from './personnel/role/delete-role/delete-role.component';
+import { UpdateRoleComponent } from './personnel/role/update-role/update-role.component';
+import { ViewRoleComponent } from './personnel/role/view-role/view-role.component';
+import { CreateAuditComponent } from './audit/create-audit/create-audit.component';
+import { UpdateAuditComponent } from './audit/update-audit/update-audit.component';
+import { DeleteAuditComponent } from './audit/delete-audit/delete-audit.component';
+import { ViewAuditComponent } from './audit/view-audit/view-audit.component';
+import { ExistingWorkItemComponent } from './catalog/existing-work-item/existing-work-item.component';
+import { CreateExistingWorkItemComponent } from './catalog/existing-work-item/create-existing-work-item/create-existing-work-item.component';
+import { DeleteExistingWorkItemComponent } from './catalog/existing-work-item/delete-existing-work-item/delete-existing-work-item.component';
+import { UpdateExistingWorkItemComponent } from './catalog/existing-work-item/update-existing-work-item/update-existing-work-item.component';
+import { ViewExistingWorkItemComponent } from './catalog/existing-work-item/view-existing-work-item/view-existing-work-item.component';
+import { DepartmentComponent } from './personnel/department/department.component';
+import { CreateDepartmentComponent } from './personnel/department/create-department/create-department.component';
+import { DeleteDepartmentComponent } from './personnel/department/delete-department/delete-department.component';
+import { UpdateDepartmentComponent } from './personnel/department/update-department/update-department.component';
+import { ViewDepartmentComponent } from './personnel/department/view-department/view-department.component';
+import {ViewSaClassificationClassComponent} from './catalog/view-sa-classification-class/view-sa-classification-class.component';
+import {DeleteSaClassificationClassComponent} from './catalog/delete-sa-classification-class/delete-sa-classification-class.component';
+import {CreateSaClassificationClassComponent} from './catalog/create-sa-classification-class/create-sa-classification-class.component';
+import {SaClassificationService} from './shared/services/saClassification/sa-classification.service';
+import { UpdateSaClassificationClassComponent } from './catalog/update-sa-classification-class/update-sa-classification-class.component';
 
 
 
@@ -48,7 +75,33 @@ import {PpeClassificationService} from './shared/services/ppeClassification/ppe-
     CreatePpeClassificationComponent,
     ViewPpeClassificationComponent,
     UpdatePpeClassificationComponent,
-    DeletePpeClassificationComponent
+    DeletePpeClassificationComponent,
+    CreatePpeComponent,
+    PpePpeComponent,
+    DeletePpeClassificationComponent,
+    RoleComponent,
+    CreateRoleComponent,
+    DeleteRoleComponent,
+    UpdateRoleComponent,
+    ViewRoleComponent,
+    CreateAuditComponent,
+    UpdateAuditComponent,
+    DeleteAuditComponent,
+    ViewAuditComponent,
+    ExistingWorkItemComponent,
+    CreateExistingWorkItemComponent,
+    DeleteExistingWorkItemComponent,
+    UpdateExistingWorkItemComponent,
+    ViewExistingWorkItemComponent,
+    DepartmentComponent,
+    CreateDepartmentComponent,
+    DeleteDepartmentComponent,
+    UpdateDepartmentComponent,
+    ViewDepartmentComponent,
+    DeleteSaClassificationClassComponent,
+    ViewSaClassificationClassComponent,
+    CreateSaClassificationClassComponent,
+    UpdateSaClassificationClassComponent
   ],
   imports: [
     BrowserModule,
@@ -61,7 +114,9 @@ import {PpeClassificationService} from './shared/services/ppeClassification/ppe-
     ReportService,
     WorkItemClassService,
     PpeClassificationService,
-    HttpClient
+    SaClassificationService,
+    HttpClient,
+    PpeService
 
   ],
   bootstrap: [AppComponent]

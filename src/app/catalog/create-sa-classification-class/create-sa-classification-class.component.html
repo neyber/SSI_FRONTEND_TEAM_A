@@ -1,0 +1,43 @@
+<p>
+  Create Sickness and Accident classification
+</p>
+
+<div class="container">
+  <br>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+
+
+      <form #formSaClassification="ngForm" (ngSubmit)="onSubmit()" class="col-lg-6" id="form-saClassification">
+        <label>
+          Category
+
+        </label>
+        <input type="text" #category="ngModel" name="category" [(ngModel)]="saClassification.category" class="form-control" required />
+
+        <label>
+          Total Days Out of Work
+
+        </label>
+        <input #totalDaysOutOfWork="ngModel" name="totalDaysOutOfWork" [(ngModel)]="saClassification.totalDaysOutOfWork" class="form-control" required/>
+
+        <label>
+          Total Days Restricted/Transferred Work
+
+        </label>
+        <input #totalDaysRestrictedTransferredWork="ngModel" name="totalDaysRestrictedTransferredWork" [(ngModel)]="saClassification.totalDaysRestrictedTransferredWork" class="form-control" required/>
+
+        <label>
+          Type
+
+        </label>
+        <input #type="ngModel" name="type" [(ngModel)]="saClassification.type" class="form-control" required/>
+
+        <br/>
+        <input type="submit" value="Save" class="btn btn-success"/>
+
+      </form>
+    </div>
+  </div>
+</div>
+

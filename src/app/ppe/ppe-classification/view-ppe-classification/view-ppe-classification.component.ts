@@ -10,7 +10,6 @@ import {PpeClassificationService} from '../../../shared/services/ppeClassificati
 export class ViewPpeClassificationComponent implements OnInit {
 
   ppeClassifications: PpeClassification[];
-  public title: string;
 
   constructor(private ppeClassificationService: PpeClassificationService) { }
 
@@ -18,7 +17,6 @@ export class ViewPpeClassificationComponent implements OnInit {
     this.ppeClassificationService.getPpeClassification().subscribe(
       result => {
         this.ppeClassifications = result.data;
-        console.log('PPE Classifications:::::::::::::' + JSON.stringify(result));
       },
       error => {
         console.log('error');
