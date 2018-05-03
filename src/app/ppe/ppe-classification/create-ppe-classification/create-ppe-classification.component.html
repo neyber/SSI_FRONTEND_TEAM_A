@@ -4,27 +4,21 @@
     <div class="col-md-6 col-md-offset-3">
 
 
-      <form class="form-horizontal" >
-        <div class="form-group">
-          <label class="col-lg-4 control-label">Name</label>
-          <div class="col-lg-8">
-            <input type="text" class="form-control" name="name" />
-          </div>
-        </div>
+      <form #formPpeClassification="ngForm" (ngSubmit)="onSubmit()" class="col-lg-6" id="form-ppeClassification">
+        <label>
+          Name
 
-        <div class="form-group">
-          <label class="col-lg-4 control-label">Description</label>
-          <div class="col-lg-8">
-            <input type="text" class="form-control" name="description" />
-          </div>
-        </div>
+        </label>
+        <input type="text" #nombre="ngModel" name="name" [(ngModel)]="ppeClassification.name" class="form-control" required />
 
+        <label>
+          Descripción
 
-        <div class="form-group">
-          <div class="text-right">
-            <button type="submit" class="btn btn-success left">Save</button>
-          </div>
-        </div>
+        </label>
+        <textarea #descripcion="ngModel" name="description" [(ngModel)]="ppeClassification.description" class="form-control" required></textarea>
+
+        <br/>
+        <input type="submit" value="Save" class="btn btn-success"/>
 
       </form>
     </div>

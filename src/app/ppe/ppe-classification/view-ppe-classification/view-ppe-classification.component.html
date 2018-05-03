@@ -1,0 +1,23 @@
+<div class="container">
+  <br>
+  <div class="table-case">
+
+    <table class="table">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor = "let ppeClassification of ppeClassifications">
+        <td>{{ppeClassification.name}}</td>
+        <td>{{ppeClassification.description}}</td>
+      </tr>
+
+
+      </tbody>
+    </table>
+
+  </div>
+</div>

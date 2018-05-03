@@ -23,6 +23,10 @@ import { PpeClassificationComponent } from './ppe/ppe-classification/ppe-classif
 import { CreatePpeClassificationComponent } from './ppe/ppe-classification/create-ppe-classification/create-ppe-classification.component';
 
 import {WorkItemClassService} from './shared/services/workItemClass/work-item-class.service';
+import { ViewPpeClassificationComponent } from './ppe/ppe-classification/view-ppe-classification/view-ppe-classification.component';
+import { UpdatePpeClassificationComponent } from './ppe/ppe-classification/update-ppe-classification/update-ppe-classification.component';
+import { DeletePpeClassificationComponent } from './ppe/ppe-classification/delete-ppe-classification/delete-ppe-classification.component';
+import {PpeClassificationService} from './shared/services/ppeClassification/ppe-classification.service';
 
 
 
@@ -41,7 +45,10 @@ import {WorkItemClassService} from './shared/services/workItemClass/work-item-cl
     CreateWorkItemClassComponent,
     PpeComponent,
     PpeClassificationComponent,
-    CreatePpeClassificationComponent
+    CreatePpeClassificationComponent,
+    ViewPpeClassificationComponent,
+    UpdatePpeClassificationComponent,
+    DeletePpeClassificationComponent
   ],
   imports: [
     BrowserModule,
@@ -53,6 +60,7 @@ import {WorkItemClassService} from './shared/services/workItemClass/work-item-cl
     appRoutingProviders,
     ReportService,
     WorkItemClassService,
+    PpeClassificationService,
     HttpClient
 
   ],
