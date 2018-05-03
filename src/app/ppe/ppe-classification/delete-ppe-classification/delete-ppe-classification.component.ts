@@ -18,7 +18,7 @@ export class DeletePpeClassificationComponent implements OnInit {
   onSubmit(){
     this.ppeClassificationService.deletePpeClassification(this.ppeClassificationId).subscribe(
       response => {
-        console.log('respuesta DELETE' + response);
+        //console.log('respuesta DELETE' + response);
       },
       error => {
         console.log(error);
