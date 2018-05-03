@@ -10,7 +10,6 @@ import { CatalogComponent } from './catalog/catalog.component';
 import { HomeComponent } from './home/home.component';
 import { AuditComponent } from './audit/audit.component';
 import { PersonnelComponent } from './personnel/personnel.component';
-import { PersonalProtectionComponent } from './personal-protection/personal-protection.component';
 import { SicknessComponent } from './sickness/sickness.component';
 import { FunctionalManualComponent } from './functional-manual/functional-manual.component';
 import {ReportService} from './shared/services/report.service';
@@ -65,7 +64,6 @@ import { UpdateSaClassificationClassComponent } from './catalog/update-sa-classi
     HomeComponent,
     AuditComponent,
     PersonnelComponent,
-    PersonalProtectionComponent,
     SicknessComponent,
     FunctionalManualComponent,
     ViewWorkItemClassComponent,

@@ -27,7 +27,6 @@ const appRoutes: Routes = [
   { path: 'report', component: ReportComponent},
   { path: 'function', component: FunctionalManualComponent},
   { path: 'personal', component: PersonnelComponent},
-  { path: 'personalE', component: PersonalProtectionComponent},
   { path: 'ppe', component: PpeComponent},
   { path: 'audit', component: AuditComponent },
   { path: '**', component: HomeComponent }
