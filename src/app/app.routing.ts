@@ -10,6 +10,7 @@ import {FunctionalManualComponent} from './functional-manual/functional-manual.c
 import {PersonnelComponent} from './personnel/personnel.component';
 import {PersonalProtectionComponent} from './personal-protection/personal-protection.component';
 import {PpeComponent} from './ppe/ppe.component';
+import {AuditComponent} from './audit/audit.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent},
@@ -20,6 +21,7 @@ const appRoutes: Routes = [
   { path: 'personal', component: PersonnelComponent},
   { path: 'personalE', component: PersonalProtectionComponent},
   { path: 'ppe', component: PpeComponent},
+  { path: 'audit', component: AuditComponent },
   { path: '**', component: HomeComponent }
 ];
 

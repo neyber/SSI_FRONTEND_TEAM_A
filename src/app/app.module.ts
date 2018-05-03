@@ -27,6 +27,10 @@ import { ViewPpeClassificationComponent } from './ppe/ppe-classification/view-pp
 import { UpdatePpeClassificationComponent } from './ppe/ppe-classification/update-ppe-classification/update-ppe-classification.component';
 import { DeletePpeClassificationComponent } from './ppe/ppe-classification/delete-ppe-classification/delete-ppe-classification.component';
 import {PpeClassificationService} from './shared/services/ppeClassification/ppe-classification.service';
+import { CreateAuditComponent } from './audit/create-audit/create-audit.component';
+import { UpdateAuditComponent } from './audit/update-audit/update-audit.component';
+import { DeleteAuditComponent } from './audit/delete-audit/delete-audit.component';
+import { ViewAuditComponent } from './audit/view-audit/view-audit.component';
 
 
 
@@ -48,7 +52,11 @@ import {PpeClassificationService} from './shared/services/ppeClassification/ppe-
     CreatePpeClassificationComponent,
     ViewPpeClassificationComponent,
     UpdatePpeClassificationComponent,
-    DeletePpeClassificationComponent
+    DeletePpeClassificationComponent,
+    CreateAuditComponent,
+    UpdateAuditComponent,
+    DeleteAuditComponent,
+    ViewAuditComponent
   ],
   imports: [
     BrowserModule,
