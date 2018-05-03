@@ -108,6 +108,17 @@ header {
   font-size: 1em;
 }
 
+.navbar-menu {
+  background-color: #252e4f;
+  border-color: #212947;
+  margin: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0;
+  transition: 0.2s all;
+
+}
 .navbar-primary {
   background-color: #252e4f;
   border-color: #212947;
@@ -6382,7 +6393,6 @@ a.arrow-dwn {
   .kybrightbox .panel.my-panel .panel-heading,
   .kybrightbox .panel.my-panel .panel-heading.affix {
     position: static;
-    border: 0 0 1px;
   }
 
 }

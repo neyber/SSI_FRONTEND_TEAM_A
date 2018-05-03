@@ -19,7 +19,7 @@
     <div class="wrapper">
       <div class="main">
         <header class="navbar-fixed-top" *ngIf="showMenu">
-          <nav class="navbar navbar-primary">
+          <nav class="navbar navbar-menu">
             <div class="container-fluid">
               <div class="navbar-header">
                 <!-- Start Header Links Button in Responsive -->
@@ -33,17 +33,23 @@
 
               <!-- Collect the nav links, forms, and other content for toggling -->
 
-             <div class="collapse navbar-collapse" id="nav-main">
+             <div class="navbar-collapse collapse" id="nav-main">
                <ul class="nav navbar-nav">
-                 <li>
-                   <a [routerLink]="['/home']"><span class="flaticon icomoon icon-buildings"></span> Home</a></li>
-                 <li> <a [routerLink]="['/catalog']" style=""><span class="flaticon icomoon icon-list-with-one-cross"></span> Work Items
-
-
-                 </a></li>
+                 <li><a [routerLink]="['/home']"><span class="flaticon icomoon icon-buildings"></span> Home</a></li>
+                 <li><a [routerLink]="['/catalog']" style=""><span class="flaticon icomoon icon-list-with-one-cross"></span> Work Items</a></li>
                  <li><a [routerLink]="['/report']" style=""><span class="flaticon icomoon  icon-checked-files"></span> Reports</a></li>
                  <li><a [routerLink]="['/function']" style=""><span class="flaticon icomoon  icon-checked-files"></span> Function Manual</a></li>
-                 <li><a [routerLink]="['/personal']" style=""><span class="flaticon icomoon  icon-checked-files"></span> Personnel</a></li>
+
+                 <li class="dropdown">
+                   <a [routerLink]="['/personnel']" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" role="button" aria-haspopup="true">
+                     <span class="flaticon icomoon  icon-checked-files"></span> Personnel</a>
+                    <ul class="dropdown-menu">
+                      <li><a [routerLink]="['/departmentList']"><span class="flaticon icomoon  icon-checked-files"></span> Department </a></li>
+                      <li><a [routerLink]="['/role']"><span class="flaticon icomoon  icon-checked-files"></span> Roles </a></li>
+                    </ul>
+                 </li>
+
+
                  <li><a [routerLink]="['/ppe']" style=""> <span class="flaticon icomoon icon-checked-files"></span> Personal Protection Equipment </a></li>
                  <li><a [routerLink]="['/audit']" style=""> <span class="flaticon icomoon icon-checked-files"></span>Audit</a></li>
 
@@ -74,7 +80,7 @@
         </header>
         <!--<toaster-container toaster-options="{'time-out': 3000,'position-class': 'toast-top-center','close-button': true}"></toaster-container>-->
         <!-- Start Pages Views  -->
-        <router-outlet></router-outlet>
+        <router-outlet ></router-outlet>
         <!-- End Pages Views  -->
       </div>
     </div>

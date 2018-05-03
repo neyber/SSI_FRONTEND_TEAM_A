@@ -9,11 +9,15 @@ import { HomeComponent } from './home/home.component';
 
 import { FunctionalManualComponent } from './functional-manual/functional-manual.component';
 import { PersonnelComponent } from './personnel/personnel.component';
-import { PersonalProtectionComponent } from './personal-protection/personal-protection.component';
 import { PpeComponent } from './ppe/ppe.component';
 
 import { CATALOG_ROUTES } from './catalog/catalog.routes';
 import {AuditComponent} from './audit/audit.component';
+import {DepartmentComponent} from './personnel/department/department.component';
+import {RoleComponent} from './personnel/role/role.component';
+import {DEPARTMENT_ROUTES} from './personnel/department/department.routes';
+import {ViewDepartmentComponent} from './personnel/department/view-department/view-department.component';
+import {CreateDepartmentComponent} from './personnel/department/create-department/create-department.component';
 
 
 
@@ -26,7 +30,11 @@ const appRoutes: Routes = [
   },
   { path: 'report', component: ReportComponent},
   { path: 'function', component: FunctionalManualComponent},
-  { path: 'personal', component: PersonnelComponent},
+  { path: 'personnel', component: PersonnelComponent},
+  { path: 'department', component: DepartmentComponent, children: DEPARTMENT_ROUTES},
+  { path: 'departmentList', component: ViewDepartmentComponent},
+  { path: 'newDepartment', component: CreateDepartmentComponent},
+  { path: 'role', component: RoleComponent},
   { path: 'ppe', component: PpeComponent},
   { path: 'audit', component: AuditComponent },
   { path: '**', component: HomeComponent }

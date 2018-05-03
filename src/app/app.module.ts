@@ -39,9 +39,6 @@ import { UpdateAuditComponent } from './audit/update-audit/update-audit.componen
 import { DeleteAuditComponent } from './audit/delete-audit/delete-audit.component';
 import { ViewAuditComponent } from './audit/view-audit/view-audit.component';
 import { ExistingWorkItemComponent } from './catalog/existing-work-item/existing-work-item.component';
-import { CreateExistingWorkItemComponent } from './catalog/existing-work-item/create-existing-work-item/create-existing-work-item.component';
-import { DeleteExistingWorkItemComponent } from './catalog/existing-work-item/delete-existing-work-item/delete-existing-work-item.component';
-import { UpdateExistingWorkItemComponent } from './catalog/existing-work-item/update-existing-work-item/update-existing-work-item.component';
 import { ViewExistingWorkItemComponent } from './catalog/existing-work-item/view-existing-work-item/view-existing-work-item.component';
 import { DepartmentComponent } from './personnel/department/department.component';
 import { CreateDepartmentComponent } from './personnel/department/create-department/create-department.component';
@@ -53,6 +50,8 @@ import {DeleteSaClassificationClassComponent} from './catalog/delete-sa-classifi
 import {CreateSaClassificationClassComponent} from './catalog/create-sa-classification-class/create-sa-classification-class.component';
 import {SaClassificationService} from './shared/services/saClassification/sa-classification.service';
 import { UpdateSaClassificationClassComponent } from './catalog/update-sa-classification-class/update-sa-classification-class.component';
+import {DepartmentService} from './shared/services/Personnel/department.service';
+import {RoleService} from './shared/services/Personnel/role.service';
 
 
 
@@ -87,9 +86,6 @@ import { UpdateSaClassificationClassComponent } from './catalog/update-sa-classi
     DeleteAuditComponent,
     ViewAuditComponent,
     ExistingWorkItemComponent,
-    CreateExistingWorkItemComponent,
-    DeleteExistingWorkItemComponent,
-    UpdateExistingWorkItemComponent,
     ViewExistingWorkItemComponent,
     DepartmentComponent,
     CreateDepartmentComponent,
@@ -114,7 +110,9 @@ import { UpdateSaClassificationClassComponent } from './catalog/update-sa-classi
     PpeClassificationService,
     SaClassificationService,
     HttpClient,
-    PpeService
+    PpeService,
+    DepartmentService,
+    RoleService
 
   ],
   bootstrap: [AppComponent]

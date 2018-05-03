@@ -5,8 +5,11 @@ import {DepartmentRequest} from '../../models/Personnel/DepartmentRequest';
 
 @Injectable()
 export class DepartmentService {
+  private headers;
 
-  constructor(private http: Http) { }
+  constructor(private http: Http) {
+    this.headers = new Headers({'Content-Type': 'application/json'});
+  }
 
   getDepartments() {
     return this.http.get(global.url + 'departments').map(res => res.json());
