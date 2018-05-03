@@ -26,4 +26,11 @@ export class PpeClassificationService {
   deletePpeClassification(ppeClassificationId:number){
     return this.http.delete(global.url + 'ppeClassifications/' + ppeClassificationId).map(res => res.json());
   }
+
+  updatePpeClassification(ppeClassificationId: number, ppeClassification: PpeClassificationRequest) {
+    const headers = new Headers({ 'Content-Type': 'application/json' });
+    const options = new RequestOptions({ headers: headers });
+
+    return this.http.put(global.url + 'ppeClassifications/' + ppeClassificationId, ppeClassification, options).map(res => res.json());
+  }
 }
