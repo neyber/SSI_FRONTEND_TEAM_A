@@ -27,6 +27,9 @@ import { ViewPpeClassificationComponent } from './ppe/ppe-classification/view-pp
 import { UpdatePpeClassificationComponent } from './ppe/ppe-classification/update-ppe-classification/update-ppe-classification.component';
 import { DeletePpeClassificationComponent } from './ppe/ppe-classification/delete-ppe-classification/delete-ppe-classification.component';
 import {PpeClassificationService} from './shared/services/ppeClassification/ppe-classification.service';
+import {PpeService} from './shared/services/ppe/ppe.service';
+import { CreatePpeComponent } from './ppe/ppe-ppe/create-ppe/create-ppe.component';
+import { PpePpeComponent } from './ppe/ppe-ppe/ppe-ppe.component';
 import { RoleComponent } from './personnel/role/role.component';
 import { CreateRoleComponent } from './personnel/role/create-role/create-role.component';
 import { DeleteRoleComponent } from './personnel/role/delete-role/delete-role.component';
@@ -67,6 +70,9 @@ import { ViewDepartmentComponent } from './personnel/department/view-department/
     CreatePpeClassificationComponent,
     ViewPpeClassificationComponent,
     UpdatePpeClassificationComponent,
+    DeletePpeClassificationComponent,
+    CreatePpeComponent,
+    PpePpeComponent
     DeletePpeClassificationComponent,
     RoleComponent,
     CreateRoleComponent,
