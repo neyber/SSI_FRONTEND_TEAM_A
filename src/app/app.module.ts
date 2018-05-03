@@ -36,6 +36,11 @@ import { CreateAuditComponent } from './audit/create-audit/create-audit.componen
 import { UpdateAuditComponent } from './audit/update-audit/update-audit.component';
 import { DeleteAuditComponent } from './audit/delete-audit/delete-audit.component';
 import { ViewAuditComponent } from './audit/view-audit/view-audit.component';
+import { ExistingWorkItemComponent } from './catalog/existing-work-item/existing-work-item.component';
+import { CreateExistingWorkItemComponent } from './catalog/existing-work-item/create-existing-work-item/create-existing-work-item.component';
+import { DeleteExistingWorkItemComponent } from './catalog/existing-work-item/delete-existing-work-item/delete-existing-work-item.component';
+import { UpdateExistingWorkItemComponent } from './catalog/existing-work-item/update-existing-work-item/update-existing-work-item.component';
+import { ViewExistingWorkItemComponent } from './catalog/existing-work-item/view-existing-work-item/view-existing-work-item.component';
 
 
 
@@ -62,11 +67,16 @@ import { ViewAuditComponent } from './audit/view-audit/view-audit.component';
     CreateRoleComponent,
     DeleteRoleComponent,
     UpdateRoleComponent,
-    ViewRoleComponent
+    ViewRoleComponent,
     CreateAuditComponent,
     UpdateAuditComponent,
     DeleteAuditComponent,
-    ViewAuditComponent
+    ViewAuditComponent,
+    ExistingWorkItemComponent,
+    CreateExistingWorkItemComponent,
+    DeleteExistingWorkItemComponent,
+    UpdateExistingWorkItemComponent,
+    ViewExistingWorkItemComponent
   ],
   imports: [
     BrowserModule,
