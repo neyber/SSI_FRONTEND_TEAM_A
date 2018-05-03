@@ -115,7 +115,8 @@ import { UpdateSaClassificationClassComponent } from './catalog/update-sa-classi
     WorkItemClassService,
     PpeClassificationService,
     SaClassificationService,
-    HttpClient
+    HttpClient,
+    PpeService
 
   ],
   bootstrap: [AppComponent]
