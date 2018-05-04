@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { WorkItemClass } from '../../shared/models/workItemClass/WorkItemClass';
 import { WorkItemClassService } from '../../shared/services/workItemClass/work-item-class.service';
+import { global } from '../../shared/services/global';
+import {UpdateWorkItemClassComponent} from '../update-work-item-class/update-work-item-class.component';
 
 
 
@@ -28,6 +30,8 @@ export class ViewWorkItemClassComponent implements OnInit {
 
     console.log("onclick y el id"+id);
     this.getWorkItemById(id);
+
+    global.idAux = id;
   }
 
   getWorkItem(){

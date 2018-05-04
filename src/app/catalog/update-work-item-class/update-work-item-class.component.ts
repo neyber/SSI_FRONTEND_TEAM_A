@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { WorkItemClass } from '../../shared/models/workItemClass/WorkItemClass';
 import { WorkItemClassService } from '../../shared/services/workItemClass/work-item-class.service';
 import {ActivatedRoute, Router} from '@angular/router';
+import { global } from '../../shared/services/global';
 
 @Component({
   selector: 'app-update-work-item-class',
@@ -16,17 +17,21 @@ export class UpdateWorkItemClassComponent implements OnInit {
     private workItemClassService: WorkItemClassService,
     private _route: ActivatedRoute,
     private _router: Router
-  ) { }
+  ) {
+
+
+  }
 
   ngOnInit() {
-    this.getWorkItemById(1);
+
+    this.getWorkItemById(global.idAux);
    }
   getWorkItemById(Id){
 
     this.workItemClassService.getWorkItemClassById(Id).subscribe(
       result =>{
         this.workItemsC = result.data;
-        console.log("este es el valor de work item por id" + this.workItemsC);
+
       },
       error =>{
         console.log("error");
@@ -35,14 +40,16 @@ export class UpdateWorkItemClassComponent implements OnInit {
   }
 
   onSubmit() {  //addWorkItemClassification
-    this.workItemClassService.addWorkItemClassification(this.workItemsC).subscribe(
+    this.workItemClassService.editWorkItem(global.idAux, this.workItemsC).subscribe(
       response => {
-        console.log('respuesta post' + response);
+        console.log('respuesta UPDATE' + response);
       },
       error => {
         console.log(error);
       }
     );
   }
+
+
 
 }
