@@ -20,8 +20,14 @@ export class ViewWorkItemClassComponent implements OnInit {
 
 
   this.getWorkItem();
-  this.getWorkItemById(1);
 
+
+  }
+
+  onClick(id){
+
+    console.log("onclick y el id"+id);
+    this.getWorkItemById(id);
   }
 
   getWorkItem(){
