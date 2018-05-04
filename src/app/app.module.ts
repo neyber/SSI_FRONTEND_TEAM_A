@@ -52,6 +52,12 @@ import {SaClassificationService} from './shared/services/saClassification/sa-cla
 import { UpdateSaClassificationClassComponent } from './catalog/update-sa-classification-class/update-sa-classification-class.component';
 import {DepartmentService} from './shared/services/Personnel/department.service';
 import {RoleService} from './shared/services/Personnel/role.service';
+import { EmployeeComponent } from './personnel/employee/employee.component';
+import { CreateEmployeeComponent } from './personnel/employee/create-employee/create-employee.component';
+import { DeleteEmployeeComponent } from './personnel/employee/delete-employee/delete-employee.component';
+import { UpdateEmployeeComponent } from './personnel/employee/update-employee/update-employee.component';
+import { ViewEmployeeComponent } from './personnel/employee/view-employee/view-employee.component';
+import {EmployeeService} from './shared/services/Personnel/employee.service';
 
 
 
@@ -95,7 +101,12 @@ import {RoleService} from './shared/services/Personnel/role.service';
     DeleteSaClassificationClassComponent,
     ViewSaClassificationClassComponent,
     CreateSaClassificationClassComponent,
-    UpdateSaClassificationClassComponent
+    UpdateSaClassificationClassComponent,
+    EmployeeComponent,
+    CreateEmployeeComponent,
+    DeleteEmployeeComponent,
+    UpdateEmployeeComponent,
+    ViewEmployeeComponent
   ],
   imports: [
     BrowserModule,
@@ -112,7 +123,8 @@ import {RoleService} from './shared/services/Personnel/role.service';
     HttpClient,
     PpeService,
     DepartmentService,
-    RoleService
+    RoleService,
+    EmployeeService
 
   ],
   bootstrap: [AppComponent]
