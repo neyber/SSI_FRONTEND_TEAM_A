@@ -17,16 +17,35 @@ export class ViewWorkItemClassComponent implements OnInit {
   }
 
   ngOnInit() {
+
+
+  this.getWorkItem();
+  this.getWorkItemById(1);
+
+  }
+
+  getWorkItem(){
+
     this.workItemClassService.getWorkItemClassification().subscribe(
       result =>{
-            this.workItemsC = result.data;
-        console.log("workItems:::::::::::::"+ JSON.stringify(result))
+        this.workItemsC = result.data;
       },
       error =>{
         console.log("error");
       }
     )
-
   }
 
+  getWorkItemById(Id){
+
+    this.workItemClassService.getWorkItemClassById(Id).subscribe(
+      result =>{
+        this.workItemsC = result.data;
+        console.log("este es el valor de work item por id" + JSON.stringify(this.workItemsC));
+      },
+      error =>{
+        console.log("error");
+      }
+    )
+  }
 }

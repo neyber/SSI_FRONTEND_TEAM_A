@@ -21,7 +21,6 @@ export class CreateWorkItemClassComponent implements OnInit {
   ngOnInit() {
   }
   onSubmit() {
-      console.log("onsubmit "+this.workItemsC);
       this.workItemClassService.addWorkItemClassification(this.workItemsC).subscribe(
         response => {
             console.log('respuesta post' + response);

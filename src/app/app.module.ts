@@ -52,6 +52,7 @@ import {SaClassificationService} from './shared/services/saClassification/sa-cla
 import { UpdateSaClassificationClassComponent } from './catalog/update-sa-classification-class/update-sa-classification-class.component';
 import {DepartmentService} from './shared/services/Personnel/department.service';
 import {RoleService} from './shared/services/Personnel/role.service';
+import { UpdateWorkItemClassComponent } from './catalog/update-work-item-class/update-work-item-class.component';
 
 
 
@@ -95,7 +96,8 @@ import {RoleService} from './shared/services/Personnel/role.service';
     DeleteSaClassificationClassComponent,
     ViewSaClassificationClassComponent,
     CreateSaClassificationClassComponent,
-    UpdateSaClassificationClassComponent
+    UpdateSaClassificationClassComponent,
+    UpdateWorkItemClassComponent
   ],
   imports: [
     BrowserModule,
