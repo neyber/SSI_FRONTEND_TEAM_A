@@ -6,21 +6,25 @@
 
       <div class="col-md-12 text-left">
         <div class="btn-group" role="group" aria-label="Basic example">
-          <button type="button" class="btn btn-default" [routerLink]="['../newRole']">New Role</button>
+          <button type="button" class="btn btn-default" [routerLink]="['../newEmployee']"> New Employee </button>
         </div>
       </div>
       <br/>
       <br/>
 
-      <table id="roleTable" class="table table-bordered table-striped table-case">
+      <table id="employeeTable" class="table table-bordered table-striped table-case">
         <thead>
-        <th>Name</th>
-        <th>Description</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Gender</th>
+        <th>Date Of Birth</th>
         </thead>
         <tbody>
-        <tr  *ngFor = "let role of roles">
-          <td>{{role.name}}</td>
-          <td>{{role.description}}</td>
+        <tr  *ngFor = "let employee of employees">
+          <td>{{employee.firstName}}</td>
+          <td>{{employee.lastName}}</td>
+          <td>{{employee.gender}}</td>
+          <td>{{employee.dateOfBirth}}</td>
           <td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p></td>
           <td><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></td>
         </tr>
