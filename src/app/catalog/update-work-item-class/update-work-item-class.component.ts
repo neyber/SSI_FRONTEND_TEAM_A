@@ -49,6 +49,9 @@ export class UpdateWorkItemClassComponent implements OnInit {
       }
     );
   }
+  onClick(){
+    this._router.navigate(['/catalog/lista']);
+  }
 
 
 
