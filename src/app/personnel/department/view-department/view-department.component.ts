@@ -16,7 +16,6 @@ export class ViewDepartmentComponent implements OnInit {
     this.departmentService.getDepartments().subscribe(
       result => {
         this.departments = result.data;
-        console.log('Departments:' + JSON.stringify(result));
       },
       error => {
         console.log('error');

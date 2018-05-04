@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {DepartmentService} from '../../../shared/services/Personnel/department.service';
 import {DepartmentRequest} from '../../../shared/models/Personnel/DepartmentRequest';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-create-department',
@@ -10,7 +11,7 @@ import {DepartmentRequest} from '../../../shared/models/Personnel/DepartmentRequ
 export class CreateDepartmentComponent implements OnInit {
   public department: DepartmentRequest;
 
-  constructor(private departmentService: DepartmentService) {
+  constructor(private departmentService: DepartmentService, private router: Router) {
     this.department = new DepartmentRequest('', '');
   }
 
@@ -20,7 +21,7 @@ export class CreateDepartmentComponent implements OnInit {
   onSubmit() {
     this.departmentService.addDepartment(this.department).subscribe(
       response => {
-        console.log('respuesta POST' + response);
+        this.router.navigateByUrl('departmentList', { skipLocationChange: true });
       },
       error => {
         console.log(error);
