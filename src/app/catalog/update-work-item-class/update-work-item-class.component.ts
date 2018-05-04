@@ -39,7 +39,7 @@ export class UpdateWorkItemClassComponent implements OnInit {
     )
   }
 
-  onSubmit() {  //addWorkItemClassification
+  onSubmit() {
     this.workItemClassService.editWorkItem(global.idAux, this.workItemsC).subscribe(
       response => {
         console.log('respuesta UPDATE' + response);
