@@ -30,7 +30,8 @@ body {
 }
 
 a {
-  color: #00CED1;
+  color: #ffffff;
+  font-size: 14px;
 }
 
 a:hover, a:focus, a:active {

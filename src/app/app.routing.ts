@@ -27,6 +27,8 @@ import {ViewEmployeeComponent} from './personnel/employee/view-employee/view-emp
 import {CreateEmployeeComponent} from './personnel/employee/create-employee/create-employee.component';
 import { AUDIT_ROUTES } from './audit/audit.routes';
 import { CreateAuditComponent } from './audit/create-audit/create-audit.component';
+import {SafetyHealthAdministrationComponent} from './safety-health-administration/safety-health-administration.component';
+import {ViewSaClassificationClassComponent} from './safety-health-administration/view-sa-classification-class/view-sa-classification-class.component';
 
 
 
@@ -52,6 +54,8 @@ const appRoutes: Routes = [
   { path: 'ppe', component: PpeComponent},
   { path: 'audit', component: AuditComponent, children: AUDIT_ROUTES },
   { path: 'newAudit', component: CreateAuditComponent },
+  { path: 'safetyHealthAdministration', component: SafetyHealthAdministrationComponent},
+  { path: 'saClassificationList', component: ViewSaClassificationClassComponent},
   { path: '**', component: HomeComponent }
 ];
 
