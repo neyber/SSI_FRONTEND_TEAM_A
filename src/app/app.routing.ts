@@ -18,6 +18,9 @@ import {RoleComponent} from './personnel/role/role.component';
 import {DEPARTMENT_ROUTES} from './personnel/department/department.routes';
 import {ViewDepartmentComponent} from './personnel/department/view-department/view-department.component';
 import {CreateDepartmentComponent} from './personnel/department/create-department/create-department.component';
+import {PPE_ROUTES} from './ppe/ppe-ppe/ppe.routes';
+import {ViewPpeComponent} from './ppe/ppe-ppe/view-ppe/view-ppe.component';
+import {CreatePpeComponent} from './ppe/ppe-ppe/create-ppe/create-ppe.component';
 
 
 
@@ -35,7 +38,9 @@ const appRoutes: Routes = [
   { path: 'departmentList', component: ViewDepartmentComponent},
   { path: 'newDepartment', component: CreateDepartmentComponent},
   { path: 'role', component: RoleComponent},
-  { path: 'ppe', component: PpeComponent},
+  { path: 'ppe', component: PpeComponent, children: PPE_ROUTES},
+  { path: 'ppeList', component: ViewPpeComponent},
+  { path: 'newPpe', component: CreatePpeComponent},
   { path: 'audit', component: AuditComponent },
   { path: '**', component: HomeComponent }
 ];

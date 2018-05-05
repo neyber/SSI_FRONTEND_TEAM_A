@@ -52,6 +52,7 @@ import {SaClassificationService} from './shared/services/saClassification/sa-cla
 import { UpdateSaClassificationClassComponent } from './catalog/update-sa-classification-class/update-sa-classification-class.component';
 import {DepartmentService} from './shared/services/Personnel/department.service';
 import {RoleService} from './shared/services/Personnel/role.service';
+import { ViewPpeComponent } from './ppe/ppe-ppe/view-ppe/view-ppe.component';
 
 
 
@@ -95,7 +96,8 @@ import {RoleService} from './shared/services/Personnel/role.service';
     DeleteSaClassificationClassComponent,
     ViewSaClassificationClassComponent,
     CreateSaClassificationClassComponent,
-    UpdateSaClassificationClassComponent
+    UpdateSaClassificationClassComponent,
+    ViewPpeComponent
   ],
   imports: [
     BrowserModule,
@@ -113,7 +115,6 @@ import {RoleService} from './shared/services/Personnel/role.service';
     PpeService,
     DepartmentService,
     RoleService
-
   ],
   bootstrap: [AppComponent]
 })

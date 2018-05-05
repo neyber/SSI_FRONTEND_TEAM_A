@@ -39,8 +39,4 @@ export class CreatePpeComponent implements OnInit {
     );
   }
 
-  convertToInt (id){
-    return parseInt(id, 10);
-  }
-
 }

@@ -50,7 +50,15 @@
                  </li>
 
 
-                 <li><a [routerLink]="['/ppe']" style=""> <span class="flaticon icomoon icon-checked-files"></span> Personal Protection Equipment </a></li>
+                 <li class="dropdown">
+                   <a [routerLink]="['/ppe']" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" role="button" aria-haspopup="true">
+                    <span class="flaticon icomoon icon-checked-files"></span> PPE </a>
+                     <ul class="dropdown-menu">
+                       <li><a [routerLink]="['/ppeClassificationList']"><span class="flaticon icomoon  icon-checked-files"></span> PPE Classification </a></li>
+                       <li><a [routerLink]="['/ppeList']"><span class="flaticon icomoon  icon-checked-files"></span> PPE </a></li>
+                     </ul>
+                 </li>
+
                  <li><a [routerLink]="['/audit']" style=""> <span class="flaticon icomoon icon-checked-files"></span>Audit</a></li>
 
                </ul>
