@@ -13,7 +13,8 @@ import { PersonnelComponent } from './personnel/personnel.component';
 import { SicknessComponent } from './sickness/sickness.component';
 import { FunctionalManualComponent } from './functional-manual/functional-manual.component';
 import {ReportService} from './shared/services/report.service';
-import {HttpClient} from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClient, HttpClientModule} from '@angular/common/http';
+import {SsiHttpInterceptor} from './interceptor/ssi-http-interceptor';
 import { ViewWorkItemClassComponent } from './catalog/view-work-item-class/view-work-item-class.component';
 import { CreateWorkItemClassComponent } from './catalog/create-work-item-class/create-work-item-class.component';
 
@@ -101,10 +102,16 @@ import {RoleService} from './shared/services/Personnel/role.service';
     BrowserModule,
     FormsModule,
     HttpModule,
+    HttpClientModule,
     routing
   ],
   providers: [
     appRoutingProviders,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: SsiHttpInterceptor,
+      multi: true
+    },
     ReportService,
     WorkItemClassService,
     PpeClassificationService,
