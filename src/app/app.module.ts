@@ -67,7 +67,7 @@ import {EmployeeService} from './shared/services/Personnel/employee.service';
 import { AuditService } from './shared/services/audit/audit.service';
 
 
-
+import { ViewPpeComponent } from './ppe/ppe-ppe/view-ppe/view-ppe.component';
 
 
 @NgModule({
@@ -120,8 +120,8 @@ import { AuditService } from './shared/services/audit/audit.service';
     CreateEmployeeComponent,
     DeleteEmployeeComponent,
     UpdateEmployeeComponent,
-    ViewEmployeeComponent
-
+    ViewEmployeeComponent,
+    ViewPpeComponent
   ],
   imports: [
     BrowserModule,

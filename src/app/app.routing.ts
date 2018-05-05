@@ -30,6 +30,9 @@ import { CreateAuditComponent } from './audit/create-audit/create-audit.componen
 import { UpdateAuditComponent } from './audit/update-audit/update-audit.component';
 import {SafetyHealthAdministrationComponent} from './safety-health-administration/safety-health-administration.component';
 import {ViewSaClassificationClassComponent} from './safety-health-administration/view-sa-classification-class/view-sa-classification-class.component';
+import {PPE_ROUTES} from './ppe/ppe-ppe/ppe.routes';
+import {ViewPpeComponent} from './ppe/ppe-ppe/view-ppe/view-ppe.component';
+import {CreatePpeComponent} from './ppe/ppe-ppe/create-ppe/create-ppe.component';
 
 
 
@@ -58,7 +61,10 @@ const appRoutes: Routes = [
   { path: 'editAudit', component: UpdateAuditComponent },
   { path: 'safetyHealthAdministration', component: SafetyHealthAdministrationComponent},
   { path: 'saClassificationList', component: ViewSaClassificationClassComponent},
-  { path: '**', component: HomeComponent }
+  { path: '**', component: HomeComponent },
+  { path: 'ppe', component: PpeComponent, children: PPE_ROUTES},
+  { path: 'ppeList', component: ViewPpeComponent},
+  { path: 'newPpe', component: CreatePpeComponent},
 ];
 
 
