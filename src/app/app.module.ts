@@ -113,9 +113,7 @@ import { ViewPpeComponent } from './ppe/ppe-ppe/view-ppe/view-ppe.component';
     UpdateSaClassificationClassComponent,
     SafetyHealthAdministrationComponent,
     AccidentComponent,
-
     UpdateWorkItemClassComponent,
-
     EmployeeComponent,
     CreateEmployeeComponent,
     DeleteEmployeeComponent,
