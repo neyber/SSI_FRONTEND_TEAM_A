@@ -22,7 +22,7 @@
 
         </label>
 
-        <select #ppeClassificationId="ngModel" name="ppeClassificationId" [(ngModel)]="ppe.ppeClassificationId"  class="form-control"  required>
+        <select #ppeClassificationId="ngModel" name="ppeClassificationId" [(ngModel)]="ppe.ppeClassificationId" class="form-control"  required>
 
           <option *ngFor="let ppec of ppeClassifications" [value]="ppec.ppeClassificationId" >{{ppec.name}}</option>
         </select>

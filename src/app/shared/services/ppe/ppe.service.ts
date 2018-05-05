@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import {Headers, Http, RequestOptions} from '@angular/http';
 import {global} from '../global';
 import {PpeRequest} from '../../models/ppe/PpeRequest';
 import {HttpClient, HttpHeaders} from '@angular/common/http';

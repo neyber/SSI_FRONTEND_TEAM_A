@@ -3,6 +3,7 @@ import {PpeRequest} from '../../../shared/models/ppe/PpeRequest';
 import {PpeService} from '../../../shared/services/ppe/ppe.service';
 import {PpeClassification} from '../../../shared/models/ppeClassification/ppeClassification';
 import {PpeClassificationService} from '../../../shared/services/ppeClassification/ppe-classification.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-create-ppe',
@@ -13,7 +14,7 @@ export class CreatePpeComponent implements OnInit {
   public ppe: PpeRequest;
   ppeClassifications: PpeClassification[];
 
-  constructor(private ppeService: PpeService, private ppeClassificationService: PpeClassificationService) {
+  constructor(private ppeService: PpeService, private ppeClassificationService: PpeClassificationService, private router: Router) {
     this.ppe = new PpeRequest('', '', 0 );
   }
 
@@ -31,7 +32,7 @@ export class CreatePpeComponent implements OnInit {
   onSubmit() {
     this.ppeService.addPpe(this.ppe).subscribe(
       response => {
-        console.log('respuesta POST' + response);
+        this.router.navigateByUrl('ppeList', { skipLocationChange: true });
       },
       error => {
         console.log(error);
