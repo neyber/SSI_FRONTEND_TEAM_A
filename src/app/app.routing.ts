@@ -25,7 +25,18 @@ import {EmployeeComponent} from './personnel/employee/employee.component';
 import {EMPLOYEE_ROUTES} from './personnel/employee/employee.route';
 import {ViewEmployeeComponent} from './personnel/employee/view-employee/view-employee.component';
 import {CreateEmployeeComponent} from './personnel/employee/create-employee/create-employee.component';
+
 import {REPORT_ROUTES} from './report/report.routes';
+
+import { AUDIT_ROUTES } from './audit/audit.routes';
+import { CreateAuditComponent } from './audit/create-audit/create-audit.component';
+import { UpdateAuditComponent } from './audit/update-audit/update-audit.component';
+import {SafetyHealthAdministrationComponent} from './safety-health-administration/safety-health-administration.component';
+import {ViewSaClassificationClassComponent} from './safety-health-administration/view-sa-classification-class/view-sa-classification-class.component';
+import {PPE_ROUTES} from './ppe/ppe-ppe/ppe.routes';
+import {ViewPpeComponent} from './ppe/ppe-ppe/view-ppe/view-ppe.component';
+import {CreatePpeComponent} from './ppe/ppe-ppe/create-ppe/create-ppe.component';
+
 
 
 
@@ -53,7 +64,14 @@ const appRoutes: Routes = [
   { path: 'employeeList', component: ViewEmployeeComponent},
   { path: 'newEmployee', component: CreateEmployeeComponent},
   { path: 'ppe', component: PpeComponent},
-  { path: 'audit', component: AuditComponent },
+  { path: 'audit', component: AuditComponent, children: AUDIT_ROUTES },
+  { path: 'newAudit', component: CreateAuditComponent },
+  { path: 'editAudit', component: UpdateAuditComponent },
+  { path: 'safetyHealthAdministration', component: SafetyHealthAdministrationComponent},
+  { path: 'saClassificationList', component: ViewSaClassificationClassComponent},
+  { path: 'ppe', component: PpeComponent, children: PPE_ROUTES},
+  { path: 'ppeList', component: ViewPpeComponent},
+  { path: 'newPpe', component: CreatePpeComponent},
   { path: '**', component: HomeComponent }
 ];
 

@@ -18,14 +18,6 @@ export class DeleteSaClassificationClassComponent implements OnInit {
   }
 
   ngOnInit() {
-    /*this.saClassificationService.getSaClassification().subscribe(
-      result => {
-        this.saClassificationD = result.data;
-      },
-      error => {
-        console.log("error");
-      }
-    );*/
   }
 
   deleteSaClassificationById(id) {
