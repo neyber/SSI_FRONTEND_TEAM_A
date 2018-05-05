@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {Ppe} from 'app/shared/models/ppe/ppe';
+
 import {PpeService} from '../../../shared/services/ppe/ppe.service';
+import {Ppe} from '../../../shared/models/ppe/ppe';
 
 @Component({
   selector: 'app-view-ppe',
@@ -17,7 +18,6 @@ export class ViewPpeComponent implements OnInit {
     this.ppeService.getPpe().subscribe(
       result => {
         this.ppes = result.data;
-        console.log(this.ppes);
       },
       error => {
         console.log('error');
