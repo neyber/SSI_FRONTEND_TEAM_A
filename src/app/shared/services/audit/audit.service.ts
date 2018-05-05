@@ -7,7 +7,7 @@ import {AuditRequest} from '../../models/audit/auditRequest';
 export class AuditService {
 
   private headers;
-  public url_: string;
+  
   constructor(private http: Http) {
     this.headers = new Headers({'Content-Type': 'application/json'});
   }
