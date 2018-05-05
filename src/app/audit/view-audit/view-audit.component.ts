@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Audit } from '../../shared/models/audit/audit';
 import { AuditService } from '../../shared/services/audit/audit.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-view-audit',
@@ -11,7 +12,7 @@ export class ViewAuditComponent implements OnInit {
 
   audits: Audit[];
 
-  constructor(private auditService: AuditService) { }
+  constructor(private auditService: AuditService, private router: Router) { }
 
   ngOnInit() {
     this.auditService.getListAudit().subscribe(
@@ -22,6 +23,15 @@ export class ViewAuditComponent implements OnInit {
         console.log('error');
       }
     );
+  }
+
+  deleteAudit(auditId) {
+    if (confirm("Are you sure to delete?")) {
+      this.auditService.deleteAudit(auditId).subscribe(
+        res => {
+          console.log('Deleted');
+        });
+    }
   }
 
 }
