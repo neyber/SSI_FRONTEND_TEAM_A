@@ -61,10 +61,10 @@ const appRoutes: Routes = [
   { path: 'editAudit', component: UpdateAuditComponent },
   { path: 'safetyHealthAdministration', component: SafetyHealthAdministrationComponent},
   { path: 'saClassificationList', component: ViewSaClassificationClassComponent},
-  { path: '**', component: HomeComponent },
   { path: 'ppe', component: PpeComponent, children: PPE_ROUTES},
   { path: 'ppeList', component: ViewPpeComponent},
   { path: 'newPpe', component: CreatePpeComponent},
+  { path: '**', component: HomeComponent }
 ];
 
 
