@@ -25,6 +25,8 @@ import {EmployeeComponent} from './personnel/employee/employee.component';
 import {EMPLOYEE_ROUTES} from './personnel/employee/employee.route';
 import {ViewEmployeeComponent} from './personnel/employee/view-employee/view-employee.component';
 import {CreateEmployeeComponent} from './personnel/employee/create-employee/create-employee.component';
+import { AUDIT_ROUTES } from './audit/audit.routes';
+import { CreateAuditComponent } from './audit/create-audit/create-audit.component';
 
 
 
@@ -48,7 +50,8 @@ const appRoutes: Routes = [
   { path: 'employeeList', component: ViewEmployeeComponent},
   { path: 'newEmployee', component: CreateEmployeeComponent},
   { path: 'ppe', component: PpeComponent},
-  { path: 'audit', component: AuditComponent },
+  { path: 'audit', component: AuditComponent, children: AUDIT_ROUTES },
+  { path: 'newAudit', component: CreateAuditComponent },
   { path: '**', component: HomeComponent }
 ];
 

@@ -1,10 +1,10 @@
 export class AuditRequest {
   constructor(
-    public name: string,
-    public code: string,
-    public type: string,
-    public scope: string,
-    public objective: string,
-    public criteria: string
+    public auditName: string,
+    public auditCode: string,
+    public auditType: string,
+    public auditScope: string,
+    public auditObjective: string,
+    public auditCriteria: string
   ) {}
 }
