@@ -7,13 +7,17 @@ import {AuditRequest} from '../../models/audit/auditRequest';
 export class AuditService {
 
   private headers;
-  public url_: string;
+  
   constructor(private http: Http) {
     this.headers = new Headers({'Content-Type': 'application/json'});
   }
 
   getListAudit() {
     return this.http.get(global.url + 'audits').map(res => res.json());
+  }
+
+  getAuditById(auditId: number) {
+    return this.http.get(global.url + 'audits/' + auditId).map(res => res.json());
   }
 
   addAudit(audit: AuditRequest) {

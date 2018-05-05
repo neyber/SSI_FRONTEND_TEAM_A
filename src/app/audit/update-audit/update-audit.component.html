@@ -1,3 +1,43 @@
-<p>
-  update-audit works!
-</p>
+<div class="container">
+  <br>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+
+
+      <form #formAudit="ngForm" class="col-lg-6" id="form-audit">
+        <label>
+          Name
+        </label>
+        <input type="text" #nombre="ngModel" name="auditName" [(ngModel)]="audit.auditName" class="form-control" required />
+
+        <label>
+          Code
+        </label>
+        <input type="text" #nombre="ngModel" name="auditCode" [(ngModel)]="audit.auditCode" class="form-control" required />
+
+        <label>
+          Type
+        </label>
+        <input type="text" #nombre="ngModel" name="auditType" [(ngModel)]="audit.auditType" class="form-control" required />
+
+        <label>
+          Scope
+        </label>
+        <textarea #descripcion="ngModel" name="auditScope" [(ngModel)]="audit.auditScope" class="form-control" required></textarea>
+
+        <label>
+          Objective
+        </label>
+        <textarea #descripcion="ngModel" name="auditObjective" [(ngModel)]="audit.auditObjective" class="form-control" required></textarea>
+
+        <label>
+          Criteria
+        </label>
+        <textarea #descripcion="ngModel" name="auditCriteria" [(ngModel)]="audit.auditCriteria" class="form-control" required></textarea>
+
+        <br/>
+        <button type="button" class="btn btn-success" (click)="onSubmit(audit.auditId)"> Update </button>
+      </form>
+    </div>
+  </div>
+</div>

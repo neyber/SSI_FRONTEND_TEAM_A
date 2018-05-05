@@ -13,11 +13,14 @@ export class WorkItemClassService {
 
   }
 
-
-
   getWorkItemClassification() {
 
     return this.http.get(global.url + 'workItemClassifications' ).map(res => res.json());
+
+  }
+  getWorkItemClassById(id) {
+
+    return this.http.get(global.url + 'workItemClassifications/' + id ).map(res => res.json());
 
   }
   addWorkItemClassification(workItemC: WorkItemClass){
@@ -26,5 +29,13 @@ export class WorkItemClassService {
     let options = new RequestOptions({ headers: headers });
     return this.http.post(global.url + 'workItemClassifications', workItemC, options)
       .map(res => res.json());
+  }
+  editWorkItem(id, workItem){
+    let params = JSON.stringify(workItem);
+    let headers = new Headers({'Content-Type': 'application/json'
+    });
+
+    return this.http.put(global.url + 'workItemClassifications/' + id, params, {headers: headers})
+                    .map(res => res.json());
   }
 }
