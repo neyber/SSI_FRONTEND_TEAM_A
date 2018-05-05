@@ -149,7 +149,7 @@ import { ViewPpeComponent } from './ppe/ppe-ppe/view-ppe/view-ppe.component';
     RoleService,
     EmployeeService,
     AuditService
-  ], 
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
