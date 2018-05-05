@@ -3524,7 +3524,7 @@ tbody.collapse.in {
   z-index: 1000;
   display: none;
   float: left;
-  min-width: 160px;
+  min-width: 70px;
   padding: 5px 0;
   margin: 2px 0 0;
   font-size: 14px;
@@ -4961,7 +4961,7 @@ a.badge:focus {
   padding-bottom: 30px;
   margin-bottom: 30px;
   color: inherit;
-  background-color: #eee;
+  background-color: #ffffff;
 }
 .jumbotron h1,
 .jumbotron .h1 {

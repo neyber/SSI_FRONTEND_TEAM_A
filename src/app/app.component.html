@@ -24,7 +24,8 @@
             <div class="container-fluid">
               <div class="navbar-header">
                 <!-- Start Header Links Button in Responsive -->
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-main" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-main" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
                 <!-- End Header Links Button in Responsive -->
                 <!-- Start Brand Logo -->
                 <a [routerLink]="['/home']" class="navbar-brand" ui-sref="Home"><img src="assets/images/safetylogo.png" alt="Logo"></a>
@@ -37,8 +38,28 @@
              <div class="navbar-collapse collapse" id="nav-main">
                <ul class="nav navbar-nav">
                  <li><a [routerLink]="['/home']"><span class="flaticon icomoon icon-buildings"></span> Home</a></li>
-                 <li><a [routerLink]="['/catalog']" style=""><span class="flaticon icomoon icon-list-with-one-cross"></span> Work Items</a></li>
-                 <li><a [routerLink]="['/report']" style=""><span class="flaticon icomoon  icon-checked-files"></span> Reports</a></li>
+
+                 <li class="dropdown">
+                   <a [routerLink]="['/catalog']" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" role="button" aria-haspopup="true">
+                     <span class="flaticon icomoon icon-list-with-one-cross"></span> Work Items</a>
+                       <ul class="dropdown-menu">
+                         <li><a [routerLink]="['/catalog']"><span class="flaticon icomoon  icon-checked-files"></span> uno </a></li>
+                         <li><a [routerLink]="['/catalog']"><span class="flaticon icomoon  icon-checked-files"></span> dos </a></li>
+                         <li><a [routerLink]="['/catalog']"><span class="flaticon icomoon  icon-checked-files"></span> tres </a></li>
+                      </ul>
+                 </li>
+
+                 <li><a [routerLink]="['/report']" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" role="button" aria-haspopup="true">
+                   <span class="flaticon icomoon  icon-checked-files"></span> Reports</a>
+                   <ul class="dropdown-menu">
+                     <li><a routerLink="/report/tool" [routerLinkActive]="['/tool']"><span class="flaticon icomoon  icon-checked-files"></span> Equipment / Tools </a></li>
+                     <li><a [routerLink]="['/catalog']"><span class="flaticon icomoon  icon-checked-files"></span> Audit  </a></li>
+                     <li><a [routerLink]="['/catalog']"><span class="flaticon icomoon  icon-checked-files"></span> Accidents / Diseases </a></li>
+
+
+                   </ul>
+
+                 </li>
                  <li><a [routerLink]="['/function']" style=""><span class="flaticon icomoon  icon-checked-files"></span> Function Manual</a></li>
 
                  <li class="dropdown">

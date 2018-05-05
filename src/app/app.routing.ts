@@ -25,6 +25,7 @@ import {EmployeeComponent} from './personnel/employee/employee.component';
 import {EMPLOYEE_ROUTES} from './personnel/employee/employee.route';
 import {ViewEmployeeComponent} from './personnel/employee/view-employee/view-employee.component';
 import {CreateEmployeeComponent} from './personnel/employee/create-employee/create-employee.component';
+import {REPORT_ROUTES} from './report/report.routes';
 
 
 
@@ -35,7 +36,11 @@ const appRoutes: Routes = [
     component: CatalogComponent,
     children: CATALOG_ROUTES
   },
-  { path: 'report', component: ReportComponent},
+  { path: 'report',
+    component: ReportComponent,
+    children: REPORT_ROUTES
+
+  },
   { path: 'function', component: FunctionalManualComponent},
   { path: 'personnel', component: PersonnelComponent},
   { path: 'department', component: DepartmentComponent, children: DEPARTMENT_ROUTES},

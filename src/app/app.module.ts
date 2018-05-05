@@ -61,6 +61,7 @@ import { DeleteEmployeeComponent } from './personnel/employee/delete-employee/de
 import { UpdateEmployeeComponent } from './personnel/employee/update-employee/update-employee.component';
 import { ViewEmployeeComponent } from './personnel/employee/view-employee/view-employee.component';
 import {EmployeeService} from './shared/services/Personnel/employee.service';
+import { ViewReportComponent } from './report/view-report/view-report.component';
 
 
 
@@ -114,7 +115,8 @@ import {EmployeeService} from './shared/services/Personnel/employee.service';
     CreateEmployeeComponent,
     DeleteEmployeeComponent,
     UpdateEmployeeComponent,
-    ViewEmployeeComponent
+    ViewEmployeeComponent,
+    ViewReportComponent
 
   ],
   imports: [
