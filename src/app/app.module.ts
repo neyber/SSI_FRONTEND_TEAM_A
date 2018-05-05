@@ -71,6 +71,7 @@ import { AuditService } from './shared/services/audit/audit.service';
 
 import { ViewPpeComponent } from './ppe/ppe-ppe/view-ppe/view-ppe.component';
 import { ViewReportAuditComponent } from './report/view-report-audit/view-report-audit.component';
+import { UpdatePpeComponent } from './ppe/ppe-ppe/update-ppe/update-ppe.component';
 
 
 @NgModule({
@@ -124,8 +125,8 @@ import { ViewReportAuditComponent } from './report/view-report-audit/view-report
     ViewEmployeeComponent,
     ViewReportComponent,
     ViewPpeComponent,
-    ViewReportAuditComponent
-
+    ViewReportAuditComponent,
+    UpdatePpeComponent
   ],
   imports: [
     BrowserModule,
