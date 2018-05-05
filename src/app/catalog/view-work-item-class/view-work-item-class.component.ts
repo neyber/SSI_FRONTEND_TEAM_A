@@ -28,7 +28,7 @@ export class ViewWorkItemClassComponent implements OnInit {
 
   onClick(id){
 
-    console.log("onclick y el id"+id);
+    console.log("onclick work item id"+id);
     this.getWorkItemById(id);
 
     global.idAux = id;
@@ -39,9 +39,10 @@ export class ViewWorkItemClassComponent implements OnInit {
     this.workItemClassService.getWorkItemClassification().subscribe(
       result =>{
         this.workItemsC = result.data;
+        console.log('esl work tiem es '+JSON.stringify(this.workItemsC));
       },
-      error =>{
-        console.log("error");
+      error => {
+        console.log('error');
       }
     )
   }

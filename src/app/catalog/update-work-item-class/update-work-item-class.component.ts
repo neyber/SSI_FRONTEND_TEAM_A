@@ -19,7 +19,6 @@ export class UpdateWorkItemClassComponent implements OnInit {
     private _router: Router
   ) {
 
-
   }
 
   ngOnInit() {
@@ -49,7 +48,7 @@ export class UpdateWorkItemClassComponent implements OnInit {
       }
     );
   }
-  onClick(){
+  onClick() {
     this._router.navigate(['/catalog/lista']);
   }
 
