@@ -16,6 +16,10 @@ export class AuditService {
     return this.http.get(global.url + 'audits').map(res => res.json());
   }
 
+  getAuditById(auditId: number) {
+    return this.http.get(global.url + 'audits/' + auditId).map(res => res.json());
+  }
+
   addAudit(audit: AuditRequest) {
     const headers = new Headers({ 'Content-Type': 'application/json' });
     const options = new RequestOptions({ headers: headers });
