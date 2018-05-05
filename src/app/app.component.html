@@ -19,6 +19,7 @@
     <div class="wrapper">
       <div class="main">
         <header class="navbar-fixed-top" *ngIf="showMenu">
+
           <nav class="navbar navbar-menu">
             <div class="container-fluid">
               <div class="navbar-header">
@@ -45,10 +46,20 @@
                      <span class="flaticon icomoon  icon-checked-files"></span> Personnel</a>
                     <ul class="dropdown-menu">
                       <li><a [routerLink]="['/departmentList']"><span class="flaticon icomoon  icon-checked-files"></span> Department </a></li>
-                      <li><a [routerLink]="['/role']"><span class="flaticon icomoon  icon-checked-files"></span> Roles </a></li>
+                      <li><a [routerLink]="['/roleList']"><span class="flaticon icomoon  icon-checked-files"></span> Roles </a></li>
+                      <li><a [routerLink]="['/employeeList']"><span class="flaticon icomoon  icon-checked-files"></span> Employee </a></li>
                     </ul>
                  </li>
 
+                 <li class="dropdown">
+                   <a [routerLink]="['/safetyHealthAdministration']" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" role="button" aria-haspopup="true">
+                     <span class="flaticon icomoon  icon-checked-files"></span> Safety and Health Administration</a>
+                   <ul class="dropdown-menu">
+                     <li><a [routerLink]="['/saClassificationList']"><span class="flaticon icomoon  icon-checked-files"></span> Sickness/Accident Classification </a></li>
+                     <li><a [routerLink]="['/sickness']"><span class="flaticon icomoon  icon-checked-files"></span> Sickness </a></li>
+                     <li><a [routerLink]="['/accident']"><span class="flaticon icomoon  icon-checked-files"></span> Accident </a></li>
+                   </ul>
+                 </li>
 
                  <li class="dropdown">
                    <a [routerLink]="['/ppe']" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" role="button" aria-haspopup="true">
