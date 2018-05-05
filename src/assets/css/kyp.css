@@ -685,7 +685,7 @@ tags-input .tags .tag-item { background: #e1e5ec; border-color: #e1e5ec; color: 
 ul.downarrowul > li  { border-bottom:3px solid rgba(0,0,0,0); position:relative;}
 ul.downarrowul > li.active { border-color:#ef5552}
 ul.downarrowul > li.active:after { position:absolute; content:""; border-style:solid; border-width:10px; left:50%; bottom:-20px; margin-left:-10px; border-color:red transparent transparent transparent; z-index:1;}
-ul.downarrowul > li a { font-size:14px;}
+ul.downarrowul > li a { font-size:12px;}
 .cke_top,
 .cke_bottom  { background:#fff !important;     border-color: #e0dfdf !important;  }
 [class*="cke_editor_editor"] { box-shadow: none !important;
@@ -3010,9 +3010,9 @@ a.textHover {
 
     #chat-page ul {
         height: calc(100% - 120px);
-        
+
     }
-    
+
     #chat-page ul {
     list-style-type: none;
     background-color: #FFF;
