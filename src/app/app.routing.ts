@@ -36,6 +36,7 @@ import {ViewSaClassificationClassComponent} from './safety-health-administration
 import {PPE_ROUTES} from './ppe/ppe-ppe/ppe.routes';
 import {ViewPpeComponent} from './ppe/ppe-ppe/view-ppe/view-ppe.component';
 import {CreatePpeComponent} from './ppe/ppe-ppe/create-ppe/create-ppe.component';
+import {UpdatePpeComponent} from './ppe/ppe-ppe/update-ppe/update-ppe.component';
 
 
 
@@ -72,6 +73,7 @@ const appRoutes: Routes = [
   { path: 'ppe', component: PpeComponent, children: PPE_ROUTES},
   { path: 'ppeList', component: ViewPpeComponent},
   { path: 'newPpe', component: CreatePpeComponent},
+  { path: 'editPpe', component: UpdatePpeComponent},
   { path: '**', component: HomeComponent }
 ];
 
