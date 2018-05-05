@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="jumbotron">
+    <div class="page-header">
+      <h2>Report: <small>Audit</small></h2>
+    </div>
+<hr/>
+    <div class="row">
+      <div class="col-sm-8 col-md-8"  *ngFor = "let audit of audits">
+        <div class="thumbnail">
+
+          <div class="caption">
+            <h3>{{audit.auditName}}</h3>
+            <hr/>
+            <p>{{audit.auditCode}}</p>
+            <p>{{audit.auditType}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+

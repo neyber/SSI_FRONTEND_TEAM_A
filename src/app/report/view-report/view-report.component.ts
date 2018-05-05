@@ -15,7 +15,6 @@ export class ViewReportComponent implements OnInit {
     this.ppeService.getPpe().subscribe(
       result => {
         this.ppes = result.data;
-        console.log("VIEW ::::::::::::" + JSON.stringify(this.ppes));
       },
       error => {
         console.log('error');
