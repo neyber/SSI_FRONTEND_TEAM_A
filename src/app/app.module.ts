@@ -53,7 +53,8 @@ import {UpdateSaClassificationClassComponent} from './safety-health-administrati
 import {CreateSaClassificationClassComponent} from './safety-health-administration/create-sa-classification-class/create-sa-classification-class.component';
 import {ViewSaClassificationClassComponent} from './safety-health-administration/view-sa-classification-class/view-sa-classification-class.component';
 import {DeleteSaClassificationClassComponent} from './safety-health-administration/delete-sa-classification-class/delete-sa-classification-class.component';
-
+import { SafetyHealthAdministrationComponent } from './safety-health-administration/safety-health-administration.component';
+import { AccidentComponent } from './safety-health-administration/accident/accident.component';
 import { UpdateWorkItemClassComponent } from './catalog/update-work-item-class/update-work-item-class.component';
 
 import { EmployeeComponent } from './personnel/employee/employee.component';
@@ -109,6 +110,8 @@ import { AuditService } from './shared/services/audit/audit.service';
     ViewSaClassificationClassComponent,
     CreateSaClassificationClassComponent,
     UpdateSaClassificationClassComponent,
+    SafetyHealthAdministrationComponent,
+    AccidentComponent,
 
     UpdateWorkItemClassComponent,
 
