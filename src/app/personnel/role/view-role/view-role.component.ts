@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {RoleService} from '../../../shared/services/Personnel/role.service';
+import {Role} from '../../../shared/models/Personnel/Role';
 
 @Component({
   selector: 'app-view-role',
@@ -6,10 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./view-role.component.scss']
 })
 export class ViewRoleComponent implements OnInit {
+  roles: Role[];
 
-  constructor() { }
+  constructor(private roleService: RoleService) { }
 
   ngOnInit() {
+    this.roleService.getRoles().subscribe(
+      result => {
+        this.roles = result.data;
+      },
+      error => {
+        console.log('error');
+      }
+    );
   }
-
 }

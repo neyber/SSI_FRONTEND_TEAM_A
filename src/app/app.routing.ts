@@ -18,6 +18,18 @@ import {RoleComponent} from './personnel/role/role.component';
 import {DEPARTMENT_ROUTES} from './personnel/department/department.routes';
 import {ViewDepartmentComponent} from './personnel/department/view-department/view-department.component';
 import {CreateDepartmentComponent} from './personnel/department/create-department/create-department.component';
+import {ROLE_ROUTES} from './personnel/role/role.routes';
+import {ViewRoleComponent} from './personnel/role/view-role/view-role.component';
+import {CreateRoleComponent} from './personnel/role/create-role/create-role.component';
+import {EmployeeComponent} from './personnel/employee/employee.component';
+import {EMPLOYEE_ROUTES} from './personnel/employee/employee.route';
+import {ViewEmployeeComponent} from './personnel/employee/view-employee/view-employee.component';
+import {CreateEmployeeComponent} from './personnel/employee/create-employee/create-employee.component';
+import { AUDIT_ROUTES } from './audit/audit.routes';
+import { CreateAuditComponent } from './audit/create-audit/create-audit.component';
+import { UpdateAuditComponent } from './audit/update-audit/update-audit.component';
+import {SafetyHealthAdministrationComponent} from './safety-health-administration/safety-health-administration.component';
+import {ViewSaClassificationClassComponent} from './safety-health-administration/view-sa-classification-class/view-sa-classification-class.component';
 
 
 
@@ -34,9 +46,18 @@ const appRoutes: Routes = [
   { path: 'department', component: DepartmentComponent, children: DEPARTMENT_ROUTES},
   { path: 'departmentList', component: ViewDepartmentComponent},
   { path: 'newDepartment', component: CreateDepartmentComponent},
-  { path: 'role', component: RoleComponent},
+  { path: 'role', component: RoleComponent, children: ROLE_ROUTES},
+  { path: 'roleList', component: ViewRoleComponent},
+  { path: 'newRole', component: CreateRoleComponent},
+  { path: 'employee', component: EmployeeComponent, children: EMPLOYEE_ROUTES},
+  { path: 'employeeList', component: ViewEmployeeComponent},
+  { path: 'newEmployee', component: CreateEmployeeComponent},
   { path: 'ppe', component: PpeComponent},
-  { path: 'audit', component: AuditComponent },
+  { path: 'audit', component: AuditComponent, children: AUDIT_ROUTES },
+  { path: 'newAudit', component: CreateAuditComponent },
+  { path: 'editAudit', component: UpdateAuditComponent },
+  { path: 'safetyHealthAdministration', component: SafetyHealthAdministrationComponent},
+  { path: 'saClassificationList', component: ViewSaClassificationClassComponent},
   { path: '**', component: HomeComponent }
 ];
 

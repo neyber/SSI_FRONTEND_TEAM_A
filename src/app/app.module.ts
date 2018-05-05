@@ -10,7 +10,7 @@ import { CatalogComponent } from './catalog/catalog.component';
 import { HomeComponent } from './home/home.component';
 import { AuditComponent } from './audit/audit.component';
 import { PersonnelComponent } from './personnel/personnel.component';
-import { SicknessComponent } from './sickness/sickness.component';
+import { SicknessComponent } from './safety-health-administration/sickness/sickness.component';
 import { FunctionalManualComponent } from './functional-manual/functional-manual.component';
 import {ReportService} from './shared/services/report.service';
 import {HTTP_INTERCEPTORS, HttpClient, HttpClientModule} from '@angular/common/http';
@@ -46,13 +46,27 @@ import { CreateDepartmentComponent } from './personnel/department/create-departm
 import { DeleteDepartmentComponent } from './personnel/department/delete-department/delete-department.component';
 import { UpdateDepartmentComponent } from './personnel/department/update-department/update-department.component';
 import { ViewDepartmentComponent } from './personnel/department/view-department/view-department.component';
-import {ViewSaClassificationClassComponent} from './catalog/view-sa-classification-class/view-sa-classification-class.component';
-import {DeleteSaClassificationClassComponent} from './catalog/delete-sa-classification-class/delete-sa-classification-class.component';
-import {CreateSaClassificationClassComponent} from './catalog/create-sa-classification-class/create-sa-classification-class.component';
+
 import {SaClassificationService} from './shared/services/saClassification/sa-classification.service';
-import { UpdateSaClassificationClassComponent } from './catalog/update-sa-classification-class/update-sa-classification-class.component';
 import {DepartmentService} from './shared/services/Personnel/department.service';
 import {RoleService} from './shared/services/Personnel/role.service';
+import {UpdateSaClassificationClassComponent} from './safety-health-administration/update-sa-classification-class/update-sa-classification-class.component';
+import {CreateSaClassificationClassComponent} from './safety-health-administration/create-sa-classification-class/create-sa-classification-class.component';
+import {ViewSaClassificationClassComponent} from './safety-health-administration/view-sa-classification-class/view-sa-classification-class.component';
+import {DeleteSaClassificationClassComponent} from './safety-health-administration/delete-sa-classification-class/delete-sa-classification-class.component';
+import { SafetyHealthAdministrationComponent } from './safety-health-administration/safety-health-administration.component';
+import { AccidentComponent } from './safety-health-administration/accident/accident.component';
+import { UpdateWorkItemClassComponent } from './catalog/update-work-item-class/update-work-item-class.component';
+
+import { EmployeeComponent } from './personnel/employee/employee.component';
+import { CreateEmployeeComponent } from './personnel/employee/create-employee/create-employee.component';
+import { DeleteEmployeeComponent } from './personnel/employee/delete-employee/delete-employee.component';
+import { UpdateEmployeeComponent } from './personnel/employee/update-employee/update-employee.component';
+import { ViewEmployeeComponent } from './personnel/employee/view-employee/view-employee.component';
+import {EmployeeService} from './shared/services/Personnel/employee.service';
+import { AuditService } from './shared/services/audit/audit.service';
+
+
 
 
 
@@ -96,7 +110,18 @@ import {RoleService} from './shared/services/Personnel/role.service';
     DeleteSaClassificationClassComponent,
     ViewSaClassificationClassComponent,
     CreateSaClassificationClassComponent,
-    UpdateSaClassificationClassComponent
+    UpdateSaClassificationClassComponent,
+    SafetyHealthAdministrationComponent,
+    AccidentComponent,
+
+    UpdateWorkItemClassComponent,
+
+    EmployeeComponent,
+    CreateEmployeeComponent,
+    DeleteEmployeeComponent,
+    UpdateEmployeeComponent,
+    ViewEmployeeComponent
+
   ],
   imports: [
     BrowserModule,
@@ -119,8 +144,9 @@ import {RoleService} from './shared/services/Personnel/role.service';
     HttpClient,
     PpeService,
     DepartmentService,
-    RoleService
-
+    RoleService,
+    EmployeeService,
+    AuditService
   ],
   bootstrap: [AppComponent]
 })
