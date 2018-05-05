@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 import {PpeService} from '../../../shared/services/ppe/ppe.service';
 import {Ppe} from '../../../shared/models/ppe/ppe';
 
@@ -15,6 +14,19 @@ export class ViewPpeComponent implements OnInit {
   constructor(private ppeService: PpeService) { }
 
   ngOnInit() {
+    this.loadData();
+  }
+
+  deletePpe(ppeId) {
+    if(confirm("Are you sure to delete?")) {
+      this.ppeService.deletePpe(ppeId).subscribe(res => {
+        console.log('Deleted');
+        this.loadData();
+      });
+    }
+  }
+
+  loadData(){
     this.ppeService.getPpe().subscribe(
       result => {
         this.ppes = result.data;
