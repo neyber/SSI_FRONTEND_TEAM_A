@@ -3,7 +3,6 @@ import {global} from '../global';
 import {PpeRequest} from '../../models/ppe/PpeRequest';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs/Observable';
-import {AuditRequest} from '../../models/audit/auditRequest';
 
 @Injectable()
 export class PpeService {
@@ -16,7 +15,7 @@ export class PpeService {
   getPpe(): Observable<any> {
     return this.httpClient.get(global.url + 'ppes').map(res => res);
   }
-  getPpeById(ppeId:number): Observable<any>{
+  getPpeById(ppeId: number): Observable<any> {
     return this.httpClient.get(global.url + 'ppes/' + ppeId).map(res => res);
   }
   addPpe(ppe: PpeRequest): Observable<any> {
@@ -24,8 +23,8 @@ export class PpeService {
     return this.httpClient.post(global.url + 'ppes', ppe, { headers: headers })
       .map(res => res);
   }
-  deletePpe(ppeClassificationId:number): Observable<any>{
-    return this.httpClient.delete(global.url + 'ppes/' + ppeClassificationId).map(res => res);
+  deletePpe(ppeId: number): Observable<any> {
+    return this.httpClient.delete(global.url + 'ppes/' + ppeId).map(res => res);
   }
 
   updatePpe(ppeId: number, ppe: PpeRequest): Observable<any> {

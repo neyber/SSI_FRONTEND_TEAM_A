@@ -37,8 +37,9 @@ import {PPE_ROUTES} from './ppe/ppe-ppe/ppe.routes';
 import {ViewPpeComponent} from './ppe/ppe-ppe/view-ppe/view-ppe.component';
 import {CreatePpeComponent} from './ppe/ppe-ppe/create-ppe/create-ppe.component';
 import {UpdatePpeComponent} from './ppe/ppe-ppe/update-ppe/update-ppe.component';
-
-
+import {CreateExistingPpeComponent} from './ppe/existing-ppe/create-existing-ppe/create-existing-ppe.component';
+import {ViewExistingPpeComponent} from './ppe/existing-ppe/view-existing-ppe/view-existing-ppe.component';
+import {UpdateExistingPpeComponent} from './ppe/existing-ppe/update-existing-ppe/update-existing-ppe.component';
 
 
 const appRoutes: Routes = [
@@ -74,6 +75,9 @@ const appRoutes: Routes = [
   { path: 'ppeList', component: ViewPpeComponent},
   { path: 'newPpe', component: CreatePpeComponent},
   { path: 'editPpe', component: UpdatePpeComponent},
+  { path: 'existingPpeList', component: ViewExistingPpeComponent},
+  { path: 'newExistingPpe', component: CreateExistingPpeComponent},
+  { path: 'editExistingPpe', component: UpdateExistingPpeComponent},
   { path: '**', component: HomeComponent }
 ];
 

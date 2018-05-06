@@ -72,6 +72,11 @@ import { AuditService } from './shared/services/audit/audit.service';
 import { ViewPpeComponent } from './ppe/ppe-ppe/view-ppe/view-ppe.component';
 import { ViewReportAuditComponent } from './report/view-report-audit/view-report-audit.component';
 import { UpdatePpeComponent } from './ppe/ppe-ppe/update-ppe/update-ppe.component';
+import { ExistingPpeComponent } from './ppe/existing-ppe/existing-ppe.component';
+import { CreateExistingPpeComponent } from './ppe/existing-ppe/create-existing-ppe/create-existing-ppe.component';
+import { UpdateExistingPpeComponent } from './ppe/existing-ppe/update-existing-ppe/update-existing-ppe.component';
+import { ViewExistingPpeComponent } from './ppe/existing-ppe/view-existing-ppe/view-existing-ppe.component';
+import {ExistingPpeService} from 'app/shared/services/existingPpe/existing-ppe.service';
 
 
 @NgModule({
@@ -126,7 +131,11 @@ import { UpdatePpeComponent } from './ppe/ppe-ppe/update-ppe/update-ppe.componen
     ViewReportComponent,
     ViewPpeComponent,
     ViewReportAuditComponent,
-    UpdatePpeComponent
+    UpdatePpeComponent,
+    ExistingPpeComponent,
+    CreateExistingPpeComponent,
+    UpdateExistingPpeComponent,
+    ViewExistingPpeComponent
   ],
   imports: [
     BrowserModule,
@@ -151,7 +160,8 @@ import { UpdatePpeComponent } from './ppe/ppe-ppe/update-ppe/update-ppe.componen
     DepartmentService,
     RoleService,
     EmployeeService,
-    AuditService
+    AuditService,
+    ExistingPpeService
   ],
   bootstrap: [AppComponent]
 })
