@@ -1,6 +1,6 @@
 export class PpeClassification {
   constructor(
-    public id: number,
+    public ppeClassificationId: number,
     public name: string,
     public description: string
   ) {}

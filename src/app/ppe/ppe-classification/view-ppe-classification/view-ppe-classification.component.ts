@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {PpeClassification} from '../../../shared/models/ppeClassification/ppeClassification';
 import {PpeClassificationService} from '../../../shared/services/ppeClassification/ppe-classification.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-view-ppe-classification',
@@ -11,7 +12,7 @@ export class ViewPpeClassificationComponent implements OnInit {
 
   ppeClassifications: PpeClassification[];
 
-  constructor(private ppeClassificationService: PpeClassificationService) { }
+  constructor(private ppeClassificationService: PpeClassificationService, private router: Router) { }
 
   ngOnInit() {
     this.ppeClassificationService.getPpeClassification().subscribe(
@@ -23,4 +24,18 @@ export class ViewPpeClassificationComponent implements OnInit {
       }
     );
   }
+
+  deletePpeClassification(ppeClassificationId) {
+    if (confirm('Are you sure to delete?')) {
+      this.ppeClassificationService.deletePpeClassification(ppeClassificationId).subscribe(
+        res => {
+          console.log('Deleted');
+          // this.router.navigateByUrl('ppeClassificationList', { skipLocationChange: true });
+        },
+        error => {
+          console.log('error');
+        });
+    }
+  }
+
 }

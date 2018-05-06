@@ -43,6 +43,10 @@ import {ViewExistingPpeComponent} from './ppe/existing-ppe/view-existing-ppe/vie
 import {UpdateExistingPpeComponent} from './ppe/existing-ppe/update-existing-ppe/update-existing-ppe.component';
 
 
+import {ViewPpeClassificationComponent} from './ppe/ppe-classification/view-ppe-classification/view-ppe-classification.component';
+import {CreatePpeClassificationComponent} from './ppe/ppe-classification/create-ppe-classification/create-ppe-classification.component';
+import {UpdatePpeClassificationComponent} from './ppe/ppe-classification/update-ppe-classification/update-ppe-classification.component';
+
 const appRoutes: Routes = [
   { path: '', component: HomeComponent},
   {
@@ -50,6 +54,9 @@ const appRoutes: Routes = [
     component: CatalogComponent,
     children: CATALOG_ROUTES
   },
+  { path: 'ppeClassificationList', component: ViewPpeClassificationComponent},
+  { path: 'newPpeClassification', component: CreatePpeClassificationComponent},
+  { path: 'editPpeClassification', component: UpdatePpeClassificationComponent},
   { path: 'report',
     component: ReportComponent,
     children: REPORT_ROUTES
