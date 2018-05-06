@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {SaClassification} from '../../shared/models/saclassification/saClassification';
-import {SaClassificationService} from '../../shared/services/saClassification/sa-classification.service';
+import {SaClassification} from '../../../shared/models/saclassification/saClassification';
+import {SaClassificationService} from '../../../shared/services/saClassification/sa-classification.service';
 import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {SaClassificationRequest} from '../../shared/models/saclassification/saClassificationRequest';
-import {SaClassificationService} from '../../shared/services/saClassification/sa-classification.service';
+import {SaClassificationRequest} from '../../../shared/models/saclassification/saClassificationRequest';
+import {SaClassificationService} from '../../../shared/services/saClassification/sa-classification.service';
 
 @Component({
   selector: 'app-update-sa-classification-class',
