@@ -86,6 +86,12 @@ import { CreateExistingPpeComponent } from './ppe/existing-ppe/create-existing-p
 import { UpdateExistingPpeComponent } from './ppe/existing-ppe/update-existing-ppe/update-existing-ppe.component';
 import { ViewExistingPpeComponent } from './ppe/existing-ppe/view-existing-ppe/view-existing-ppe.component';
 import {ExistingPpeService} from 'app/shared/services/existingPpe/existing-ppe.service';
+import { ExistingPpeAssignedComponent } from './ppe/existing-ppe-assigned/existing-ppe-assigned.component';
+import { CreateExistingPpeAssignedComponent } from './ppe/existing-ppe-assigned/create-existing-ppe-assigned/create-existing-ppe-assigned.component';
+import { ViewExistingPpeAssignedComponent } from './ppe/existing-ppe-assigned/view-existing-ppe-assigned/view-existing-ppe-assigned.component';
+import { UpdateExistingPpeAssignedComponent } from './ppe/existing-ppe-assigned/update-existing-ppe-assigned/update-existing-ppe-assigned.component';
+import {ExistingPpeAssignedService} from './shared/services/existingPpeAssigned/existing-ppe-assigned.service';
+import {DatePipe} from '@angular/common';
 
 
 @NgModule({
@@ -157,7 +163,11 @@ import {ExistingPpeService} from 'app/shared/services/existingPpe/existing-ppe.s
     ExistingPpeComponent,
     CreateExistingPpeComponent,
     UpdateExistingPpeComponent,
-    ViewExistingPpeComponent
+    ViewExistingPpeComponent,
+    ExistingPpeAssignedComponent,
+    CreateExistingPpeAssignedComponent,
+    ViewExistingPpeAssignedComponent,
+    UpdateExistingPpeAssignedComponent
   ],
   imports: [
     BrowserModule,
@@ -183,7 +193,9 @@ import {ExistingPpeService} from 'app/shared/services/existingPpe/existing-ppe.s
     RoleService,
     EmployeeService,
     AuditService,
-    ExistingPpeService
+    ExistingPpeService,
+    ExistingPpeAssignedService,
+    DatePipe
   ],
   bootstrap: [AppComponent]
 })

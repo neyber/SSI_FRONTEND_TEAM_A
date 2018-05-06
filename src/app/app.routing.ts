@@ -41,6 +41,9 @@ import {UpdatePpeComponent} from './ppe/ppe-ppe/update-ppe/update-ppe.component'
 import {CreateExistingPpeComponent} from './ppe/existing-ppe/create-existing-ppe/create-existing-ppe.component';
 import {ViewExistingPpeComponent} from './ppe/existing-ppe/view-existing-ppe/view-existing-ppe.component';
 import {UpdateExistingPpeComponent} from './ppe/existing-ppe/update-existing-ppe/update-existing-ppe.component';
+import {ViewExistingPpeAssignedComponent} from './ppe/existing-ppe-assigned/view-existing-ppe-assigned/view-existing-ppe-assigned.component';
+import {CreateExistingPpeAssignedComponent} from './ppe/existing-ppe-assigned/create-existing-ppe-assigned/create-existing-ppe-assigned.component';
+import {UpdateExistingPpeAssignedComponent} from './ppe/existing-ppe-assigned/update-existing-ppe-assigned/update-existing-ppe-assigned.component';
 
 
 import {ViewPpeClassificationComponent} from './ppe/ppe-classification/view-ppe-classification/view-ppe-classification.component';
@@ -87,6 +90,9 @@ const appRoutes: Routes = [
   { path: 'existingPpeList', component: ViewExistingPpeComponent},
   { path: 'newExistingPpe', component: CreateExistingPpeComponent},
   { path: 'editExistingPpe', component: UpdateExistingPpeComponent},
+  { path: 'existingPpeAssignedList', component: ViewExistingPpeAssignedComponent},
+  { path: 'newExistingPpeAssigned', component: CreateExistingPpeAssignedComponent},
+  { path: 'editExistingPpeAssigned', component: UpdateExistingPpeAssignedComponent},
   { path: '**', component: HomeComponent }
 ];
 

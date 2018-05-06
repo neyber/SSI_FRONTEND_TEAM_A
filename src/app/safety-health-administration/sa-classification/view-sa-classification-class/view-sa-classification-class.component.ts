@@ -26,7 +26,7 @@ export class ViewSaClassificationClassComponent implements OnInit {
 
   deleteSaClassification(saClassificationId) {
 
-    if( confirm('Are you sure to delete?')) {
+    if ( confirm('Are you sure to delete?')) {
       this.saClassificationService.deleteSaClassification(saClassificationId).subscribe(res => {
         console.log('Deleted');
         this.router.navigateByUrl('saClassificationList', { skipLocationChange: true});
