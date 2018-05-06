@@ -13,7 +13,7 @@ export class UpdateSaClassificationClassComponent implements OnInit {
   public saClassification: SaClassificationRequest;
   constructor(private saClassificationService: SaClassificationService) {
     this.saClassificationId = 0;
-    this.saClassification = new SaClassificationRequest('',0,0, '');
+    this.saClassification = new SaClassificationRequest('',  0, 0, '');
   }
 
   ngOnInit() {
