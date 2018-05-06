@@ -15,6 +15,10 @@ export class ViewPpeClassificationComponent implements OnInit {
   constructor(private ppeClassificationService: PpeClassificationService, private router: Router) { }
 
   ngOnInit() {
+    this.loadList();
+  }
+
+  loadList() {
     this.ppeClassificationService.getPpeClassification().subscribe(
       result => {
         this.ppeClassifications = result.data;
@@ -30,7 +34,7 @@ export class ViewPpeClassificationComponent implements OnInit {
       this.ppeClassificationService.deletePpeClassification(ppeClassificationId).subscribe(
         res => {
           console.log('Deleted');
-          // this.router.navigateByUrl('ppeClassificationList', { skipLocationChange: true });
+          this.loadList();
         },
         error => {
           console.log('error');
