@@ -80,7 +80,13 @@ import { ViewAccidentComponent } from './safety-health-administration/accident/v
 
 import { ViewPpeComponent } from './ppe/ppe-ppe/view-ppe/view-ppe.component';
 import { ViewReportAuditComponent } from './report/view-report-audit/view-report-audit.component';
+
 import { UpdatePpeComponent } from './ppe/ppe-ppe/update-ppe/update-ppe.component';
+import { CreateManualComponent } from './functional-manual/create-manual/create-manual.component';
+import { DeleteManualComponent } from './functional-manual/delete-manual/delete-manual.component';
+import { UpdateManualComponent } from './functional-manual/update-manual/update-manual.component';
+import { ViewManualComponent } from './functional-manual/view-manual/view-manual.component';
+import {FunctionManualService} from './shared/services/functionManual/function-manual.service';
 import { ExistingPpeComponent } from './ppe/existing-ppe/existing-ppe.component';
 import { CreateExistingPpeComponent } from './ppe/existing-ppe/create-existing-ppe/create-existing-ppe.component';
 import { UpdateExistingPpeComponent } from './ppe/existing-ppe/update-existing-ppe/update-existing-ppe.component';
@@ -98,6 +104,10 @@ import { CreateWorkItemComponent } from './work-item/work-item-wi/create-work-it
 import { UpdateWorkItemComponent } from './work-item/work-item-wi/update-work-item/update-work-item.component';
 import { ViewWorkItemComponent } from './work-item/work-item-wi/view-work-item/view-work-item.component';
 import {WorkItemService} from './shared/services/workItem/work-item.service';
+
+import { ViewReportSicknessComponent } from './report/view-report-sickness/view-report-sickness.component';
+import { ViewReportFunctionmComponent } from './report/view-report-functionm/view-report-functionm.component';
+
 
 
 @NgModule({
@@ -154,8 +164,12 @@ import {WorkItemService} from './shared/services/workItem/work-item.service';
     ViewReportComponent,
     ViewPpeComponent,
     ViewReportAuditComponent,
-    UpdatePpeComponent,
 
+    UpdatePpeComponent,
+    CreateManualComponent,
+    DeleteManualComponent,
+    UpdateManualComponent,
+    ViewManualComponent,
     SaClassificationComponent,
     CreateSicknessComponent,
     UpdateSicknessComponent,
@@ -174,11 +188,15 @@ import {WorkItemService} from './shared/services/workItem/work-item.service';
     CreateExistingPpeAssignedComponent,
     ViewExistingPpeAssignedComponent,
     UpdateExistingPpeAssignedComponent,
+    ViewReportSicknessComponent,
+    ViewReportFunctionmComponent,
     WorkItemComponent,
     WorkItemWiComponent,
     CreateWorkItemComponent,
     UpdateWorkItemComponent,
     ViewWorkItemComponent
+
+
   ],
   imports: [
     BrowserModule,
@@ -204,6 +222,7 @@ import {WorkItemService} from './shared/services/workItem/work-item.service';
     RoleService,
     EmployeeService,
     AuditService,
+    FunctionManualService,
     ExistingPpeService,
     ExistingPpeAssignedService,
     DatePipe,
@@ -212,3 +231,4 @@ import {WorkItemService} from './shared/services/workItem/work-item.service';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
