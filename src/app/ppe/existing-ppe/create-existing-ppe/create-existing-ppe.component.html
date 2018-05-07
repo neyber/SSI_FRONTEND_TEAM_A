@@ -6,7 +6,7 @@
 
       <form #formExistingPpe="ngForm" (ngSubmit)="onSubmit()" class="col-lg-6" id="form-existing-ppe">
         <label>
-          Detail
+          DetailnewExistingPpeAssigned
 
         </label>
         <input type="text" #detail="ngModel" name="detail" [(ngModel)]="existingPpe.detail" class="form-control" required />
@@ -36,6 +36,7 @@
 
         <select #ppeId="ngModel" name="ppeId" [(ngModel)]="existingPpe.ppeId" class="form-control"  required>
 
+          <option [ngValue]="null">--Select--</option>
           <option *ngFor="let ppe of ppes" [value]="ppe.ppeId" >{{ppe.name}}</option>
         </select>
 

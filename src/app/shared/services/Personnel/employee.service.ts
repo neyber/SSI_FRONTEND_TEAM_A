@@ -1,33 +1,37 @@
 import { Injectable } from '@angular/core';
-import {Headers, Http, RequestOptions} from '@angular/http';
 import {global} from '../global';
 import {EmployeeRequest} from '../../models/Personnel/EmployeeRequest';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {Observable} from 'rxjs/Observable';
+import {map} from 'rxjs/operators';
 
 @Injectable()
 export class EmployeeService {
+  private headers;
+  public url: string;
 
-  constructor(private http: Http) { }
-
-  getEmployees() {
-    return this.http.get(global.url + 'employees').map(res => res.json());
-  }
-  getEmployeeById(employeeId: number) {
-    return this.http.get(global.url + 'employees/' + employeeId).map(res => res.json());
-  }
-  addEmployee(employee: EmployeeRequest) {
-    const headers = new Headers({ 'Content-Type': 'application/json' });
-    const options = new RequestOptions({ headers: headers });
-    return this.http.post(global.url + 'employees', employee, options)
-      .map(res => res.json());
-  }
-  deleteEmployee(employeeId: number) {
-    return this.http.delete(global.url + 'employees/' + employeeId).map(res => res.json());
+  constructor(private httpClient: HttpClient) {
+    this.headers = new HttpHeaders({'Content-Type': 'application/json'});
   }
 
-  updateEmployee(employeeId: number, employee: EmployeeRequest) {
-    const headers = new Headers({ 'Content-Type': 'application/json' });
-    const options = new RequestOptions({ headers: headers });
+  getEmployees(): Observable<any> {
+    return this.httpClient.get(global.url + 'employees').map(res => res);
+  }
+  getEmployeeById(employeeId: number): Observable<any> {
+    return this.httpClient.get(global.url + 'employees/' + employeeId).map(res => res);
+  }
+  addEmployee(employee: EmployeeRequest): Observable<any> {
+    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+    return this.httpClient.post(global.url + 'employees', employee, {headers: headers})
+      .map(res => res);
+  }
+  deleteEmployee(employeeId: number): Observable<any> {
+    return this.httpClient.delete(global.url + 'employees/' + employeeId).map(res => res);
+  }
 
-    return this.http.put(global.url + 'employees/' + employeeId, employee, options).map(res => res.json());
+  updateEmployee(employeeId: number, employee: EmployeeRequest): Observable<any> {
+    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+    return this.httpClient.put(global.url + 'employees/' + employeeId, employee, {headers: headers})
+      .map(res => res);
   }
 }
