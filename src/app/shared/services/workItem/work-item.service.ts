@@ -25,11 +25,11 @@ export class WorkItemService {
     return this.httpClient.post(global.url + this.PATH, workItem, { headers: headers })
       .map(res => res);
   }
-  deleteExistingPpe(workItemId: number): Observable<any> {
+  deleteWorkItem(workItemId: number): Observable<any> {
     return this.httpClient.delete(global.url + this.PATH + workItemId).map(res => res);
   }
 
-  updateExistingPpe(workItemId: number, workItem: WorkItemRequest): Observable<any> {
+  updateWorkItem(workItemId: number, workItem: WorkItemRequest): Observable<any> {
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
 
     return this.httpClient.put(global.url + this.PATH + workItemId, workItem, { headers: headers }).map(res => res);

@@ -101,7 +101,7 @@ const appRoutes: Routes = [
   { path: 'editExistingPpeAssigned', component: UpdateExistingPpeAssignedComponent},
   { path: 'workItemList', component: ViewWorkItemComponent},
   { path: 'newWorkItem', component: CreateWorkItemComponent},
-  { path: 'editWorkItem', component: UpdateWorkItemClassComponent},
+  { path: 'editWorkItem', component: UpdateWorkItemComponent},
   { path: 'workItemClassificationList', component: ViewWorkItemClassComponent},
   { path: 'newWorkItemClassification', component: CreateWorkItemClassComponent},
   { path: 'editWorkItemClassification', component: UpdateWorkItemClassComponent},
