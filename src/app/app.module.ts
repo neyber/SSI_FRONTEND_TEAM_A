@@ -181,7 +181,7 @@ import { ViewReportFunctionmComponent } from './report/view-report-functionm/vie
     ExistingPpeAssignedComponent,
     CreateExistingPpeAssignedComponent,
     ViewExistingPpeAssignedComponent,
-    UpdateExistingPpeAssignedComponent
+    UpdateExistingPpeAssignedComponent,
 
     ViewReportSicknessComponent,
     ViewReportFunctionmComponent
