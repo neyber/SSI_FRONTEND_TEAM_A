@@ -26,37 +26,50 @@ export class ViewWorkItemClassComponent implements OnInit {
 
   }
 
-  onClick(id){
+  onClick(id) {
 
-    console.log("onclick work item id"+id);
+    console.log('onclick work item id' + id);
     this.getWorkItemById(id);
 
     global.idAux = id;
   }
 
-  getWorkItem(){
+  getWorkItem() {
 
     this.workItemClassService.getWorkItemClassification().subscribe(
-      result =>{
+      result => {
         this.workItemsC = result.data;
-        console.log('esl work tiem es '+JSON.stringify(this.workItemsC));
+        console.log('esl work tiem es ' + JSON.stringify(this.workItemsC));
       },
       error => {
         console.log('error');
       }
-    )
+    );
   }
 
-  getWorkItemById(Id){
+  getWorkItemById(Id) {
 
     this.workItemClassService.getWorkItemClassById(Id).subscribe(
-      result =>{
+      result => {
         this.workItemsC = result.data;
-        console.log("este es el valor de work item por id" + JSON.stringify(this.workItemsC));
+        console.log('este es el valor de work item por id' + JSON.stringify(this.workItemsC));
       },
-      error =>{
-        console.log("error");
+      error => {
+        console.log('error');
       }
-    )
+    );
+  }
+
+  deleteWorkItemClassification(workItemClassificationId) {
+    if (confirm('Are you sure to delete?')) {
+      this.workItemClassService.deleteWorkItemClassification(workItemClassificationId).subscribe(
+        res => {
+          console.log('Deleted');
+          this.getWorkItem();
+        },
+        error => {
+          console.log('error');
+        });
+    }
   }
 }

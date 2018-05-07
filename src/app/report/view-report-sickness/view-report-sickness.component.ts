@@ -16,7 +16,6 @@ export class ViewReportSicknessComponent implements OnInit {
     this.saClassificationService.getAllAccidents().subscribe(
       result => {
         this.accidents = result.data;
-        //console.log("mi lista de acpuiiites::::::::::::::::::::::"+JSON.stringify(this.accidents));
       },
       error1 => {
         console.log('error');

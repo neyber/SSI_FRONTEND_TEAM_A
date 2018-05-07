@@ -9,25 +9,27 @@
           Detail
 
         </label>
-        <input type="text" #nombre="ngModel" name="detail" [(ngModel)]="existingPpe.detail" class="form-control" required />
+        <input type="text" #detail="ngModel" name="detail" [(ngModel)]="existingPpe.detail" class="form-control" required />
 
         <label>
-          Purchase date (YYYY-MM-DD)
+          Purchase date
 
         </label>
-        <input type="text" #nombre="ngModel" name="purchaseDate" [(ngModel)]="existingPpe.purchaseDate" class="form-control" required />
+        <input type="date" #purchaseDate="ngModel" name="purchaseDate"
+               [ngModel]="existingPpe.purchaseDate | date:'yyyy-MM-dd'" (ngModelChange)="existingPpe.purchaseDate = $event"
+               [value]="existingPpe.purchaseDate | date:'yyyy-MM-dd'" min="1900-01-01" class="form-control" required />
 
         <label>
           Life time days
 
         </label>
-        <input type="text" #nombre="ngModel" name="lifeTimeDays" [(ngModel)]="existingPpe.lifeTimeDays" class="form-control" required />
+        <input type="text" #lifeTimeDays="ngModel" name="lifeTimeDays" [(ngModel)]="existingPpe.lifeTimeDays" class="form-control" required />
 
         <label>
           Current lifeTime days
 
         </label>
-        <input type="text" #nombre="ngModel" name="currentLifeTimeDays" [(ngModel)]="existingPpe.currentLifeTimeDays" class="form-control" required />
+        <input type="text" #currentLifeTimeDays="ngModel" name="currentLifeTimeDays" [(ngModel)]="existingPpe.currentLifeTimeDays" class="form-control" required />
 
         <label>
           Personal protection equipment classification
@@ -41,6 +43,7 @@
 
         <br/>
         <input type="submit" value="Update" (click)="onSubmit(existingPpe.existingPpeId)" class="btn btn-success"/>
+        <input type="button" value="Cancel" routerLink="../existingPpeList" class="btn btn-cancel"/>
 
       </form>
     </div>
