@@ -26,7 +26,7 @@ export class EmployeeService {
       .map(res => res);
   }
   deleteEmployee(employeeId: number): Observable<any> {
-    return this.httpClient.delete(global.url + 'employees/' + employeeId).map(res => res.json());
+    return this.httpClient.delete(global.url + 'employees/' + employeeId).map(res => res);
   }
 
   updateEmployee(employeeId: number, employee: EmployeeRequest): Observable<any> {
