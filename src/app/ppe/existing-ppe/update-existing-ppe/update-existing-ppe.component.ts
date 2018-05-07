@@ -28,6 +28,7 @@ export class UpdateExistingPpeComponent implements OnInit {
       this.existingPpeService.getExistingPpeById(existingPpeId).subscribe(
         result => {
           this.existingPpe = result.data;
+          this.existingPpe.ppeId = result.data.ppe.ppeId;
         },
         error => {
           console.log('error');

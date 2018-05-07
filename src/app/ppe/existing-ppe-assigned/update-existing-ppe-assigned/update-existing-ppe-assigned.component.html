@@ -24,6 +24,7 @@
 
         <select #existingPpeId="ngModel" name="existingPpeId" [(ngModel)]="existingPpeAssigned.employeeId" class="form-control"  required>
 
+          <option [ngValue]="null">--Select--</option>
           <option *ngFor="let employee of employees" [value]="employee.employeeId" >{{employee.firstName}} {{employee.lastName}}</option>
         </select>
 
@@ -34,6 +35,7 @@
 
         <select #existingPpeId="ngModel" name="existingPpeId" [(ngModel)]="existingPpeAssigned.existingPpeId" class="form-control"  required>
 
+          <option [ngValue]="null">--Select--</option>
           <option *ngFor="let existingPpe of existingPpes" [value]="existingPpe.existingPpeId" >{{existingPpe.ppe.name}}</option>
         </select>
 
