@@ -38,12 +38,17 @@ import {PPE_ROUTES} from './ppe/ppe-ppe/ppe.routes';
 import {ViewPpeComponent} from './ppe/ppe-ppe/view-ppe/view-ppe.component';
 import {CreatePpeComponent} from './ppe/ppe-ppe/create-ppe/create-ppe.component';
 import {UpdatePpeComponent} from './ppe/ppe-ppe/update-ppe/update-ppe.component';
+import {MANUAL_ROUTES} from './functional-manual/function-manual.routes';
+import {CreateManualComponent} from './functional-manual/create-manual/create-manual.component';
+import {UpdateManualComponent} from './functional-manual/update-manual/update-manual.component';
+
 import {CreateExistingPpeComponent} from './ppe/existing-ppe/create-existing-ppe/create-existing-ppe.component';
 import {ViewExistingPpeComponent} from './ppe/existing-ppe/view-existing-ppe/view-existing-ppe.component';
 import {UpdateExistingPpeComponent} from './ppe/existing-ppe/update-existing-ppe/update-existing-ppe.component';
 import {ViewExistingPpeAssignedComponent} from './ppe/existing-ppe-assigned/view-existing-ppe-assigned/view-existing-ppe-assigned.component';
 import {CreateExistingPpeAssignedComponent} from './ppe/existing-ppe-assigned/create-existing-ppe-assigned/create-existing-ppe-assigned.component';
 import {UpdateExistingPpeAssignedComponent} from './ppe/existing-ppe-assigned/update-existing-ppe-assigned/update-existing-ppe-assigned.component';
+
 
 
 import {ViewPpeClassificationComponent} from './ppe/ppe-classification/view-ppe-classification/view-ppe-classification.component';
@@ -55,6 +60,7 @@ import {CreateWorkItemComponent} from './work-item/work-item-wi/create-work-item
 import {UpdateWorkItemClassComponent} from './catalog/update-work-item-class/update-work-item-class.component';
 import {ViewWorkItemClassComponent} from './catalog/view-work-item-class/view-work-item-class.component';
 import {CreateWorkItemClassComponent} from './catalog/create-work-item-class/create-work-item-class.component';
+import {UpdateEmployeeComponent} from './personnel/employee/update-employee/update-employee.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent},
@@ -82,6 +88,7 @@ const appRoutes: Routes = [
   { path: 'employee', component: EmployeeComponent, children: EMPLOYEE_ROUTES},
   { path: 'employeeList', component: ViewEmployeeComponent},
   { path: 'newEmployee', component: CreateEmployeeComponent},
+  { path: 'editEmployee', component: UpdateEmployeeComponent},
   { path: 'ppe', component: PpeComponent},
   { path: 'audit', component: AuditComponent, children: AUDIT_ROUTES },
   { path: 'newAudit', component: CreateAuditComponent },
@@ -93,6 +100,9 @@ const appRoutes: Routes = [
   { path: 'ppeList', component: ViewPpeComponent},
   { path: 'newPpe', component: CreatePpeComponent},
   { path: 'editPpe', component: UpdatePpeComponent},
+  { path: 'functionManual', component: FunctionalManualComponent, children: MANUAL_ROUTES},
+  { path: 'newManual', component: CreateManualComponent},
+  { path: 'editManual', component: UpdateManualComponent},
   { path: 'existingPpeList', component: ViewExistingPpeComponent},
   { path: 'newExistingPpe', component: CreateExistingPpeComponent},
   { path: 'editExistingPpe', component: UpdateExistingPpeComponent},

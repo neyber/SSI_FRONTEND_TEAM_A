@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="jumbotron">
+    <div class="page-header">
+      <h2>Report: <small>List of Accidents</small></h2>
+    </div>
+    <hr/>
+    <div class="row">
+      <div class="col-sm-10 col-md-10">
+        <div class="thumbnail" style="width: 1000px;">
+          <table class="table table-bordered">
+            <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Accident description</th>
+              <th scope="col">Where Occurr</th>
+              <th scope="col">Category</th>
+              <th scope="col">Total days out of work</th>
+              <th scope="col">Type</th>
+              <th scope="col">Employee</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor = "let acc of accidents">
+              <th scope="row">{{acc.accidentId}}</th>
+              <td>{{acc.description}}</td>
+              <td>{{acc.whereOccurr}}</td>
+              <td>{{acc.saClassification.category}}</td>
+              <td>{{acc.saClassification.totalDaysOutOfWork}}</td>
+              <td>{{acc.saClassification.type}}</td>
+              <td>{{acc.employee.firstName}} {{acc.employee.lastName}}</td>
+            </tr>
+
+            </tbody>
+          </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+

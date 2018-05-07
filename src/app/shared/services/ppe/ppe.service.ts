@@ -9,7 +9,7 @@ export class PpeService {
   private headers;
 
   constructor(private httpClient: HttpClient) {
-    this.headers = new HttpHeaders({'Content-Type': 'application/json'});
+    this.headers = new HttpHeaders({'Content-Type ': 'application/json'});
   }
 
   getPpe(): Observable<any> {

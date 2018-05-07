@@ -1,0 +1,66 @@
+<div class="container">
+  <br>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+
+
+      <form #formFunctionManual="ngForm" class="col-lg-6" id="form-functionManual">
+        <label>
+          Name
+
+        </label>
+        <input type="text" #nombre="ngModel" name="name" [(ngModel)]="functionManual.name" class="form-control" required />
+        <label>
+          Position
+
+        </label>
+        <input type="text" #nombre="ngModel" name="position" [(ngModel)]="functionManual.position" class="form-control" required />
+        <label>
+          Hierarchical Lever
+
+        </label>
+        <input type="text" #nombre="ngModel" name="hierarchicalLever" [(ngModel)]="functionManual.hierarchicalLever" class="form-control" required />
+        <label>
+          superiorBoss
+
+        </label>
+        <input type="text" #nombre="ngModel" name="superiorBoss" [(ngModel)]="functionManual.superiorBoss" class="form-control" required />
+
+        <label>
+          Dependent Personal
+
+        </label>
+        <textarea #descripcion="ngModel" name="dependentPersonal" [(ngModel)]="functionManual.dependentPersonal" class="form-control" required></textarea>
+        <label>
+          Internal Relation
+
+        </label>
+        <textarea #descripcion="ngModel" name="internalRelation" [(ngModel)]="functionManual.internalRelation" class="form-control" required></textarea>
+        <label>
+          External Relation
+
+        </label>
+        <textarea #descripcion="ngModel" name="externalRelation" [(ngModel)]="functionManual.externalRelation" class="form-control" required></textarea>
+        <label>
+          General Activity
+
+        </label>
+        <textarea #descripcion="ngModel" name="generalActivity" [(ngModel)]="functionManual.generalActivity" class="form-control" required></textarea>
+        <label>
+          Principal Function
+
+        </label>
+        <textarea #descripcion="ngModel" name="principalFunction" [(ngModel)]="functionManual.principalFunction" class="form-control" required></textarea>
+        <label>
+          Role
+
+        </label>
+        <input type="text" #nombre="ngModel" name="roleFunction" [(ngModel)]="functionManual.roleFunction" class="form-control" required />
+
+        <br/>
+        <button type="button" class="btn btn-success" (click)="onSubmit(functionManual.functionManualId)"> Update </button>
+
+      </form>
+    </div>
+  </div>
+</div>
