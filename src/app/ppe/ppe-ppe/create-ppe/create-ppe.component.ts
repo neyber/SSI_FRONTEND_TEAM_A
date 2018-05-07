@@ -35,7 +35,7 @@ export class CreatePpeComponent implements OnInit {
         this.router.navigateByUrl('ppeList', { skipLocationChange: true });
       },
       error => {
-        console.log(error);
+        console.log('error');
       }
     );
   }
