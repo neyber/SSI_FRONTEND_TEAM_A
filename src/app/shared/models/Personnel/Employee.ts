@@ -3,6 +3,7 @@ import {Role} from './Role';
 export class Employee {
   constructor(
     public employeeId: number,
+    public identificationNumber: number,
     public firstName: string,
     public lastName: string,
     public dateOfBirth: string,
@@ -10,8 +11,9 @@ export class Employee {
     public startDateInCompany: string,
     public roleId: number,
     public departmentId: number,
-    public supervisor: number,
-    public healthConditionStartingAtCompany: string
+    public supervisorId: number,
+    public healthConditionStartingAtCompany: string,
+    public photoId: number
 
   ) {}
 }

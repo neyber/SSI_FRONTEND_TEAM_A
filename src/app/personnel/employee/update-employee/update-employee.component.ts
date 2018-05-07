@@ -6,6 +6,7 @@ import {RoleService} from '../../../shared/services/Personnel/role.service';
 import {ActivatedRoute, Router} from '@angular/router';
 import {DepartmentService} from '../../../shared/services/Personnel/department.service';
 import {EmployeeService} from '../../../shared/services/Personnel/employee.service';
+import {EmployeeRequest} from '../../../shared/models/Personnel/EmployeeRequest';
 
 @Component({
   selector: 'app-update-employee',
@@ -21,7 +22,7 @@ export class UpdateEmployeeComponent implements OnInit {
 
 
   constructor(private employeeService: EmployeeService, private roleService: RoleService, private departmentService: DepartmentService, private router: Router, private activeRouter: ActivatedRoute) {
-    this.employee = new Employee(0, '', '', '', '', '', 0, 0, 0, '');
+    this.employee = new Employee(0, 0, '',  '', '', '', '', 0, 0, 0, '', 0);
   }
 
   ngOnInit() {
@@ -32,6 +33,8 @@ export class UpdateEmployeeComponent implements OnInit {
           this.employee = result.data;
           this.employee.roleId = result.data.roleEmployee.roleId;
           this.employee.departmentId = result.data.departmentEmployee.departmentId;
+          this.employee.supervisorId = result.data.supervisor.employeeId;
+          this.employee.photoId = 0;
         },
         error => {
           console.log('error');

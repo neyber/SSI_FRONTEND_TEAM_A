@@ -6,16 +6,22 @@
 
       <form #formPpe="ngForm" (ngSubmit)="onSubmit()" class="col-lg-6" id="form-employees">
         <label>
+          Identification Number:
+
+        </label>
+        <input type="number" #ci="ngModel" name="ci" [(ngModel)]="employee.identificationNumber" class="form-control" required />
+
+        <label>
           First Name:
 
         </label>
-        <input type="text" #nombre="ngModel" name="firstName" [(ngModel)]="employee.firstName" class="form-control" required />
+        <input type="text" #nombre1="ngModel" name="firstName" [(ngModel)]="employee.firstName" class="form-control" required />
 
         <label>
           Last Name:
 
         </label>
-        <input type="text" #nombre="ngModel" name="lastName" [(ngModel)]="employee.lastName" class="form-control" required />
+        <input type="text" #nombre2="ngModel" name="lastName" [(ngModel)]="employee.lastName" class="form-control" required />
 
         <label>
           Gender:
@@ -31,14 +37,14 @@
 
         </label>
 
-        <input type="date" #nombre="ngModel" name="dob" [(ngModel)]="employee.dateOfBirth" class="form-control" required>
+        <input type="date" #dob="ngModel" name="dob" [(ngModel)]="employee.dateOfBirth" min="1900-01-01" class="form-control" required>
 
         <label>
           Starting Date at Company:
 
         </label>
 
-        <input type="date" #nombre="ngModel" name="startDate" [(ngModel)]="employee.startDateInCompany" class="form-control" required>
+        <input type="date" #startDate="ngModel" name="startDate" [(ngModel)]="employee.startDateInCompany" min="1900-01-01" class="form-control" required>
 
         <label>
           Health Conditions Starting At Company:
