@@ -80,7 +80,13 @@ import { ViewAccidentComponent } from './safety-health-administration/accident/v
 
 import { ViewPpeComponent } from './ppe/ppe-ppe/view-ppe/view-ppe.component';
 import { ViewReportAuditComponent } from './report/view-report-audit/view-report-audit.component';
+
 import { UpdatePpeComponent } from './ppe/ppe-ppe/update-ppe/update-ppe.component';
+import { CreateManualComponent } from './functional-manual/create-manual/create-manual.component';
+import { DeleteManualComponent } from './functional-manual/delete-manual/delete-manual.component';
+import { UpdateManualComponent } from './functional-manual/update-manual/update-manual.component';
+import { ViewManualComponent } from './functional-manual/view-manual/view-manual.component';
+import {FunctionManualService} from './shared/services/functionManual/function-manual.service';
 import { ExistingPpeComponent } from './ppe/existing-ppe/existing-ppe.component';
 import { CreateExistingPpeComponent } from './ppe/existing-ppe/create-existing-ppe/create-existing-ppe.component';
 import { UpdateExistingPpeComponent } from './ppe/existing-ppe/update-existing-ppe/update-existing-ppe.component';
@@ -92,6 +98,10 @@ import { ViewExistingPpeAssignedComponent } from './ppe/existing-ppe-assigned/vi
 import { UpdateExistingPpeAssignedComponent } from './ppe/existing-ppe-assigned/update-existing-ppe-assigned/update-existing-ppe-assigned.component';
 import {ExistingPpeAssignedService} from './shared/services/existingPpeAssigned/existing-ppe-assigned.service';
 import {DatePipe} from '@angular/common';
+
+import { ViewReportSicknessComponent } from './report/view-report-sickness/view-report-sickness.component';
+import { ViewReportFunctionmComponent } from './report/view-report-functionm/view-report-functionm.component';
+
 
 
 @NgModule({
@@ -148,8 +158,12 @@ import {DatePipe} from '@angular/common';
     ViewReportComponent,
     ViewPpeComponent,
     ViewReportAuditComponent,
-    UpdatePpeComponent,
 
+    UpdatePpeComponent,
+    CreateManualComponent,
+    DeleteManualComponent,
+    UpdateManualComponent,
+    ViewManualComponent,
     SaClassificationComponent,
     CreateSicknessComponent,
     UpdateSicknessComponent,
@@ -167,7 +181,12 @@ import {DatePipe} from '@angular/common';
     ExistingPpeAssignedComponent,
     CreateExistingPpeAssignedComponent,
     ViewExistingPpeAssignedComponent,
-    UpdateExistingPpeAssignedComponent
+    UpdateExistingPpeAssignedComponent,
+
+    ViewReportSicknessComponent,
+    ViewReportFunctionmComponent
+
+
   ],
   imports: [
     BrowserModule,
@@ -193,6 +212,7 @@ import {DatePipe} from '@angular/common';
     RoleService,
     EmployeeService,
     AuditService,
+    FunctionManualService,
     ExistingPpeService,
     ExistingPpeAssignedService,
     DatePipe
@@ -200,3 +220,4 @@ import {DatePipe} from '@angular/common';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

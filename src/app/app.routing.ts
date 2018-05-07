@@ -38,12 +38,17 @@ import {PPE_ROUTES} from './ppe/ppe-ppe/ppe.routes';
 import {ViewPpeComponent} from './ppe/ppe-ppe/view-ppe/view-ppe.component';
 import {CreatePpeComponent} from './ppe/ppe-ppe/create-ppe/create-ppe.component';
 import {UpdatePpeComponent} from './ppe/ppe-ppe/update-ppe/update-ppe.component';
+import {MANUAL_ROUTES} from './functional-manual/function-manual.routes';
+import {CreateManualComponent} from './functional-manual/create-manual/create-manual.component';
+import {UpdateManualComponent} from './functional-manual/update-manual/update-manual.component';
+
 import {CreateExistingPpeComponent} from './ppe/existing-ppe/create-existing-ppe/create-existing-ppe.component';
 import {ViewExistingPpeComponent} from './ppe/existing-ppe/view-existing-ppe/view-existing-ppe.component';
 import {UpdateExistingPpeComponent} from './ppe/existing-ppe/update-existing-ppe/update-existing-ppe.component';
 import {ViewExistingPpeAssignedComponent} from './ppe/existing-ppe-assigned/view-existing-ppe-assigned/view-existing-ppe-assigned.component';
 import {CreateExistingPpeAssignedComponent} from './ppe/existing-ppe-assigned/create-existing-ppe-assigned/create-existing-ppe-assigned.component';
 import {UpdateExistingPpeAssignedComponent} from './ppe/existing-ppe-assigned/update-existing-ppe-assigned/update-existing-ppe-assigned.component';
+
 
 
 import {ViewPpeClassificationComponent} from './ppe/ppe-classification/view-ppe-classification/view-ppe-classification.component';
@@ -89,6 +94,9 @@ const appRoutes: Routes = [
   { path: 'ppeList', component: ViewPpeComponent},
   { path: 'newPpe', component: CreatePpeComponent},
   { path: 'editPpe', component: UpdatePpeComponent},
+  { path: 'functionManual', component: FunctionalManualComponent, children: MANUAL_ROUTES},
+  { path: 'newManual', component: CreateManualComponent},
+  { path: 'editManual', component: UpdateManualComponent},
   { path: 'existingPpeList', component: ViewExistingPpeComponent},
   { path: 'newExistingPpe', component: CreateExistingPpeComponent},
   { path: 'editExistingPpe', component: UpdateExistingPpeComponent},
