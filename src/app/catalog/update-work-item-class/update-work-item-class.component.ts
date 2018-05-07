@@ -26,6 +26,7 @@ export class UpdateWorkItemClassComponent implements OnInit {
 
     this.getWorkItemById(global.idAux);
    }
+
   getWorkItemById(Id){
 
     this.workItemClassService.getWorkItemClassById(Id).subscribe(

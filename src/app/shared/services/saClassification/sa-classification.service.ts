@@ -22,6 +22,11 @@ export class SaClassificationService {
     return this.http.get(global.url + 'saClassifications' ).map(res => res.json());
 
   }
+  getAllAccidents() {
+
+    return this.http.get(global.url + 'accidents' ).map(res => res.json());
+
+  }
 
   getSaClassificationById(saClassificationId: number) {
     return this.http.get(global.url + 'saClassifications/' + saClassificationId).map(res => res.json());
