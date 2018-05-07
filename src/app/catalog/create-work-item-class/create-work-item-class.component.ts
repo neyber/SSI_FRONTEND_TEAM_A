@@ -24,6 +24,7 @@ export class CreateWorkItemClassComponent implements OnInit {
       this.workItemClassService.addWorkItemClassification(this.workItemsC).subscribe(
         response => {
             console.log('respuesta post' + response);
+          this._router.navigateByUrl('workItemClassificationList', { skipLocationChange: true });
         },
         error => {
           console.log(error);

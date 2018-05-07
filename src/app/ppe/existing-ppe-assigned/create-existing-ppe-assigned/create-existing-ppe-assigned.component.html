@@ -12,17 +12,17 @@
         <textarea #assignedNotes="ngModel" name="assignedNotes" [(ngModel)]="existingPpeAssigned.assignedNotes" class="form-control" required></textarea>
 
         <label>
-          Assigned date (YYYY-MM-DD)
+          Assigned date
 
         </label>
-        <input type="text" #nombre="ngModel" name="assignedDate" [(ngModel)]="existingPpeAssigned.assignedDate" class="form-control" required />
+        <input type="date" #assignedDate="ngModel" name="assignedDate" [(ngModel)]="existingPpeAssigned.assignedDate" min="1900-01-01" class="form-control" required />
 
         <label>
           Employee
 
         </label>
 
-        <select #existingPpeId="ngModel" name="existingPpeId" [(ngModel)]="existingPpeAssigned.employeeId" class="form-control"  required>
+        <select #employeeId="ngModel" name="employeeId" [(ngModel)]="existingPpeAssigned.employeeId" class="form-control"  required>
 
           <option [ngValue]="null">--Select--</option>
           <option *ngFor="let employee of employees" [value]="employee.employeeId" >{{employee.firstName}} {{employee.lastName}}</option>
@@ -41,6 +41,7 @@
 
         <br/>
         <input type="submit" value="Save" class="btn btn-success"/>
+        <input type="button" value="Cancel" routerLink="../existingPpeAssignedList" class="btn btn-cancel"/>
 
       </form>
     </div>

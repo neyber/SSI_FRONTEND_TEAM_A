@@ -1,4 +1,4 @@
-export class FunctionManualRequest{
+export class FunctionManualRequest {
   constructor(
     public name: string,
     public position: string,
