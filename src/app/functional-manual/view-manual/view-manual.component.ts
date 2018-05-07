@@ -24,7 +24,7 @@ export class ViewManualComponent implements OnInit {
     );
   }
   deleteManual(functionManualId) {
-    if (confirm("Are you sure to delete?")) {
+    if (confirm('Are you sure to delete?')) {
       this.ManualService.deleteManual(functionManualId).subscribe(
         res => {
           console.log('Deleted');

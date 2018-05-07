@@ -10,8 +10,7 @@ export class Accidents {
     public statusRecord: string,
     public saClassification: SaClassification[],
     public role: Role[]
-    )
-{}
+    ) {}
 
 }
 
