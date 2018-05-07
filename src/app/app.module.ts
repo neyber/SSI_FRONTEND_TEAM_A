@@ -92,6 +92,12 @@ import { ViewExistingPpeAssignedComponent } from './ppe/existing-ppe-assigned/vi
 import { UpdateExistingPpeAssignedComponent } from './ppe/existing-ppe-assigned/update-existing-ppe-assigned/update-existing-ppe-assigned.component';
 import {ExistingPpeAssignedService} from './shared/services/existingPpeAssigned/existing-ppe-assigned.service';
 import {DatePipe} from '@angular/common';
+import { WorkItemComponent } from './work-item/work-item.component';
+import { WorkItemWiComponent } from './work-item/work-item-wi/work-item-wi.component';
+import { CreateWorkItemComponent } from './work-item/work-item-wi/create-work-item/create-work-item.component';
+import { UpdateWorkItemComponent } from './work-item/work-item-wi/update-work-item/update-work-item.component';
+import { ViewWorkItemComponent } from './work-item/work-item-wi/view-work-item/view-work-item.component';
+import {WorkItemService} from './shared/services/workItem/work-item.service';
 
 
 @NgModule({
@@ -167,7 +173,12 @@ import {DatePipe} from '@angular/common';
     ExistingPpeAssignedComponent,
     CreateExistingPpeAssignedComponent,
     ViewExistingPpeAssignedComponent,
-    UpdateExistingPpeAssignedComponent
+    UpdateExistingPpeAssignedComponent,
+    WorkItemComponent,
+    WorkItemWiComponent,
+    CreateWorkItemComponent,
+    UpdateWorkItemComponent,
+    ViewWorkItemComponent
   ],
   imports: [
     BrowserModule,
@@ -195,7 +206,8 @@ import {DatePipe} from '@angular/common';
     AuditService,
     ExistingPpeService,
     ExistingPpeAssignedService,
-    DatePipe
+    DatePipe,
+    WorkItemService
   ],
   bootstrap: [AppComponent]
 })

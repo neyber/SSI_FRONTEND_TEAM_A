@@ -49,6 +49,9 @@ import {UpdateExistingPpeAssignedComponent} from './ppe/existing-ppe-assigned/up
 import {ViewPpeClassificationComponent} from './ppe/ppe-classification/view-ppe-classification/view-ppe-classification.component';
 import {CreatePpeClassificationComponent} from './ppe/ppe-classification/create-ppe-classification/create-ppe-classification.component';
 import {UpdatePpeClassificationComponent} from './ppe/ppe-classification/update-ppe-classification/update-ppe-classification.component';
+import {ViewWorkItemComponent} from './work-item/work-item-wi/view-work-item/view-work-item.component';
+import {UpdateWorkItemComponent} from './work-item/work-item-wi/update-work-item/update-work-item.component';
+import {CreateWorkItemComponent} from './work-item/work-item-wi/create-work-item/create-work-item.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent},
@@ -93,6 +96,9 @@ const appRoutes: Routes = [
   { path: 'existingPpeAssignedList', component: ViewExistingPpeAssignedComponent},
   { path: 'newExistingPpeAssigned', component: CreateExistingPpeAssignedComponent},
   { path: 'editExistingPpeAssigned', component: UpdateExistingPpeAssignedComponent},
+  { path: 'workItemList', component: ViewWorkItemComponent},
+  { path: 'newWorkItem', component: CreateWorkItemComponent},
+  { path: 'editWorkItem', component: UpdateWorkItemComponent},
   { path: '**', component: HomeComponent }
 ];
 
