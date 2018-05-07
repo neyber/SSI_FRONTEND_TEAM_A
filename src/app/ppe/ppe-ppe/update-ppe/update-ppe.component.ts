@@ -25,6 +25,7 @@ export class UpdatePpeComponent implements OnInit {
       this.ppeService.getPpeById(ppeId).subscribe(
         result => {
           this.ppe = result.data;
+          this.ppe.ppeClassificationId = result.data.ppeClassification.ppeClassificationId;
         },
         error => {
           console.log('error');

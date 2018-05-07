@@ -29,6 +29,8 @@ export class UpdateExistingPpeAssignedComponent implements OnInit {
       this.existingPpeAssignedService.getExistingPpeAssignedById(existingPpeAssignedId).subscribe(
         result => {
           this.existingPpeAssigned = result.data;
+          this.existingPpeAssigned.employeeId = result.data.employee.employeeId;
+          this.existingPpeAssigned.existingPpeId = result.data.existingPpe.existingPpeId;
         },
         error => {
           console.log('error');
