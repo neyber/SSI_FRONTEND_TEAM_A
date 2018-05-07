@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {SaClassificationRequest} from '../../shared/models/saclassification/saClassificationRequest';
-import {SaClassificationService} from '../../shared/services/saClassification/sa-classification.service';
+import {SaClassificationRequest} from '../../../shared/models/saclassification/saClassificationRequest';
+import {SaClassificationService} from '../../../shared/services/saClassification/sa-classification.service';
 
 @Component({
   selector: 'app-update-sa-classification-class',
@@ -13,7 +13,7 @@ export class UpdateSaClassificationClassComponent implements OnInit {
   public saClassification: SaClassificationRequest;
   constructor(private saClassificationService: SaClassificationService) {
     this.saClassificationId = 0;
-    this.saClassification = new SaClassificationRequest('',0,0, '');
+    this.saClassification = new SaClassificationRequest('',  0, 0, '');
   }
 
   ngOnInit() {

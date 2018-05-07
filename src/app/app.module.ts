@@ -50,10 +50,10 @@ import { ViewDepartmentComponent } from './personnel/department/view-department/
 import {SaClassificationService} from './shared/services/saClassification/sa-classification.service';
 import {DepartmentService} from './shared/services/Personnel/department.service';
 import {RoleService} from './shared/services/Personnel/role.service';
-import {UpdateSaClassificationClassComponent} from './safety-health-administration/update-sa-classification-class/update-sa-classification-class.component';
-import {CreateSaClassificationClassComponent} from './safety-health-administration/create-sa-classification-class/create-sa-classification-class.component';
-import {ViewSaClassificationClassComponent} from './safety-health-administration/view-sa-classification-class/view-sa-classification-class.component';
-import {DeleteSaClassificationClassComponent} from './safety-health-administration/delete-sa-classification-class/delete-sa-classification-class.component';
+import {UpdateSaClassificationClassComponent} from './safety-health-administration/sa-classification/update-sa-classification-class/update-sa-classification-class.component';
+import {CreateSaClassificationClassComponent} from './safety-health-administration/sa-classification/create-sa-classification-class/create-sa-classification-class.component';
+import {ViewSaClassificationClassComponent} from './safety-health-administration/sa-classification/view-sa-classification-class/view-sa-classification-class.component';
+import {DeleteSaClassificationClassComponent} from './safety-health-administration/sa-classification/delete-sa-classification-class/delete-sa-classification-class.component';
 import { SafetyHealthAdministrationComponent } from './safety-health-administration/safety-health-administration.component';
 import { AccidentComponent } from './safety-health-administration/accident/accident.component';
 import { UpdateWorkItemClassComponent } from './catalog/update-work-item-class/update-work-item-class.component';
@@ -66,6 +66,15 @@ import { ViewEmployeeComponent } from './personnel/employee/view-employee/view-e
 import {EmployeeService} from './shared/services/Personnel/employee.service';
 import { ViewReportComponent } from './report/view-report/view-report.component';
 import { AuditService } from './shared/services/audit/audit.service';
+import { SaClassificationComponent } from './safety-health-administration/sa-classification/sa-classification.component';
+import { CreateSicknessComponent } from './safety-health-administration/sickness/create-sickness/create-sickness.component';
+import { UpdateSicknessComponent } from './safety-health-administration/sickness/update-sickness/update-sickness.component';
+import { DeleteSicknessComponent } from './safety-health-administration/sickness/delete-sickness/delete-sickness.component';
+import { ViewSicknessComponent } from './safety-health-administration/sickness/view-sickness/view-sickness.component';
+import { CreateAccidentComponent } from './safety-health-administration/accident/create-accident/create-accident.component';
+import { UpdateAccidentComponent } from './safety-health-administration/accident/update-accident/update-accident.component';
+import { DeleteAccidentComponent } from './safety-health-administration/accident/delete-accident/delete-accident.component';
+import { ViewAccidentComponent } from './safety-health-administration/accident/view-accident/view-accident.component';
 
 
 
@@ -77,6 +86,17 @@ import { DeleteManualComponent } from './functional-manual/delete-manual/delete-
 import { UpdateManualComponent } from './functional-manual/update-manual/update-manual.component';
 import { ViewManualComponent } from './functional-manual/view-manual/view-manual.component';
 import {FunctionManualService} from './shared/services/functionManual/function-manual.service';
+import { ExistingPpeComponent } from './ppe/existing-ppe/existing-ppe.component';
+import { CreateExistingPpeComponent } from './ppe/existing-ppe/create-existing-ppe/create-existing-ppe.component';
+import { UpdateExistingPpeComponent } from './ppe/existing-ppe/update-existing-ppe/update-existing-ppe.component';
+import { ViewExistingPpeComponent } from './ppe/existing-ppe/view-existing-ppe/view-existing-ppe.component';
+import {ExistingPpeService} from 'app/shared/services/existingPpe/existing-ppe.service';
+import { ExistingPpeAssignedComponent } from './ppe/existing-ppe-assigned/existing-ppe-assigned.component';
+import { CreateExistingPpeAssignedComponent } from './ppe/existing-ppe-assigned/create-existing-ppe-assigned/create-existing-ppe-assigned.component';
+import { ViewExistingPpeAssignedComponent } from './ppe/existing-ppe-assigned/view-existing-ppe-assigned/view-existing-ppe-assigned.component';
+import { UpdateExistingPpeAssignedComponent } from './ppe/existing-ppe-assigned/update-existing-ppe-assigned/update-existing-ppe-assigned.component';
+import {ExistingPpeAssignedService} from './shared/services/existingPpeAssigned/existing-ppe-assigned.service';
+import {DatePipe} from '@angular/common';
 
 
 @NgModule({
@@ -122,7 +142,9 @@ import {FunctionManualService} from './shared/services/functionManual/function-m
     UpdateSaClassificationClassComponent,
     SafetyHealthAdministrationComponent,
     AccidentComponent,
+
     UpdateWorkItemClassComponent,
+
     EmployeeComponent,
     CreateEmployeeComponent,
     DeleteEmployeeComponent,
@@ -135,7 +157,25 @@ import {FunctionManualService} from './shared/services/functionManual/function-m
     CreateManualComponent,
     DeleteManualComponent,
     UpdateManualComponent,
-    ViewManualComponent
+    ViewManualComponent,
+    SaClassificationComponent,
+    CreateSicknessComponent,
+    UpdateSicknessComponent,
+    DeleteSicknessComponent,
+    ViewSicknessComponent,
+    CreateAccidentComponent,
+    UpdateAccidentComponent,
+    DeleteAccidentComponent,
+    ViewAccidentComponent,
+    UpdatePpeComponent,
+    ExistingPpeComponent,
+    CreateExistingPpeComponent,
+    UpdateExistingPpeComponent,
+    ViewExistingPpeComponent,
+    ExistingPpeAssignedComponent,
+    CreateExistingPpeAssignedComponent,
+    ViewExistingPpeAssignedComponent,
+    UpdateExistingPpeAssignedComponent
   ],
   imports: [
     BrowserModule,
@@ -161,8 +201,12 @@ import {FunctionManualService} from './shared/services/functionManual/function-m
     RoleService,
     EmployeeService,
     AuditService,
-    FunctionManualService
+    FunctionManualService,
+    ExistingPpeService,
+    ExistingPpeAssignedService,
+    DatePipe
   ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

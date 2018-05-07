@@ -32,7 +32,8 @@ import { AUDIT_ROUTES } from './audit/audit.routes';
 import { CreateAuditComponent } from './audit/create-audit/create-audit.component';
 import { UpdateAuditComponent } from './audit/update-audit/update-audit.component';
 import {SafetyHealthAdministrationComponent} from './safety-health-administration/safety-health-administration.component';
-import {ViewSaClassificationClassComponent} from './safety-health-administration/view-sa-classification-class/view-sa-classification-class.component';
+import {ViewSaClassificationClassComponent} from './safety-health-administration/sa-classification/view-sa-classification-class/view-sa-classification-class.component';
+import {CreateSaClassificationClassComponent} from './safety-health-administration/sa-classification/create-sa-classification-class/create-sa-classification-class.component';
 import {PPE_ROUTES} from './ppe/ppe-ppe/ppe.routes';
 import {ViewPpeComponent} from './ppe/ppe-ppe/view-ppe/view-ppe.component';
 import {CreatePpeComponent} from './ppe/ppe-ppe/create-ppe/create-ppe.component';
@@ -41,8 +42,18 @@ import {MANUAL_ROUTES} from './functional-manual/function-manual.routes';
 import {CreateManualComponent} from './functional-manual/create-manual/create-manual.component';
 import {UpdateManualComponent} from './functional-manual/update-manual/update-manual.component';
 
+import {CreateExistingPpeComponent} from './ppe/existing-ppe/create-existing-ppe/create-existing-ppe.component';
+import {ViewExistingPpeComponent} from './ppe/existing-ppe/view-existing-ppe/view-existing-ppe.component';
+import {UpdateExistingPpeComponent} from './ppe/existing-ppe/update-existing-ppe/update-existing-ppe.component';
+import {ViewExistingPpeAssignedComponent} from './ppe/existing-ppe-assigned/view-existing-ppe-assigned/view-existing-ppe-assigned.component';
+import {CreateExistingPpeAssignedComponent} from './ppe/existing-ppe-assigned/create-existing-ppe-assigned/create-existing-ppe-assigned.component';
+import {UpdateExistingPpeAssignedComponent} from './ppe/existing-ppe-assigned/update-existing-ppe-assigned/update-existing-ppe-assigned.component';
 
 
+
+import {ViewPpeClassificationComponent} from './ppe/ppe-classification/view-ppe-classification/view-ppe-classification.component';
+import {CreatePpeClassificationComponent} from './ppe/ppe-classification/create-ppe-classification/create-ppe-classification.component';
+import {UpdatePpeClassificationComponent} from './ppe/ppe-classification/update-ppe-classification/update-ppe-classification.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent},
@@ -51,6 +62,9 @@ const appRoutes: Routes = [
     component: CatalogComponent,
     children: CATALOG_ROUTES
   },
+  { path: 'ppeClassificationList', component: ViewPpeClassificationComponent},
+  { path: 'newPpeClassification', component: CreatePpeClassificationComponent},
+  { path: 'editPpeClassification', component: UpdatePpeClassificationComponent},
   { path: 'report',
     component: ReportComponent,
     children: REPORT_ROUTES
@@ -73,6 +87,7 @@ const appRoutes: Routes = [
   { path: 'editAudit', component: UpdateAuditComponent },
   { path: 'safetyHealthAdministration', component: SafetyHealthAdministrationComponent},
   { path: 'saClassificationList', component: ViewSaClassificationClassComponent},
+  { path: 'newSaClassification', component: CreateSaClassificationClassComponent},
   { path: 'ppe', component: PpeComponent, children: PPE_ROUTES},
   { path: 'ppeList', component: ViewPpeComponent},
   { path: 'newPpe', component: CreatePpeComponent},
@@ -80,6 +95,12 @@ const appRoutes: Routes = [
   { path: 'functionManual', component: FunctionalManualComponent, children: MANUAL_ROUTES},
   { path: 'newManual', component: CreateManualComponent},
   { path: 'editManual', component: UpdateManualComponent},
+  { path: 'existingPpeList', component: ViewExistingPpeComponent},
+  { path: 'newExistingPpe', component: CreateExistingPpeComponent},
+  { path: 'editExistingPpe', component: UpdateExistingPpeComponent},
+  { path: 'existingPpeAssignedList', component: ViewExistingPpeAssignedComponent},
+  { path: 'newExistingPpeAssigned', component: CreateExistingPpeAssignedComponent},
+  { path: 'editExistingPpeAssigned', component: UpdateExistingPpeAssignedComponent},
   { path: '**', component: HomeComponent }
 ];
 

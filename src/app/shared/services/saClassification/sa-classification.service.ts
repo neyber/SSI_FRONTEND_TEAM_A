@@ -1,10 +1,7 @@
-import { Injectable } from '@angular/core';
-import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {Injectable} from '@angular/core';
 import {global} from '../global';
 
 import {Headers, Http, RequestOptions} from '@angular/http';
-import {SaClassification} from '../../models/saclassification/saClassification';
-import {PpeClassificationRequest} from '../../models/ppeClassification/PpeClassificationRequest';
 import {SaClassificationRequest} from '../../models/saclassification/saClassificationRequest';
 
 @Injectable()

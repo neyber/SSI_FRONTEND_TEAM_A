@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {SaClassificationRequest} from '../../shared/models/saclassification/saClassificationRequest';
-import {SaClassificationService} from '../../shared/services/saClassification/sa-classification.service';
+import {SaClassificationRequest} from '../../../shared/models/saclassification/saClassificationRequest';
+import {SaClassificationService} from '../../../shared/services/saClassification/sa-classification.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-create-sa-classification-class',
@@ -10,7 +11,7 @@ import {SaClassificationService} from '../../shared/services/saClassification/sa
 export class CreateSaClassificationClassComponent implements OnInit {
 
   public saClassification: SaClassificationRequest;
-  constructor(private saClassificationService: SaClassificationService) {
+  constructor(private saClassificationService: SaClassificationService, private router: Router) {
     this.saClassification = new SaClassificationRequest('', 0, 0, '');
   }
 
@@ -20,7 +21,7 @@ export class CreateSaClassificationClassComponent implements OnInit {
   onSubmit() {
     this.saClassificationService.addSaClassification(this.saClassification).subscribe(
       response => {
-        console.log('response POST' + response);
+        this.router.navigateByUrl('saClassificationList', { skipLocationChange: true});
       },
       error => {
         console.log(error);

@@ -1,0 +1,59 @@
+<div class="container">
+  <br>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+
+
+      <div class="col-md-12 text-left">
+        <div class="btn-group" role="group" aria-label="Basic example">
+        </div>
+        <button type="button" class="btn btn-default" [routerLink]="['../newExistingPpeAssigned']">New assigned PPE</button>
+      </div>
+      <br/>
+      <br/>
+
+      <table id="ppeTable" class="table table-bordered table-striped table-case">
+        <thead>
+        <th>Employee</th>
+        <th>PPE</th>
+        <th>Assigned notes</th>
+        <th>Assigned date</th>
+        <th>Return date</th>
+        </thead>
+        <tbody>
+        <tr  *ngFor = "let existingPpeAssigned of existingPpeAssigneds">
+          <td>{{existingPpeAssigned.employee.firstName}} {{existingPpeAssigned.employee.lastName}}</td>
+          <td>{{existingPpeAssigned.existingPpe.ppe.name}}</td>
+          <td>{{existingPpeAssigned.assignedNotes}}</td>
+          <td>{{existingPpeAssigned.assignedDate | date : 'shortDate'}}</td>
+          <td>{{existingPpeAssigned.returnDate | date : 'shortDate'}}</td>
+          <td>
+            <p data-placement="top" data-toggle="tooltip" title="Edit">
+              <button type="button" [routerLink]="['../editExistingPpeAssigned']" [queryParams]="{existingPpeAssignedId: existingPpeAssigned.existingPpeAssignedId}" [disabled]="existingPpeAssigned.returnDate != null" class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit">
+                <span class="glyphicon glyphicon-pencil"></span>
+              </button>
+            </p>
+          </td>
+          <td>
+            <p data-placement="top" data-toggle="tooltip" title="Return">
+              <button type="button" (click)="returnExistingPpe(existingPpeAssigned.existingPpeAssignedId)" [disabled]="existingPpeAssigned.returnDate != null" class="btn btn-danger btn-xs" data-title="Return" data-toggle="modal" data-target="#return">
+                <span class="glyphicon glyphicon-backward"></span>
+              </button>
+            </p>
+          </td>
+        </tr>
+
+        </tbody>
+      </table>
+
+      <ul class="pagination pull-right">
+        <li class="disabled"><a href="#"><span class="glyphicon glyphicon-chevron-left"></span></a></li>
+        <li class="active"><a href="#">1</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+

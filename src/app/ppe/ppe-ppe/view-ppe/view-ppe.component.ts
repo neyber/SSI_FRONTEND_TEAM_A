@@ -18,7 +18,7 @@ export class ViewPpeComponent implements OnInit {
   }
 
   deletePpe(ppeId) {
-    if(confirm("Are you sure to delete?")) {
+    if (confirm('Are you sure to delete?')) {
       this.ppeService.deletePpe(ppeId).subscribe(res => {
         console.log('Deleted');
         this.loadData();
@@ -26,7 +26,7 @@ export class ViewPpeComponent implements OnInit {
     }
   }
 
-  loadData(){
+  loadData() {
     this.ppeService.getPpe().subscribe(
       result => {
         this.ppes = result.data;
