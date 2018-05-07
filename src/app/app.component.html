@@ -40,11 +40,13 @@
                  <li><a [routerLink]="['/home']"><span class="flaticon icomoon icon-buildings"></span> Home</a></li>
 
                  <li class="dropdown">
-                   <a [routerLink]="['/catalog']" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" role="button" aria-haspopup="true">
+                   <a [routerLink]="['/home']" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" role="button" aria-haspopup="true">
                      <span class="flaticon icomoon icon-list-with-one-cross"></span> Work Items</a>
                        <ul class="dropdown-menu">
-                         <li><a [routerLink]="['/catalog']"><span class="flaticon icomoon  icon-checked-files"></span> New </a></li>
-                         <li><a [routerLink]="['/catalog']"><span class="flaticon icomoon  icon-checked-files"></span> Edit </a></li>
+                         <li><a [routerLink]="['/workItemClassificationList']"><span class="flaticon icomoon  icon-checked-files"></span> Work Item Classification </a></li>
+                         <li><a [routerLink]="['/workItemList']"><span class="flaticon icomoon  icon-checked-files"></span> Work Item </a></li>
+                         <li><a [routerLink]="['/catalog']"><span class="flaticon icomoon  icon-checked-files"></span> Inventory </a></li>
+                         <li><a [routerLink]="['/catalog']"><span class="flaticon icomoon  icon-checked-files"></span> Assign Work Item</a></li>
 
                       </ul>
                  </li>

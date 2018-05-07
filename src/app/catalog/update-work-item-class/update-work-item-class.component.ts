@@ -25,23 +25,24 @@ export class UpdateWorkItemClassComponent implements OnInit {
 
     this.getWorkItemById(global.idAux);
    }
-  getWorkItemById(Id){
+  getWorkItemById(Id) {
 
     this.workItemClassService.getWorkItemClassById(Id).subscribe(
-      result =>{
+      result => {
         this.workItemsC = result.data;
 
       },
-      error =>{
-        console.log("error");
+      error => {
+        console.log('error');
       }
-    )
+    );
   }
 
   onSubmit() {
     this.workItemClassService.editWorkItem(global.idAux, this.workItemsC).subscribe(
       response => {
         console.log('respuesta UPDATE' + response);
+        this._router.navigateByUrl('workItemClassificationList', { skipLocationChange: true });
       },
       error => {
         console.log(error);
