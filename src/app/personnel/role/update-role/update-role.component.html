@@ -1,3 +1,29 @@
-<p>
-  update-role works!
-</p>
+<div class="container">
+  <br>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+
+
+      <form #formUpdateRole="ngForm" class="col-lg-6" id="formUpdateRole" >
+        <label>
+          Name
+
+        </label>
+        <input type="text" #nombre="ngModel" name="name" [(ngModel)]="role.name" class="form-control" required />
+
+        <label>
+          Description
+
+        </label>
+        <textarea #descripcion="ngModel" name="description" [(ngModel)]="role.description" class="form-control" required></textarea>
+
+        <br/>
+
+        <button type="button" class="btn btn-success" (click)="onSubmit(role.roleId)">Update</button>
+        <button type="button" class="btncancel" routerLink="../roleList">Cancel</button>
+
+
+      </form>
+    </div>
+  </div>
+</div>

@@ -4,7 +4,7 @@
     <div class="col-md-6 col-md-offset-3">
 
 
-      <form #formPpe="ngForm" (ngSubmit)="onSubmit()" class="col-lg-6" id="form-employees">
+      <form #formCreateEmployee="ngForm" (ngSubmit)="onSubmit()" class="col-lg-6" id="form-employees">
         <label>
           Identification Number:
 
@@ -57,7 +57,7 @@
 
       </label>
 
-        <select #roleId="ngModel" name="roleId" [(ngModel)]="employee.roleId" class="form-control"  required>
+        <select #roleId="ngModel" name="roleId" [(ngModel)]="employee.roleId" class="form-control" required>
 
           <option *ngFor="let role of roles" [value]="role.roleId" >{{role.name}}</option>
         </select>
@@ -74,6 +74,8 @@
 
         <br/>
         <input type="submit" value="Save" class="btn btn-success"/>
+        <button type="button" class="btncancel" routerLink="../employeeList">Cancel</button>
+
 
       </form>
     </div>

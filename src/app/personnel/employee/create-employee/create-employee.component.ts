@@ -20,7 +20,7 @@ export class CreateEmployeeComponent implements OnInit {
    supervisors: Employee[];
 
   constructor(private employeeService: EmployeeService, private roleService: RoleService, private departmentService: DepartmentService, private router: Router) {
-    this.employee = new EmployeeRequest(0, '', '', '', '', '', 0, 0, 0, '', 0);
+    this.employee = new EmployeeRequest(0, '', '', '', '', '', 0, 0, '');
   }
 
   ngOnInit() {
