@@ -1,0 +1,24 @@
+<div class="container">
+<div class="jumbotron">
+<div class="page-header">
+  <h2>Report: <small>Equipment / Tools</small></h2>
+</div>
+  <hr/>
+  <div class="row">
+    <div class="col-sm-6 col-md-6"  *ngFor = "let ppe of ppes">
+      <div class="thumbnail">
+        <img src="assets/images/casco.PNG" alt="...">
+        <div class="caption">
+          <h3>Name: {{ppe.name}}</h3>
+
+          <p>{{ppe.description}}</p>
+          <p>{{ppe.ppeClassification.name}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+

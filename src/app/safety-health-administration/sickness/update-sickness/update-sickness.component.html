@@ -1,0 +1,33 @@
+<div class="container">
+  <br>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+
+
+      <form #formSickness="ngForm" class="col-lg-6" id="form-sickness">
+
+        <label>
+          Decription:
+
+        </label>
+        <textarea #description="ngModel" name="description" [(ngModel)]="sickness.description" class="form-control" required></textarea>
+
+        <label>
+          Sickness date (YYYY-MM-DD)
+
+        </label>
+        <input type="text"  #dateSickness="ngModel" name="dateSickness" [(ngModel)]="sickness.dateSickness" class="form-control" required />
+
+        <label>
+          Where Occurred
+
+        </label>
+        <input type="text" #whereOccurr="ngModel" name="whereOccurr" [(ngModel)]="sickness.whereOccurr" class="form-control" required />
+
+        <br/>
+        <input type="submit" value="Update" (click)="onSubmit(sickness.id)" class="btn btn-success"/>
+
+      </form>
+    </div>
+  </div>
+</div>

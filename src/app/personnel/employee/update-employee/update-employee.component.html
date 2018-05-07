@@ -1,0 +1,88 @@
+<div class="container">
+  <br>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+
+      <form #formPpe="ngForm" class="col-lg-6" id="form-employees">
+        <label>
+          Identification Number:
+
+        </label>
+        <input type="number" #ci="ngModel" name="ci" [(ngModel)]="employee.identificationNumber" class="form-control" required />
+
+        <label>
+          First Name:
+
+        </label>
+        <input type="text" #nombre="ngModel" name="firstName" [(ngModel)]="employee.firstName" class="form-control" required />
+
+        <label>
+          Last Name:
+
+        </label>
+        <input type="text" #nombre="ngModel" name="lastName" [(ngModel)]="employee.lastName" class="form-control" required />
+
+        <label>
+          Gender:
+
+        </label>
+        <select type="text" #gender="ngModel" name="gender" [(ngModel)]="employee.gender" class="form-control" required>
+          <option value="F">Femenino </option>
+          <option value="M">Masculino </option>
+        </select>
+
+        <label>
+          Date Of Birth:
+
+        </label>
+
+        <input type="date" class="form-control" id="BirthDate" name="BirthDate"
+               [ngModel]="employee.dateOfBirth | date:'yyyy-MM-dd'" (ngModelChange)="employee.dateOfBirth = $event"
+               [value]="employee.dateOfBirth | date:'yyyy-MM-dd'" #BirthDate="ngModel" min="1900-01-01" required>
+
+        <label>
+          Starting Date at Company:
+
+        </label>
+
+        <input type="date" class="form-control" id="startDate" name="startDate"
+               [ngModel]="employee.startDateInCompany | date:'yyyy-MM-dd'" (ngModelChange)="employee.startDateInCompany = $event"
+               [value]="employee.startDateInCompany | date:'yyyy-MM-dd'" #startDate="ngModel" min="1900-01-01" required>
+
+
+        <label>
+          Health Conditions Starting At Company:
+
+        </label>
+        <textarea #descripcion="ngModel" name="healthDesc" [(ngModel)]="employee.healthConditionStartingAtCompany" class="form-control"></textarea>
+
+        <label>
+          Role:
+
+        </label>
+
+        <select #roleId="ngModel" name="roleId" [(ngModel)]="employee.roleId" class="form-control"  required>
+
+          <option *ngFor="let role of roles" [value]="role.roleId" >{{role.name}}</option>
+        </select>
+
+        <label>
+        Department:
+
+      </label>
+
+        <select #departmentId="ngModel" name="departmentId" [(ngModel)]="employee.departmentId" class="form-control" required>
+
+          <option *ngFor="let department of departments" [value]="department.departmentId" >{{department.name}}</option>
+        </select>
+
+        <br/>
+
+
+        <input type="submit" (click)="onSubmit(employee.employeeId)"  value="Update" class="btn btn-success"/>
+        <input type="button" value="Cancel" class="btn btncancel" routerLink="../employeeList"/>
+
+      </form>
+    </div>
+  </div>
+</div>

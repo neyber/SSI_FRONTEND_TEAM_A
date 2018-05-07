@@ -1,0 +1,29 @@
+<div class="container">
+  <br>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+
+
+      <form #formPpeClassification="ngForm" class="col-lg-6" id="form-ppeClassification">
+        <label>
+          Name
+
+        </label>
+        <input type="text" #nombre="ngModel" name="name" [(ngModel)]="ppeClassification.name" class="form-control" required />
+
+        <label>
+          Description
+
+        </label>
+        <textarea #descripcion="ngModel" name="description" [(ngModel)]="ppeClassification.description" class="form-control" required></textarea>
+
+        <br/>
+
+        <br/>
+        <button type="button" class="btn btn-success" (click)="onSubmit(ppeClassification.ppeClassificationId)"> Update </button>
+        <input type="button" value="Cancel" routerLink="../ppeClassificationList" class="btn btn-cancel"/>
+
+      </form>
+    </div>
+  </div>
+</div>

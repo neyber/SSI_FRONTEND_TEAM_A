@@ -1,0 +1,23 @@
+<p>
+  delete-sa-classification-class works!
+</p>
+<div class="container">
+  <br>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+
+
+      <form #formPpeClassification="ngForm" (ngSubmit)="onSubmit()" class="col-lg-6" id="form-ppeClassification">
+        <label>
+          Sa Classification ID
+        </label>
+        <input type="text" #nombre="ngModel" name="id" [(ngModel)]="saClassificationId" class="form-control" required />
+
+        <br/>
+        <input type="submit" value="Delete" class="btn btn-success"/>
+
+      </form>
+    </div>
+  </div>
+</div>
+

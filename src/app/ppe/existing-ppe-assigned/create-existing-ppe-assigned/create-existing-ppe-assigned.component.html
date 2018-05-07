@@ -1,0 +1,49 @@
+<div class="container">
+  <br>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+
+
+      <form #formExistingPpe="ngForm" (ngSubmit)="onSubmit()" class="col-lg-6" id="form-existing-ppe-assigned">
+        <label>
+          Notes
+
+        </label>
+        <textarea #assignedNotes="ngModel" name="assignedNotes" [(ngModel)]="existingPpeAssigned.assignedNotes" class="form-control" required></textarea>
+
+        <label>
+          Assigned date
+
+        </label>
+        <input type="date" #assignedDate="ngModel" name="assignedDate" [(ngModel)]="existingPpeAssigned.assignedDate" min="1900-01-01" class="form-control" required />
+
+        <label>
+          Employee
+
+        </label>
+
+        <select #employeeId="ngModel" name="employeeId" [(ngModel)]="existingPpeAssigned.employeeId" class="form-control"  required>
+
+          <option [ngValue]="null">--Select--</option>
+          <option *ngFor="let employee of employees" [value]="employee.employeeId" >{{employee.firstName}} {{employee.lastName}}</option>
+        </select>
+
+        <label>
+          Personal protection equipment
+
+        </label>
+
+        <select #existingPpeId="ngModel" name="existingPpeId" [(ngModel)]="existingPpeAssigned.existingPpeId" class="form-control"  required>
+
+          <option [ngValue]="null">--Select--</option>
+          <option *ngFor="let existingPpe of existingPpes" [value]="existingPpe.existingPpeId" >{{existingPpe.ppe.name}}</option>
+        </select>
+
+        <br/>
+        <input type="submit" value="Save" class="btn btn-success"/>
+        <input type="button" value="Cancel" routerLink="../existingPpeAssignedList" class="btn btn-cancel"/>
+
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+
+<div class="container">
+  <br>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3" *ngIf="workItemsC">
+
+      <form #formProducto="ngForm" (ngSubmit)="onSubmit()" class="col-lg-6" id="form-workItem">
+
+        <label>
+          Name
+
+        </label>
+        <input type="text" #name="ngModel" name="name" [(ngModel)]="workItemsC.name" class="form-control" required />
+
+        <label>
+          Descripción
+
+        </label>
+        <textarea #description="ngModel" name="description" [(ngModel)]="workItemsC.description" class="form-control" required></textarea>
+
+        <br/>
+        <input type="submit" value="Update" class="btn btn-success"/>
+        <input type="button" value="Cancel" routerLink="../workItemClassificationList" class="btn btn-cancel"/>
+
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+

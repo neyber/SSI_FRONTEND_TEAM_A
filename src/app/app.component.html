@@ -19,11 +19,13 @@
     <div class="wrapper">
       <div class="main">
         <header class="navbar-fixed-top" *ngIf="showMenu">
-          <nav class="navbar navbar-primary">
+
+          <nav class="navbar navbar-menu">
             <div class="container-fluid">
               <div class="navbar-header">
                 <!-- Start Header Links Button in Responsive -->
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-main" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-main" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
                 <!-- End Header Links Button in Responsive -->
                 <!-- Start Brand Logo -->
                 <a [routerLink]="['/home']" class="navbar-brand" ui-sref="Home"><img src="assets/images/safetylogo.png" alt="Logo"></a>
@@ -33,15 +35,67 @@
 
               <!-- Collect the nav links, forms, and other content for toggling -->
 
-             <div class="collapse navbar-collapse" id="nav-main">
+             <div class="navbar-collapse collapse" id="nav-main">
                <ul class="nav navbar-nav">
-                 <li>
-                   <a [routerLink]="['/home']"><span class="flaticon icomoon icon-buildings"></span> Home</a></li>
-                 <li> <a [routerLink]="['/catalog']" style=""><span class="flaticon icomoon icon-list-with-one-cross"></span> Catalog</a></li>
-                 <li><a [routerLink]="['/report']" style=""><span class="flaticon icomoon  icon-checked-files"></span> Reports</a></li>
+                 <li><a [routerLink]="['/home']"><span class="flaticon icomoon icon-buildings"></span> Home</a></li>
+
+                 <li class="dropdown">
+                   <a [routerLink]="['/home']" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" role="button" aria-haspopup="true">
+                     <span class="flaticon icomoon icon-list-with-one-cross"></span> Work Items</a>
+                       <ul class="dropdown-menu">
+                         <li><a [routerLink]="['/workItemClassificationList']"><span class="flaticon icomoon  icon-checked-files"></span> Work Item Classification </a></li>
+                         <li><a [routerLink]="['/workItemList']"><span class="flaticon icomoon  icon-checked-files"></span> Work Item </a></li>
+                         <li><a [routerLink]="['/catalog']"><span class="flaticon icomoon  icon-checked-files"></span> Inventory </a></li>
+                         <li><a [routerLink]="['/catalog']"><span class="flaticon icomoon  icon-checked-files"></span> Assign Work Item</a></li>
+
+                      </ul>
+                 </li>
+
+                 <li><a [routerLink]="['/report']" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" role="button" aria-haspopup="true">
+                   <span class="flaticon icomoon  icon-checked-files"></span> Reports</a>
+                   <ul class="dropdown-menu">
+                     <li><a routerLink="/report/tool" [routerLinkActive]="['/tool']"><span class="flaticon icomoon  icon-checked-files"></span> Equipment / Tools </a></li>
+                     <li><a routerLink="/report/audit" [routerLinkActive]="['/audit']"><span class="flaticon icomoon  icon-checked-files"></span> Audit  </a></li>
+                     <li><a routerLink="/report/sickness" [routerLinkActive]="['/sickness']"><span class="flaticon icomoon  icon-checked-files"></span> Accidents / Diseases </a></li>
+                     <li><a routerLink="/report/function" [routerLinkActive]="['/function']"><span class="flaticon icomoon  icon-checked-files"></span> Function Manual </a></li>
+
+                   </ul>
+
+                 </li>
                  <li><a [routerLink]="['/function']" style=""><span class="flaticon icomoon  icon-checked-files"></span> Function Manual</a></li>
-                 <li><a [routerLink]="['/personal']" style=""><span class="flaticon icomoon  icon-checked-files"></span> Personal</a></li>
-                 <li><a [routerLink]="['/personalE']" style=""><span class="flaticon icomoon  icon-checked-files"></span> Personal protection</a></li>
+
+                 <li class="dropdown">
+                   <a [routerLink]="['/personnel']" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" role="button" aria-haspopup="true">
+                     <span class="flaticon icomoon  icon-checked-files"></span> Personnel</a>
+                    <ul class="dropdown-menu">
+                      <li><a [routerLink]="['/departmentList']"><span class="flaticon icomoon  icon-checked-files"></span> Department </a></li>
+                      <li><a [routerLink]="['/roleList']"><span class="flaticon icomoon  icon-checked-files"></span> Roles </a></li>
+                      <li><a [routerLink]="['/employeeList']"><span class="flaticon icomoon  icon-checked-files"></span> Employee </a></li>
+                    </ul>
+                 </li>
+
+                 <li class="dropdown">
+                   <a [routerLink]="['/safetyHealthAdministration']" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" role="button" aria-haspopup="true">
+                     <span class="flaticon icomoon  icon-checked-files"></span> Safety and Health Administration</a>
+                   <ul class="dropdown-menu">
+                     <li><a [routerLink]="['/saClassificationList']"><span class="flaticon icomoon  icon-checked-files"></span> Sickness/Accident Classification </a></li>
+                     <li><a [routerLink]="['/sickness']"><span class="flaticon icomoon  icon-checked-files"></span> Sickness </a></li>
+                     <li><a [routerLink]="['/accident']"><span class="flaticon icomoon  icon-checked-files"></span> Accident </a></li>
+                   </ul>
+                 </li>
+
+                 <li class="dropdown">
+                   <a [routerLink]="['/ppe']" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" role="button" aria-haspopup="true">
+                    <span class="flaticon icomoon icon-checked-files"></span> PPE </a>
+                     <ul class="dropdown-menu">
+                       <li><a [routerLink]="['/ppeClassificationList']"><span class="flaticon icomoon  icon-checked-files"></span> PPE Classification </a></li>
+                       <li><a [routerLink]="['/ppeList']"><span class="flaticon icomoon  icon-checked-files"></span> PPE </a></li>
+                       <li><a [routerLink]="['/existingPpeList']"><span class="flaticon icomoon  icon-checked-files"></span> Inventory </a></li>
+                       <li><a [routerLink]="['/existingPpeAssignedList']"><span class="flaticon icomoon  icon-checked-files"></span> Assign EPP </a></li>
+                     </ul>
+                 </li>
+
+                 <li><a [routerLink]="['/audit']" style=""> <span class="flaticon icomoon icon-checked-files"></span>Audit</a></li>
 
                </ul>
 
@@ -70,7 +124,7 @@
         </header>
         <!--<toaster-container toaster-options="{'time-out': 3000,'position-class': 'toast-top-center','close-button': true}"></toaster-container>-->
         <!-- Start Pages Views  -->
-        <router-outlet></router-outlet>
+        <router-outlet ></router-outlet>
         <!-- End Pages Views  -->
       </div>
     </div>
@@ -83,6 +137,6 @@
 </div>
 <footer>
     <div class="container-fluid">
-        <div class="text-right">© 2018  SSI-A</div>
+        <div class="text-center">© 2018  SSI-A</div>
     </div>
 </footer>

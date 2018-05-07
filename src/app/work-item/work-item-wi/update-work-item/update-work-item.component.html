@@ -1,0 +1,37 @@
+<div class="container">
+  <br>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+
+
+      <form #formPpeClassification="ngForm" class="col-lg-6" id="form-ppeClassification">
+        <label>
+          Name
+
+        </label>
+        <input type="text" #nombre="ngModel" name="name" [(ngModel)]="workItem.name" class="form-control" required />
+
+        <label>
+          Description
+
+        </label>
+        <textarea #descripcion="ngModel" name="description" [(ngModel)]="workItem.description" class="form-control" required></textarea>
+
+        <label>
+          Work item classification
+
+        </label>
+
+        <select #workItemClassificationId="ngModel" name="workItemClassificationId" [(ngModel)]="workItem.workItemClassificationId" class="form-control"  required>
+          <option [ngValue]="null">--Select--</option>
+          <option *ngFor="let workItemClassification of workItemClassifications" [value]="workItemClassification.workItemClassificationId" >{{workItemClassification.name}}</option>
+        </select>
+
+        <br/>
+        <input type="submit" (click)="onSubmit(workItem.workItemId)" value="Update" class="btn btn-success"/>
+        <input type="button" value="Cancel" routerLink="../workItemList" class="btn btn-cancel"/>
+
+      </form>
+    </div>
+  </div>
+</div>
