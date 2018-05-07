@@ -1,3 +1,63 @@
-<p>
-  view-sickness works!
-</p>
+<div class="container">
+  <br>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+
+
+      <div class="col-md-12 text-left">
+        <div class="btn-group" role="group" aria-label="Basic example">
+        </div>
+        <button type="button" class="btn btn-default" [routerLink]="['../newSickness']">New Sickness for Employee</button>
+      </div>
+      <br/>
+      <br/>
+
+      <table id="ppeTable" class="table table-bordered table-striped table-case">
+        <thead>
+        <th>Employee</th>
+        <th>Sickness description</th>
+        <th>Date sickness started</th>
+        <th>Where Occurred</th>
+        <th>Category</th>
+        <th>Total days employee was sick</th>
+        <th>Type</th>
+        </thead>
+        <tbody>
+        <tr  *ngFor = "let sicknessEmployee of diseases">
+          <td>{{sicknessEmployee.employee.firstName}} {{sicknessEmployee.employee.lastName}}</td>
+          <td>{{sicknessEmployee.description}}</td>
+          <td>{{sicknessEmployee.dateSickness | date: 'shortDate'}}</td>
+          <td>{{sicknessEmployee.whereOccurr}}</td>
+          <td>{{sicknessEmployee.saClassification.category}}</td>
+          <td>{{sicknessEmployee.saClassification.totalDaysOutOfWork + sicknessEmployee.saClassification.totalDaysRestrictedTransferredWork}}</td>
+          <td>{{sicknessEmployee.saClassification.type}}</td>
+          <td>
+            <p data-placement="top" data-toggle="tooltip" title="Edit">
+              <button type="button" [routerLink]="['../updateSickness']" [queryParams]="{sicknessId: sicknessEmployee.sicknessId, saClassificationId: sicknessEmployee.saClassification.saClassificationId, employeeId: sicknessEmployee.employee.employeeId}" class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit">
+                <span class="glyphicon glyphicon-pencil"></span>
+              </button>
+            </p>
+          </td>
+          <td>
+            <p data-placement="top" data-toggle="tooltip" title="Delete">
+              <button type="button" (click)="deleteSicknessEmployee(sicknessEmployee.id)" class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete">
+                <span class="glyphicon glyphicon-trash"></span>
+              </button>
+            </p>
+          </td>
+        </tr>
+
+        </tbody>
+      </table>
+
+      <ul class="pagination pull-right">
+        <li class="disabled"><a href="#"><span class="glyphicon glyphicon-chevron-left"></span></a></li>
+        <li class="active"><a href="#">1</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+

@@ -24,6 +24,7 @@
 
         <select #ppeClassificationId="ngModel" name="ppeClassificationId" [(ngModel)]="ppe.ppeClassificationId" class="form-control"  required>
 
+          <option [ngValue]="null">--Select--</option>
           <option *ngFor="let ppec of ppeClassifications" [value]="ppec.ppeClassificationId" >{{ppec.name}}</option>
         </select>
 
