@@ -6,6 +6,7 @@ import {Employee} from '../../../shared/models/Personnel/Employee';
 import {Router} from '@angular/router';
 import {Role} from '../../../shared/models/Personnel/Role';
 import {Department} from '../../../shared/models/Personnel/Department';
+import {EmployeeRequest} from '../../../shared/models/Personnel/EmployeeRequest';
 
 @Component({
   selector: 'app-create-employee',
@@ -13,13 +14,13 @@ import {Department} from '../../../shared/models/Personnel/Department';
   styleUrls: ['./create-employee.component.scss']
 })
 export class CreateEmployeeComponent implements OnInit {
-   employee: Employee;
+   employee: EmployeeRequest;
    roles: Role[];
    departments: Department[];
    supervisors: Employee[];
 
   constructor(private employeeService: EmployeeService, private roleService: RoleService, private departmentService: DepartmentService, private router: Router) {
-    this.employee = new Employee(0, '', '', '', '', '', 0, 0, 0, '');
+    this.employee = new EmployeeRequest(0, '', '', '', '', '', 0, 0, 0, '', 0);
   }
 
   ngOnInit() {
