@@ -23,4 +23,23 @@ export class ViewEmployeeComponent implements OnInit {
     );
   }
 
+  deleteEmployee(employeeId) {
+    if (confirm('Are you sure to delete?')) {
+      this.employeeService.deleteEmployee(employeeId).subscribe(res => {
+        this.loadData();
+      });
+    }
+  }
+
+  loadData() {
+    this.employeeService.getEmployees().subscribe(
+      result => {
+        this.employees = result.data;
+      },
+      error => {
+        console.log('error');
+      }
+    );
+  }
+
 }

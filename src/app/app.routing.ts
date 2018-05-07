@@ -55,6 +55,8 @@ import {ViewPpeClassificationComponent} from './ppe/ppe-classification/view-ppe-
 import {CreatePpeClassificationComponent} from './ppe/ppe-classification/create-ppe-classification/create-ppe-classification.component';
 import {UpdatePpeClassificationComponent} from './ppe/ppe-classification/update-ppe-classification/update-ppe-classification.component';
 import {UpdateEmployeeComponent} from './personnel/employee/update-employee/update-employee.component';
+import {UpdateDepartmentComponent} from './personnel/department/update-department/update-department.component';
+import {UpdateRoleComponent} from './personnel/role/update-role/update-role.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent},
@@ -76,9 +78,11 @@ const appRoutes: Routes = [
   { path: 'department', component: DepartmentComponent, children: DEPARTMENT_ROUTES},
   { path: 'departmentList', component: ViewDepartmentComponent},
   { path: 'newDepartment', component: CreateDepartmentComponent},
+  { path: 'editDepartment', component: UpdateDepartmentComponent},
   { path: 'role', component: RoleComponent, children: ROLE_ROUTES},
   { path: 'roleList', component: ViewRoleComponent},
   { path: 'newRole', component: CreateRoleComponent},
+  { path: 'editRole', component: UpdateRoleComponent},
   { path: 'employee', component: EmployeeComponent, children: EMPLOYEE_ROUTES},
   { path: 'employeeList', component: ViewEmployeeComponent},
   { path: 'newEmployee', component: CreateEmployeeComponent},

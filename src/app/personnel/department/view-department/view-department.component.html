@@ -21,8 +21,24 @@
         <tr  *ngFor = "let department of departments">
           <td>{{department.name}}</td>
           <td>{{department.description}}</td>
-          <td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p></td>
-          <td><p data-placement="top" data-toggle="tooltip" title="Delete"><button (click)="deleteDepartment(department.departmentId)" class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete"><span class="glyphicon glyphicon-trash"></span></button></p></td>
+
+          <td>
+          <p data-placement="top" data-toggle="tooltip" title="Edit">
+            <button type="button" [routerLink]="['../editDepartment']" [queryParams]="{departmentId: department.departmentId}" class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit">
+              <span class="glyphicon glyphicon-pencil"></span>
+            </button>
+          </p>
+        </td>
+
+          <td>
+            <p data-placement="top" data-toggle="tooltip" title="Delete">
+              <button type="button" (click)="deleteDepartment(department.departmentId)" class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete">
+                <span class="glyphicon glyphicon-trash"></span>
+              </button>
+            </p>
+          </td>
+
+
         </tr>
         </tbody>
       </table>

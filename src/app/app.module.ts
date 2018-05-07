@@ -32,7 +32,6 @@ import { CreatePpeComponent } from './ppe/ppe-ppe/create-ppe/create-ppe.componen
 import { PpePpeComponent } from './ppe/ppe-ppe/ppe-ppe.component';
 import { RoleComponent } from './personnel/role/role.component';
 import { CreateRoleComponent } from './personnel/role/create-role/create-role.component';
-import { DeleteRoleComponent } from './personnel/role/delete-role/delete-role.component';
 import { UpdateRoleComponent } from './personnel/role/update-role/update-role.component';
 import { ViewRoleComponent } from './personnel/role/view-role/view-role.component';
 import { CreateAuditComponent } from './audit/create-audit/create-audit.component';
@@ -43,7 +42,6 @@ import { ExistingWorkItemComponent } from './catalog/existing-work-item/existing
 import { ViewExistingWorkItemComponent } from './catalog/existing-work-item/view-existing-work-item/view-existing-work-item.component';
 import { DepartmentComponent } from './personnel/department/department.component';
 import { CreateDepartmentComponent } from './personnel/department/create-department/create-department.component';
-import { DeleteDepartmentComponent } from './personnel/department/delete-department/delete-department.component';
 import { UpdateDepartmentComponent } from './personnel/department/update-department/update-department.component';
 import { ViewDepartmentComponent } from './personnel/department/view-department/view-department.component';
 
@@ -60,7 +58,6 @@ import { UpdateWorkItemClassComponent } from './catalog/update-work-item-class/u
 
 import { EmployeeComponent } from './personnel/employee/employee.component';
 import { CreateEmployeeComponent } from './personnel/employee/create-employee/create-employee.component';
-import { DeleteEmployeeComponent } from './personnel/employee/delete-employee/delete-employee.component';
 import { UpdateEmployeeComponent } from './personnel/employee/update-employee/update-employee.component';
 import { ViewEmployeeComponent } from './personnel/employee/view-employee/view-employee.component';
 import {EmployeeService} from './shared/services/Personnel/employee.service';
@@ -127,7 +124,6 @@ import { ViewReportFunctionmComponent } from './report/view-report-functionm/vie
     DeletePpeClassificationComponent,
     RoleComponent,
     CreateRoleComponent,
-    DeleteRoleComponent,
     UpdateRoleComponent,
     ViewRoleComponent,
     CreateAuditComponent,
@@ -138,7 +134,6 @@ import { ViewReportFunctionmComponent } from './report/view-report-functionm/vie
     ViewExistingWorkItemComponent,
     DepartmentComponent,
     CreateDepartmentComponent,
-    DeleteDepartmentComponent,
     UpdateDepartmentComponent,
     ViewDepartmentComponent,
     DeleteSaClassificationClassComponent,
@@ -152,7 +147,6 @@ import { ViewReportFunctionmComponent } from './report/view-report-functionm/vie
 
     EmployeeComponent,
     CreateEmployeeComponent,
-    DeleteEmployeeComponent,
     UpdateEmployeeComponent,
     ViewEmployeeComponent,
     ViewReportComponent,

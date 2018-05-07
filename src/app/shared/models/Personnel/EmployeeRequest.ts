@@ -7,9 +7,7 @@ export class EmployeeRequest {
     public gender: string,
     public startDateInCompany: string,
     public roleId: number,
-    public supervisorId: number,
     public departmentId: number,
     public healthConditionStartingAtCompany: string,
-    public photoId: number
   ) {}
 }

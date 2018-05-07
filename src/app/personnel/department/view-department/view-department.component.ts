@@ -16,7 +16,7 @@ export class ViewDepartmentComponent implements OnInit {
   ngOnInit() {
     this.departmentService.getDepartments().subscribe(
       result => {
-        this.departments = result.data;  
+        this.departments = result.data;
       },
       error => {
         console.log('error');
@@ -25,11 +25,22 @@ export class ViewDepartmentComponent implements OnInit {
   }
 
   deleteDepartment(departmentId) {
-    if(confirm("Are you sure to delete?")) {
+    if(confirm('Are you sure to delete?')) {
       this.departmentService.deleteDepartment(departmentId).subscribe(res => {
-        console.log('Deleted');
+        this.loadData();
       });
     }
+  }
+
+  loadData() {
+    this.departmentService.getDepartments().subscribe(
+      result => {
+        this.departments = result.data;
+      },
+      error => {
+        console.log('error');
+      }
+    );
   }
 
 }

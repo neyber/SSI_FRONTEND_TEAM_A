@@ -3,7 +3,6 @@ import {global} from '../global';
 import {EmployeeRequest} from '../../models/Personnel/EmployeeRequest';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs/Observable';
-import {map} from 'rxjs/operators';
 
 @Injectable()
 export class EmployeeService {

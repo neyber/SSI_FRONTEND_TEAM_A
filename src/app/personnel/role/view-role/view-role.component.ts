@@ -22,4 +22,24 @@ export class ViewRoleComponent implements OnInit {
       }
     );
   }
+
+  deleteRole(roleId) {
+    if(confirm('Are you sure to delete?')) {
+      this.roleService.deleteRole(roleId).subscribe(res => {
+        this.loadData();
+      });
+    }
+  }
+
+  loadData() {
+    this.roleService.getRoles().subscribe(
+      result => {
+        this.roles = result.data;
+      },
+      error => {
+        console.log('error');
+      }
+    );
+  }
+
 }

@@ -3,7 +3,7 @@
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
 
-      <form #formPpe="ngForm" (ngSubmit)="onSubmit()" class="col-lg-6" id="form-employees">
+      <form #formPpe="ngForm" class="col-lg-6" id="form-employees">
         <label>
           Identification Number:
 
@@ -76,20 +76,11 @@
           <option *ngFor="let department of departments" [value]="department.departmentId" >{{department.name}}</option>
         </select>
 
-        <label>
-          Supervisor:
-
-        </label>
-
-        <select #supervisorId="ngModel" name="supervisorId" [(ngModel)]="employee.supervisorId" class="form-control" required>
-
-          <option *ngFor="let supervisor of supervisors" [value]="supervisor.employeeId" >{{supervisor.firstName}} {{supervisor.lastName}}</option>
-        </select>
-
-
         <br/>
-        <input type="submit" value="Update" class="btn btn-success"/>
-        <input type="button" value="Cancel" routerLink="../employeeList"/>
+
+
+        <input type="submit" (click)="onSubmit(employee.employeeId)"  value="Update" class="btn btn-success"/>
+        <input type="button" value="Cancel" class="btncancel" routerLink="../employeeList"/>
 
       </form>
     </div>

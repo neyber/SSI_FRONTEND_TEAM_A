@@ -1,3 +1,29 @@
-<p>
-  update-department works!
-</p>
+<div class="container">
+  <br>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+
+
+      <form #formUpdateDepartment="ngForm" class="col-lg-6" id="formUpdateDepartment" >
+        <label>
+          Name
+
+        </label>
+        <input type="text" #nombre="ngModel" name="name" [(ngModel)]="department.name" class="form-control" required />
+
+        <label>
+          Description
+
+        </label>
+        <textarea #descripcion="ngModel" name="description" [(ngModel)]="department.description" class="form-control" required></textarea>
+
+        <br/>
+
+        <button type="button" class="btn btn-success" (click)="onSubmit(department.departmentId)">Update</button>
+        <button type="button" class="btncancel" routerLink="../departmentList">Cancel</button>
+
+
+      </form>
+    </div>
+  </div>
+</div>

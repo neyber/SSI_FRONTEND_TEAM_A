@@ -11,9 +11,7 @@ export class Employee {
     public startDateInCompany: string,
     public roleId: number,
     public departmentId: number,
-    public supervisorId: number,
     public healthConditionStartingAtCompany: string,
-    public photoId: number
 
   ) {}
 }
