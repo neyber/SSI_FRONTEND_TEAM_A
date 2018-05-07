@@ -7,13 +7,11 @@ export class Employee {
     public lastName: string,
     public dateOfBirth: string,
     public gender: string,
-    public startDateAtCompany: string,
-    public role: Role,
-    public supervisor: number,
+    public startDateInCompany: string,
+    public roleId: number,
     public departmentId: number,
+    public supervisor: number,
     public healthConditionStartingAtCompany: string
 
-  ) {
-    this.role = new Role(0, '', '');
-  }
+  ) {}
 }

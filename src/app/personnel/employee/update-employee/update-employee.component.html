@@ -1,3 +1,76 @@
-<p>
-  update-employee works!
-</p>
+<div class="container">
+  <br>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+
+      <form #formPpe="ngForm" (ngSubmit)="onSubmit()" class="col-lg-6" id="form-employees">
+        <label>
+          First Name:
+
+        </label>
+        <input type="text" #nombre="ngModel" name="firstName" [(ngModel)]="employee.firstName" class="form-control" required />
+
+        <label>
+          Last Name:
+
+        </label>
+        <input type="text" #nombre="ngModel" name="lastName" [(ngModel)]="employee.lastName" class="form-control" required />
+
+        <label>
+          Gender:
+
+        </label>
+        <select type="text" #gender="ngModel" name="gender" [(ngModel)]="employee.gender" class="form-control" required>
+          <option value="F">Femenino </option>
+          <option value="M">Masculino </option>
+        </select>
+
+        <label>
+          Date Of Birth:
+
+        </label>
+
+        <input type="text" #nombre="ngModel" name="dob" [(ngModel)]="employee.dateOfBirth" class="form-control" required>
+
+        <label>
+          Starting Date at Company:
+
+        </label>
+
+        <input type="text" #nombre="ngModel" name="startDate" [(ngModel)]="employee.startDateInCompany" class="form-control" required>
+
+        <label>
+          Health Conditions Starting At Company:
+
+        </label>
+        <textarea #descripcion="ngModel" name="healthDesc" [(ngModel)]="employee.healthConditionStartingAtCompany" class="form-control"></textarea>
+
+        <label>
+          Role:
+
+        </label>
+
+        <select #roleId="ngModel" name="roleId" [(ngModel)]="employee.roleId" class="form-control"  required>
+
+          <option *ngFor="let role of roles" [value]="role.roleId" >{{role.name}}</option>
+        </select>
+
+        <label>
+          Department:
+
+        </label>
+
+        <select #departmentId="ngModel" name="departmentId" [(ngModel)]="employee.departmentId" class="form-control" required>
+
+          <option *ngFor="let department of departments" [value]="department.departmentId" >{{department.name}}</option>
+        </select>
+
+
+        <br/>
+        <input type="submit" value="Update" class="btn btn-success"/>
+        <input type="button" value="Cancel" routerLink="../employeeList"/>
+
+      </form>
+    </div>
+  </div>
+</div>

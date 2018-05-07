@@ -49,6 +49,7 @@ import {UpdateExistingPpeAssignedComponent} from './ppe/existing-ppe-assigned/up
 import {ViewPpeClassificationComponent} from './ppe/ppe-classification/view-ppe-classification/view-ppe-classification.component';
 import {CreatePpeClassificationComponent} from './ppe/ppe-classification/create-ppe-classification/create-ppe-classification.component';
 import {UpdatePpeClassificationComponent} from './ppe/ppe-classification/update-ppe-classification/update-ppe-classification.component';
+import {UpdateEmployeeComponent} from './personnel/employee/update-employee/update-employee.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent},
@@ -76,6 +77,7 @@ const appRoutes: Routes = [
   { path: 'employee', component: EmployeeComponent, children: EMPLOYEE_ROUTES},
   { path: 'employeeList', component: ViewEmployeeComponent},
   { path: 'newEmployee', component: CreateEmployeeComponent},
+  { path: 'editEmployee', component: UpdateEmployeeComponent},
   { path: 'ppe', component: PpeComponent},
   { path: 'audit', component: AuditComponent, children: AUDIT_ROUTES },
   { path: 'newAudit', component: CreateAuditComponent },

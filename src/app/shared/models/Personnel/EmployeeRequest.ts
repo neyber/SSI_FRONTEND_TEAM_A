@@ -4,7 +4,7 @@ export class EmployeeRequest {
     public lastName: string,
     public dateOfBirth: string,
     public gender: string,
-    public startDateAtCompany: string,
+    public startDateInCompany: string,
     public roleId: number,
     public supervisor: number,
     public departmentId: number,
