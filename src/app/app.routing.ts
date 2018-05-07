@@ -37,6 +37,9 @@ import {PPE_ROUTES} from './ppe/ppe-ppe/ppe.routes';
 import {ViewPpeComponent} from './ppe/ppe-ppe/view-ppe/view-ppe.component';
 import {CreatePpeComponent} from './ppe/ppe-ppe/create-ppe/create-ppe.component';
 import {UpdatePpeComponent} from './ppe/ppe-ppe/update-ppe/update-ppe.component';
+import {MANUAL_ROUTES} from './functional-manual/function-manual.routes';
+import {CreateManualComponent} from './functional-manual/create-manual/create-manual.component';
+import {UpdateManualComponent} from './functional-manual/update-manual/update-manual.component';
 
 
 
@@ -74,6 +77,9 @@ const appRoutes: Routes = [
   { path: 'ppeList', component: ViewPpeComponent},
   { path: 'newPpe', component: CreatePpeComponent},
   { path: 'editPpe', component: UpdatePpeComponent},
+  { path: 'functionManual', component: FunctionalManualComponent, children: MANUAL_ROUTES},
+  { path: 'newManual', component: CreateManualComponent},
+  { path: 'editManual', component: UpdateManualComponent},
   { path: '**', component: HomeComponent }
 ];
 

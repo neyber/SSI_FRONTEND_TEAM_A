@@ -72,6 +72,11 @@ import { AuditService } from './shared/services/audit/audit.service';
 import { ViewPpeComponent } from './ppe/ppe-ppe/view-ppe/view-ppe.component';
 import { ViewReportAuditComponent } from './report/view-report-audit/view-report-audit.component';
 import { UpdatePpeComponent } from './ppe/ppe-ppe/update-ppe/update-ppe.component';
+import { CreateManualComponent } from './functional-manual/create-manual/create-manual.component';
+import { DeleteManualComponent } from './functional-manual/delete-manual/delete-manual.component';
+import { UpdateManualComponent } from './functional-manual/update-manual/update-manual.component';
+import { ViewManualComponent } from './functional-manual/view-manual/view-manual.component';
+import {FunctionManualService} from './shared/services/functionManual/function-manual.service';
 
 
 @NgModule({
@@ -126,7 +131,11 @@ import { UpdatePpeComponent } from './ppe/ppe-ppe/update-ppe/update-ppe.componen
     ViewReportComponent,
     ViewPpeComponent,
     ViewReportAuditComponent,
-    UpdatePpeComponent
+    UpdatePpeComponent,
+    CreateManualComponent,
+    DeleteManualComponent,
+    UpdateManualComponent,
+    ViewManualComponent
   ],
   imports: [
     BrowserModule,
@@ -151,7 +160,8 @@ import { UpdatePpeComponent } from './ppe/ppe-ppe/update-ppe/update-ppe.componen
     DepartmentService,
     RoleService,
     EmployeeService,
-    AuditService
+    AuditService,
+    FunctionManualService
   ],
   bootstrap: [AppComponent]
 })
