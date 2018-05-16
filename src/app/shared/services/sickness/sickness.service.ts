@@ -1,9 +1,8 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {global} from '../global';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs/Observable';
 import {SicknessRequest} from '../../models/sickness/SicknessRequest';
-import {Sickness} from '../../models/sickness/Sickness';
 
 @Injectable()
 export class SicknessService {

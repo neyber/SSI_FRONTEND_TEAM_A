@@ -21,15 +21,9 @@ export class ViewSicknessComponent implements OnInit {
 
   deleteSicknessEmployee(sicknessId) {
     if (confirm('Are you sure to delete this sickness record?')) {
-      this.sicknessService.deleteSickness(sicknessId).subscribe(
-        response => {
-          console.log('item deleted');
-        },
-        error => {
-          console.log('error');
-        }
-      );
-      console.log(this.sickness);
+      this.sicknessService.deleteSickness(sicknessId).subscribe(response => {
+          this.loadData();
+        });
     }
   }
 
@@ -37,6 +31,8 @@ export class ViewSicknessComponent implements OnInit {
     this.sicknessService.getSickness().subscribe(
       result => {
         this.diseases = result.data;
+        console.log('HENRY HERE ');
+        console.log(this.diseases);
       },
       error => {
         console.log('error');

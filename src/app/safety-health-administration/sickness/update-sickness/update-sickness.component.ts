@@ -1,14 +1,13 @@
-import { Component, OnInit } from '@angular/core';
-import {SicknessRequest} from '../../../shared/models/sickness/SicknessRequest';
-import {Sickness} from '../../../shared/models/sickness/Sickness';
-import {Employee} from '../../../shared/models/Personnel/Employee';
+import {Component, OnInit} from '@angular/core';
 import {SicknessService} from '../../../shared/services/sickness/sickness.service';
-import {SaClassification} from '../../../shared/models/saclassification/saClassification';
-import {SaClassificationService} from '../../../shared/services/saClassification/sa-classification.service';
-import {EmployeeService} from '../../../shared/services/Personnel/employee.service';
 import {ActivatedRoute, Router} from '@angular/router';
-import {SaClassificationRequest} from '../../../shared/models/saclassification/saClassificationRequest';
-import {EmployeeRequest} from '../../../shared/models/Personnel/EmployeeRequest';
+import {Employee} from '../../../shared/models/Personnel/Employee';
+import {Sickness} from '../../../shared/models/sickness/Sickness';
+import {SaCategory} from '../../../shared/models/saclassification/SaCategory';
+import {SaType} from '../../../shared/models/saclassification/SaType';
+import {SaCategoryService} from '../../../shared/services/saClassification/sa-category.service';
+import {SaTypeService} from '../../../shared/services/saClassification/sa-type.service';
+import {EmployeeService} from '../../../shared/services/Personnel/employee.service';
 
 @Component({
   selector: 'app-update-sickness',
@@ -17,18 +16,54 @@ import {EmployeeRequest} from '../../../shared/models/Personnel/EmployeeRequest'
 })
 export class UpdateSicknessComponent implements OnInit {
 
-  public sickness: SicknessRequest;
+  public sickness: Sickness;
+  saCategories: SaCategory[];
+  saTypes: SaType[];
+  employees: Employee[];
 
-  constructor(private sicknessService: SicknessService, private router: Router, private activatedRoute: ActivatedRoute) {
-    this.sickness = new SicknessRequest('', '', '',  0, 0);
+  constructor(private sicknessService: SicknessService, private saCategoryService: SaCategoryService, private saTypeService: SaTypeService, private employeeService: EmployeeService, private router: Router, private activatedRoute: ActivatedRoute) {
+    this.sickness = new Sickness(0, '', '',  '', 0, 0, 0, 0, 0);
+
   }
 
   ngOnInit() {
     this.activatedRoute.queryParams.subscribe(params => {
-      let sicknessId = params['sicknessId'];
+      const sicknessId = params['sicknessId'];
       this.sicknessService.getSicknessById(sicknessId).subscribe(
         result => {
           this.sickness = result.data;
+          this.sickness.saCategoryId = result.data.saCategoryResponse.saCategoryId;
+          this.sickness.saTypeId = result.data.saTypeResponse.saTypeId;
+          this.sickness.employeeId = result.data.employee.employeeId;
+          console.log('HENRY HERE');
+          console.log(this.sickness);
+        },
+        error => {
+          console.log('error');
+        }
+      );
+
+      this.saCategoryService.getSaCategories().subscribe(
+        result => {
+          this.saCategories = result.data;
+        },
+        error => {
+          console.log('error');
+        }
+      );
+
+      this.saTypeService.getSaTypes().subscribe(
+        result => {
+          this.saTypes = result.data;
+        },
+        error => {
+          console.log('error');
+        }
+      );
+
+      this.employeeService.getEmployees().subscribe(
+        result => {
+          this.employees = result.data;
         },
         error => {
           console.log('error');
@@ -37,9 +72,10 @@ export class UpdateSicknessComponent implements OnInit {
     });
   }
   onSubmit(sicknessId) {
-
+    console.log('HENRY UPDATE');
+    console.log(sicknessId);
     this.sicknessService.updateSickness(sicknessId, this.sickness).subscribe(
-      result => {
+      response => {
         this.router.navigateByUrl('sicknessList', { skipLocationChange: true });
       },
       error => {

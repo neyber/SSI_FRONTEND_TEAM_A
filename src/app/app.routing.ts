@@ -63,6 +63,9 @@ import {CreateWorkItemClassComponent} from './catalog/create-work-item-class/cre
 import {UpdateEmployeeComponent} from './personnel/employee/update-employee/update-employee.component';
 import {UpdateDepartmentComponent} from './personnel/department/update-department/update-department.component';
 import {UpdateRoleComponent} from './personnel/role/update-role/update-role.component';
+import {UpdateSicknessComponent} from './safety-health-administration/sickness/update-sickness/update-sickness.component';
+import {ViewSicknessComponent} from './safety-health-administration/sickness/view-sickness/view-sickness.component';
+import {CreateSicknessComponent} from './safety-health-administration/sickness/create-sickness/create-sickness.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent},
@@ -100,6 +103,9 @@ const appRoutes: Routes = [
   { path: 'safetyHealthAdministration', component: SafetyHealthAdministrationComponent},
   { path: 'saClassificationList', component: ViewSaClassificationClassComponent},
   { path: 'newSaClassification', component: CreateSaClassificationClassComponent},
+  { path: 'updateSickness', component: UpdateSicknessComponent},
+  { path: 'sicknessList', component: ViewSicknessComponent},
+  { path: 'newSickness', component: CreateSicknessComponent},
   { path: 'ppe', component: PpeComponent, children: PPE_ROUTES},
   { path: 'ppeList', component: ViewPpeComponent},
   { path: 'newPpe', component: CreatePpeComponent},
