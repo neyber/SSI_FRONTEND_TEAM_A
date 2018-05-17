@@ -107,6 +107,7 @@ import { ViewReportFunctionmComponent } from './report/view-report-functionm/vie
 import {SicknessService} from './shared/services/sickness/sickness.service';
 import {SaCategoryService} from './shared/services/saClassification/sa-category.service';
 import {SaTypeService} from './shared/services/saClassification/sa-type.service';
+import {AccidentService} from './shared/services/accident/accident.service';
 
 
 @NgModule({
@@ -226,7 +227,8 @@ import {SaTypeService} from './shared/services/saClassification/sa-type.service'
     WorkItemService,
     SicknessService,
     SaCategoryService,
-    SaTypeService
+    SaTypeService,
+    AccidentService
   ],
   bootstrap: [AppComponent]
 })

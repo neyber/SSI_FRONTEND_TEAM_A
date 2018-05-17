@@ -66,6 +66,9 @@ import {UpdateRoleComponent} from './personnel/role/update-role/update-role.comp
 import {UpdateSicknessComponent} from './safety-health-administration/sickness/update-sickness/update-sickness.component';
 import {ViewSicknessComponent} from './safety-health-administration/sickness/view-sickness/view-sickness.component';
 import {CreateSicknessComponent} from './safety-health-administration/sickness/create-sickness/create-sickness.component';
+import {CreateAccidentComponent} from './safety-health-administration/accident/create-accident/create-accident.component';
+import {ViewAccidentComponent} from './safety-health-administration/accident/view-accident/view-accident.component';
+import {UpdateAccidentComponent} from './safety-health-administration/accident/update-accident/update-accident.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent},
@@ -106,6 +109,9 @@ const appRoutes: Routes = [
   { path: 'updateSickness', component: UpdateSicknessComponent},
   { path: 'sicknessList', component: ViewSicknessComponent},
   { path: 'newSickness', component: CreateSicknessComponent},
+  { path: 'accidentList', component: ViewAccidentComponent},
+  { path: 'newAccident', component: CreateAccidentComponent},
+  { path: 'updateAccident', component: UpdateAccidentComponent},
   { path: 'ppe', component: PpeComponent, children: PPE_ROUTES},
   { path: 'ppeList', component: ViewPpeComponent},
   { path: 'newPpe', component: CreatePpeComponent},

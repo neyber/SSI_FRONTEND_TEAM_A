@@ -35,8 +35,6 @@ export class UpdateSicknessComponent implements OnInit {
           this.sickness.saCategoryId = result.data.saCategoryResponse.saCategoryId;
           this.sickness.saTypeId = result.data.saTypeResponse.saTypeId;
           this.sickness.employeeId = result.data.employee.employeeId;
-          console.log('HENRY HERE');
-          console.log(this.sickness);
         },
         error => {
           console.log('error');
@@ -72,8 +70,6 @@ export class UpdateSicknessComponent implements OnInit {
     });
   }
   onSubmit(sicknessId) {
-    console.log('HENRY UPDATE');
-    console.log(sicknessId);
     this.sicknessService.updateSickness(sicknessId, this.sickness).subscribe(
       response => {
         this.router.navigateByUrl('sicknessList', { skipLocationChange: true });

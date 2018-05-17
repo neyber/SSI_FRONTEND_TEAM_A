@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Sickness} from '../../../shared/models/sickness/Sickness';
 import {SicknessService} from '../../../shared/services/sickness/sickness.service';
-import {SicknessRequest} from '../../../shared/models/sickness/SicknessRequest';
 
 @Component({
   selector: 'app-view-sickness',
@@ -11,7 +10,6 @@ import {SicknessRequest} from '../../../shared/models/sickness/SicknessRequest';
 export class ViewSicknessComponent implements OnInit {
 
   diseases: Sickness[];
-  sickness: SicknessRequest;
 
   constructor(private sicknessService: SicknessService) { }
 
@@ -31,8 +29,6 @@ export class ViewSicknessComponent implements OnInit {
     this.sicknessService.getSickness().subscribe(
       result => {
         this.diseases = result.data;
-        console.log('HENRY HERE ');
-        console.log(this.diseases);
       },
       error => {
         console.log('error');
