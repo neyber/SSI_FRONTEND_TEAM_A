@@ -1,13 +1,13 @@
-import { Component, OnInit } from '@angular/core';
-import {SaClassification} from '../../../shared/models/saclassification/saClassification';
+import {Component, OnInit} from '@angular/core';
 import {SicknessRequest} from '../../../shared/models/sickness/SicknessRequest';
 import {SicknessService} from '../../../shared/services/sickness/sickness.service';
-import {SaClassificationService} from '../../../shared/services/saClassification/sa-classification.service';
 import {Router} from '@angular/router';
 import {Employee} from '../../../shared/models/Personnel/Employee';
-import {SaClassificationRequest} from '../../../shared/models/saclassification/saClassificationRequest';
-import {EmployeeRequest} from '../../../shared/models/Personnel/EmployeeRequest';
 import {EmployeeService} from '../../../shared/services/Personnel/employee.service';
+import {SaCategory} from '../../../shared/models/saclassification/SaCategory';
+import {SaType} from '../../../shared/models/saclassification/SaType';
+import {SaCategoryService} from '../../../shared/services/saClassification/sa-category.service';
+import {SaTypeService} from '../../../shared/services/saClassification/sa-type.service';
 
 @Component({
   selector: 'app-create-sickness',
@@ -17,20 +17,48 @@ import {EmployeeService} from '../../../shared/services/Personnel/employee.servi
 export class CreateSicknessComponent implements OnInit {
 
   public sickness: SicknessRequest;
-  saClassification: SaClassificationRequest;
+  saCategories: SaCategory[];
+  saTypes: SaType[];
   employees: Employee[];
 
-  constructor(private sicknessService: SicknessService, private employeeService: EmployeeService, private router: Router ) {
-    this.sickness = new SicknessRequest('', null, '',  0, 0);
-    this.saClassification = new SaClassificationRequest('', 0, 0, '');
+  constructor(private sicknessService: SicknessService, private saCategoryService: SaCategoryService, private saTypeService: SaTypeService, private employeeService: EmployeeService, private router: Router ) {
+    this.sickness = new SicknessRequest('', null, '',  0, 0, 0, 0, 0);
   }
 
   ngOnInit() {
+    this.saCategoryService.getSaCategories().subscribe(
+        result => {
+          this.saCategories = result.data;
+        },
+          error => {
+          console.log('error');
+        }
+    );
+
+    this.saTypeService.getSaTypes().subscribe(
+      result => {
+        this.saTypes = result.data;
+      },
+      error => {
+        console.log('error');
+      }
+    )
+
     this.employeeService.getEmployees().subscribe(
       result => {
         this.employees = result.data;
-        console.log('HENRY BC');
-        console.log(this.employees);
+      },
+      error => {
+        console.log('error');
+      }
+    );
+
+  }
+
+  onSubmit() {
+    this.sicknessService.addSickness(this.sickness).subscribe(
+      response => {
+        this.router.navigateByUrl('sicknessList', {skipLocationChange: true});
       },
       error => {
         console.log('error');

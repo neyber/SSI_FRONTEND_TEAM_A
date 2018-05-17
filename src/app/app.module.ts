@@ -106,7 +106,10 @@ import { ViewReportSicknessComponent } from './report/view-report-sickness/view-
 import { ViewReportFunctionmComponent } from './report/view-report-functionm/view-report-functionm.component';
 import { ViewReportEmployeeComponent } from './report/view-report-employee/view-report-employee.component';
 import { ViewReportPpeComponent } from './report/view-report-ppe/view-report-ppe.component';
-
+import {SicknessService} from './shared/services/sickness/sickness.service';
+import {SaCategoryService} from './shared/services/saClassification/sa-category.service';
+import {SaTypeService} from './shared/services/saClassification/sa-type.service';
+import {AccidentService} from './shared/services/accident/accident.service';
 
 
 @NgModule({
@@ -192,7 +195,8 @@ import { ViewReportPpeComponent } from './report/view-report-ppe/view-report-ppe
     UpdateWorkItemComponent,
     ViewWorkItemComponent,
     ViewReportEmployeeComponent,
-    ViewReportPpeComponent
+    ViewReportPpeComponent,
+    CreateSicknessComponent,
 
   ],
   imports: [
@@ -223,7 +227,11 @@ import { ViewReportPpeComponent } from './report/view-report-ppe/view-report-ppe
     ExistingPpeService,
     ExistingPpeAssignedService,
     DatePipe,
-    WorkItemService
+    WorkItemService,
+    SicknessService,
+    SaCategoryService,
+    SaTypeService,
+    AccidentService
   ],
   bootstrap: [AppComponent]
 })

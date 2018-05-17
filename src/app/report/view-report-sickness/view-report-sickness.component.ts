@@ -1,14 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {SaClassificationService} from '../../shared/services/saClassification/sa-classification.service';
-import {SaClassification} from '../../shared/models/saclassification/saClassification';
-import {Accidents} from '../../shared/models/saclassification/accidents';
+import {Accident} from '../../shared/models/accident/Accident';
 
 @Component({
   selector: 'app-view-report-sickness',
   templateUrl: './view-report-sickness.component.html'
 })
 export class ViewReportSicknessComponent implements OnInit {
-  accidents: Accidents[];
+  accidents: Accident[];
   constructor(private saClassificationService: SaClassificationService) { }
 
   ngOnInit() {

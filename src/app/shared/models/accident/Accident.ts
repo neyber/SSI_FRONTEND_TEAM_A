@@ -1,13 +1,16 @@
-export class Sickness {
+
+export class Accident {
   constructor(
-    public sicknessId: number,
+    public accidentId: number,
     public description: string,
-    public dateSickness: string,
+    public dateAccident: string,
     public whereOccurr: string,
     public totalDaysOutOfWork: number,
     public totalDaysRestrictedTransferredWork: number,
     public saCategoryId: number,
     public saTypeId: number,
     public employeeId: number
-  ) {}
+    ) {}
+
 }
+

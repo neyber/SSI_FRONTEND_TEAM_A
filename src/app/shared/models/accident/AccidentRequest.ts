@@ -1,8 +1,8 @@
-export class Sickness {
+
+export class AccidentRequest {
   constructor(
-    public sicknessId: number,
     public description: string,
-    public dateSickness: string,
+    public dateAccident: string,
     public whereOccurr: string,
     public totalDaysOutOfWork: number,
     public totalDaysRestrictedTransferredWork: number,
