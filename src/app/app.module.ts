@@ -104,6 +104,8 @@ import {WorkItemService} from './shared/services/workItem/work-item.service';
 
 import { ViewReportSicknessComponent } from './report/view-report-sickness/view-report-sickness.component';
 import { ViewReportFunctionmComponent } from './report/view-report-functionm/view-report-functionm.component';
+import { ViewReportEmployeeComponent } from './report/view-report-employee/view-report-employee.component';
+import { ViewReportPpeComponent } from './report/view-report-ppe/view-report-ppe.component';
 
 
 
@@ -188,8 +190,9 @@ import { ViewReportFunctionmComponent } from './report/view-report-functionm/vie
     WorkItemWiComponent,
     CreateWorkItemComponent,
     UpdateWorkItemComponent,
-    ViewWorkItemComponent
-
+    ViewWorkItemComponent,
+    ViewReportEmployeeComponent,
+    ViewReportPpeComponent
 
   ],
   imports: [

@@ -4,7 +4,7 @@
     <div class="col-md-6 col-md-offset-3">
 
 
-      <form #formFunctionManual="ngForm" class="col-lg-6" id="form-functionManual">
+      <form #formFunctionManual="ngForm" (ngSubmit)="onSubmit()"  class="col-lg-6" id="form-functionManual">
         <label>
           Name
 
@@ -55,10 +55,17 @@
           Role
 
         </label>
-        <input type="text" #roleId="ngModel" name="roleFunction" [(ngModel)]="functionManual.roleFunction" class="form-control" required />
+
+        <select #roleFunction="ngModel" name="roleFunction" [(ngModel)]="functionManual.roleFunction" class="form-control" required>
+
+          <option *ngFor="let rol of role" [value]="rol.roleId" >{{rol.name}}</option>
+        </select>
+
 
         <br/>
-        <button type="button" class="btn btn-success" (click)="onSubmit()"> Create </button>
+        <input type="submit" value="Save" class="btn btn-success"/>
+        <button type="button" class="btn btncancel" routerLink="../function">Cancel</button>
+
 
       </form>
     </div>

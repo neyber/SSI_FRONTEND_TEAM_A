@@ -1,0 +1,77 @@
+<p>
+  view-report-ppe works!
+</p>
+
+<div class="container">
+  <div class="jumbotron">
+    <div class="page-header">
+      <h2>Report: <small>PPE Inventary list</small></h2>
+    </div>
+    <hr/>
+    <div class="row">
+      <div class="col-sm-10 col-md-10">
+        <div class="thumbnail" style="width: 1000px;">
+          <table class="table table-bordered">
+            <thead>
+            <tr>
+              <th>Detail</th>
+              <th>Purchase date</th>
+              <th>Life time days</th>
+              <th>Current life time days</th>
+              <th>PPE</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr  *ngFor = "let existingPpe of existingPpes">
+              <td>{{existingPpe.detail}}</td>
+              <td>{{existingPpe.purchaseDate | date : 'shortDate'}}</td>
+              <td>{{existingPpe.lifeTimeDays}}</td>
+              <td>{{existingPpe.currentLifeTimeDays}}</td>
+              <td>{{existingPpe.ppe.name}}</td>
+            </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="jumbotron">
+    <div class="page-header">
+      <h2>Report: <small>PPE Assigned list</small></h2>
+    </div>
+    <hr/>
+    <div class="row">
+      <div class="col-sm-10 col-md-10">
+        <div class="thumbnail" style="width: 1000px;">
+          <table class="table table-bordered">
+            <thead>
+            <tr>
+              <th>Employee</th>
+              <th>PPE</th>
+              <th>Assigned notes</th>
+              <th>Assigned date</th>
+              <th>Return date</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr  *ngFor = "let existingPpeAssigned of existingPpeAssigneds">
+              <td>{{existingPpeAssigned.employee.firstName}} {{existingPpeAssigned.employee.lastName}}</td>
+              <td>{{existingPpeAssigned.existingPpe.ppe.name}}</td>
+              <td>{{existingPpeAssigned.assignedNotes}}</td>
+              <td>{{existingPpeAssigned.assignedDate | date : 'shortDate'}}</td>
+              <td>{{existingPpeAssigned.returnDate | date : 'shortDate'}}</td>
+            </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
