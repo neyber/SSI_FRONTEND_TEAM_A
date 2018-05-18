@@ -20,18 +20,14 @@ export class UpdateManualComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log('e423432');
     this.activatedRoute.queryParams.subscribe(params => {
-      console.log(params['id']);
       const functionManualId = params['id'];
-      console.log(functionManualId);
+
       this.functionManualService.getManualById(functionManualId).subscribe(
         result => {
-          console.log('second');
+
           this.functionManual = result.data;
-          // this.functionManual.roleFunction = result.data.roleEmployee.roleId;
-          console.log('last');
-          console.log(this.functionManual);
+          this.functionManual.roleFunction = result.data.roleFunction;
         },
         error => {
           console.log('error');
