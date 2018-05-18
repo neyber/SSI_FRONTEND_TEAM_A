@@ -1,0 +1,55 @@
+<div class="container">
+  <br>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+
+
+      <div class="col-md-12 text-left">
+        <div class="btn-group" role="group" aria-label="Basic example">
+        </div>
+        <button type="button" class="btn btn-default" [routerLink]="['../createSaCategory']">New Category</button>
+      </div>
+      <br/>
+      <br/>
+
+      <table id="saCategoryTable" class="table table-bordered table-striped table-case">
+        <thead>
+        <th>Category</th>
+        <th>Description</th>
+        <th>Reference</th>
+        </thead>
+        <tbody>
+        <tr  *ngFor = "let saCategory of saCategories">
+          <td>{{saCategory.category}} </td>
+          <td>{{saCategory.description}}</td>
+          <td>{{saCategory.reference}}</td>
+          <td>
+            <p data-placement="top" data-toggle="tooltip" title="Edit">
+              <button type="button" [routerLink]="['../updateSaCategory']" [queryParams]="{saCategoryId: saCategory.saCategoryId}" class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit">
+                <span class="glyphicon glyphicon-pencil"></span>
+              </button>
+            </p>
+          </td>
+          <td>
+            <p data-placement="top" data-toggle="tooltip" title="Delete">
+              <button type="button" (click)="deleteSaCategory(saCategory.saCategoryId)" class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete">
+                <span class="glyphicon glyphicon-trash"></span>
+              </button>
+            </p>
+          </td>
+        </tr>
+
+        </tbody>
+      </table>
+
+      <ul class="pagination pull-right">
+        <li class="disabled"><a href="#"><span class="glyphicon glyphicon-chevron-left"></span></a></li>
+        <li class="active"><a href="#">1</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+

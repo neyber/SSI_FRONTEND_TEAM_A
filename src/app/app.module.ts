@@ -110,6 +110,12 @@ import {SicknessService} from './shared/services/sickness/sickness.service';
 import {SaCategoryService} from './shared/services/saClassification/sa-category.service';
 import {SaTypeService} from './shared/services/saClassification/sa-type.service';
 import {AccidentService} from './shared/services/accident/accident.service';
+import { SaCategoryComponent } from './safety-health-administration/sa-classification/sa-category/sa-category.component';
+import { SaTypeComponent } from './safety-health-administration/sa-classification/sa-type/sa-type.component';
+import { CreatesatypeComponent } from './safety-health-administration/sa-classification/createsatype/createsatype.component';
+import { UpdatesatypeComponent } from './safety-health-administration/sa-classification/updatesatype/updatesatype.component';
+import { CreatesacategoryComponent } from './safety-health-administration/sa-classification/createsacategory/createsacategory.component';
+import { UpdatesacategoryComponent } from './safety-health-administration/sa-classification/updatesacategory/updatesacategory.component';
 
 
 @NgModule({
@@ -197,6 +203,12 @@ import {AccidentService} from './shared/services/accident/accident.service';
     ViewReportEmployeeComponent,
     ViewReportPpeComponent,
     CreateSicknessComponent,
+    SaCategoryComponent,
+    SaTypeComponent,
+    CreatesatypeComponent,
+    UpdatesatypeComponent,
+    CreatesacategoryComponent,
+    UpdatesacategoryComponent,
 
   ],
   imports: [
