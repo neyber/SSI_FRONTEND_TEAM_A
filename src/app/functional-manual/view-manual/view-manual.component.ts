@@ -14,22 +14,27 @@ export class ViewManualComponent implements OnInit {
   constructor(private ManualService: FunctionManualService, private router: Router) { }
 
   ngOnInit() {
-    this.ManualService.getListManual().subscribe(
-      result => {
-        this.functionManual = result.data;
-      },
-      error => {
-        console.log('error');
-      }
-    );
+    this.loadData();
   }
   deleteManual(functionManualId) {
     if (confirm('Are you sure to delete?')) {
       this.ManualService.deleteManual(functionManualId).subscribe(
         res => {
           console.log('Deleted');
+          this.loadData();
         });
     }
+  }
+  loadData() {
+    this.ManualService.getListManual().subscribe(
+      result => {
+        this.functionManual = result.data;
+        console.log(this.functionManual);
+      },
+      error => {
+        console.log('error');
+      }
+    );
   }
 
 }

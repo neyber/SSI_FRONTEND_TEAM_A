@@ -55,11 +55,14 @@
           Role
 
         </label>
-        <input type="text" #nombre="ngModel" name="roleFunction" [(ngModel)]="functionManual.roleFunction" class="form-control" required />
+        <select #roleFunction="ngModel" name="roleFunction" [(ngModel)]="functionManual.roleFunction" class="form-control"  required>
+
+          <option *ngFor="let role of roles" [value]="role.roleId" >{{role.name}}</option>
+        </select>
 
         <br/>
-        <button type="button" class="btn btn-success" (click)="onSubmit(functionManual.functionManualId)"> Update </button>
-
+        <button type="button" class="btn btn-success" (click)="onSubmit(functionManual.id)"> Update </button>
+        <button type="button" class="btn btncancel" routerLink="../function">Cancel</button>
       </form>
     </div>
   </div>

@@ -1,0 +1,31 @@
+<div class="container">
+  <br>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+
+
+      <form #formUpdateSaType="ngForm" class="col-lg-6" id="form-SaType">
+
+        <label>
+          Sickness/Accident Type:
+
+        </label>
+        <input type="text" #category="ngModel" name="category" [(ngModel)]="saType.type" class="form-control" required />
+
+        <label>
+          Description:
+
+        </label>
+
+        <input type="text" #description="ngModel" name="description" [(ngModel)]="saType.description" class="form-control" required>
+
+
+        <br/>
+        <input type="submit" value="Update" (click)="onSubmit(saType.saTypeId)"  class="btn btn-success"/>
+        <button type="button" class="btn btncancel" routerLink="../saTypeList">Cancel</button>
+
+
+      </form>
+    </div>
+  </div>
+</div>

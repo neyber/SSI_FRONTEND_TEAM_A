@@ -104,7 +104,18 @@ import {WorkItemService} from './shared/services/workItem/work-item.service';
 
 import { ViewReportSicknessComponent } from './report/view-report-sickness/view-report-sickness.component';
 import { ViewReportFunctionmComponent } from './report/view-report-functionm/view-report-functionm.component';
-
+import { ViewReportEmployeeComponent } from './report/view-report-employee/view-report-employee.component';
+import { ViewReportPpeComponent } from './report/view-report-ppe/view-report-ppe.component';
+import {SicknessService} from './shared/services/sickness/sickness.service';
+import {SaCategoryService} from './shared/services/saClassification/sa-category.service';
+import {SaTypeService} from './shared/services/saClassification/sa-type.service';
+import {AccidentService} from './shared/services/accident/accident.service';
+import { SaCategoryComponent } from './safety-health-administration/sa-classification/sa-category/sa-category.component';
+import { SaTypeComponent } from './safety-health-administration/sa-classification/sa-type/sa-type.component';
+import { CreatesatypeComponent } from './safety-health-administration/sa-classification/createsatype/createsatype.component';
+import { UpdatesatypeComponent } from './safety-health-administration/sa-classification/updatesatype/updatesatype.component';
+import { CreatesacategoryComponent } from './safety-health-administration/sa-classification/createsacategory/createsacategory.component';
+import { UpdatesacategoryComponent } from './safety-health-administration/sa-classification/updatesacategory/updatesacategory.component';
 
 
 @NgModule({
@@ -188,8 +199,16 @@ import { ViewReportFunctionmComponent } from './report/view-report-functionm/vie
     WorkItemWiComponent,
     CreateWorkItemComponent,
     UpdateWorkItemComponent,
-    ViewWorkItemComponent
-
+    ViewWorkItemComponent,
+    ViewReportEmployeeComponent,
+    ViewReportPpeComponent,
+    CreateSicknessComponent,
+    SaCategoryComponent,
+    SaTypeComponent,
+    CreatesatypeComponent,
+    UpdatesatypeComponent,
+    CreatesacategoryComponent,
+    UpdatesacategoryComponent,
 
   ],
   imports: [
@@ -220,7 +239,11 @@ import { ViewReportFunctionmComponent } from './report/view-report-functionm/vie
     ExistingPpeService,
     ExistingPpeAssignedService,
     DatePipe,
-    WorkItemService
+    WorkItemService,
+    SicknessService,
+    SaCategoryService,
+    SaTypeService,
+    AccidentService
   ],
   bootstrap: [AppComponent]
 })

@@ -1,3 +1,43 @@
-<p>
-  view-report-functionm works!
-</p>
+<div class="container">
+  <div class="jumbotron">
+    <div class="page-header">
+      <h2>Report: <small>Function Manual list</small></h2>
+    </div>
+    <hr/>
+    <div class="row">
+      <div class="col-sm-10 col-md-10">
+        <div class="thumbnail" style="width: 1000px;">
+          <table class="table table-bordered">
+            <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">name</th>
+              <th scope="col">Position</th>
+              <th scope="col">hierarchicalLever</th>
+              <th scope="col">superiorBoss</th>
+              <th scope="col">dependentPersonal</th>
+              <th scope="col">generalActivity</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor = "let manual of functionManual">
+              <th scope="row">{{manual.id}}</th>
+              <td>{{manual.name}}</td>
+              <td>{{manual.position}}</td>
+              <td>{{manual.hierarchicalLever}}</td>
+              <td>{{manual.superiorBoss}}</td>
+              <td>{{manual.dependentPersonal}}</td>
+              <td>{{manual.generalActivity}}</td>
+            </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+

@@ -63,6 +63,19 @@ import {CreateWorkItemClassComponent} from './catalog/create-work-item-class/cre
 import {UpdateEmployeeComponent} from './personnel/employee/update-employee/update-employee.component';
 import {UpdateDepartmentComponent} from './personnel/department/update-department/update-department.component';
 import {UpdateRoleComponent} from './personnel/role/update-role/update-role.component';
+import {UpdateSicknessComponent} from './safety-health-administration/sickness/update-sickness/update-sickness.component';
+import {ViewSicknessComponent} from './safety-health-administration/sickness/view-sickness/view-sickness.component';
+import {CreateSicknessComponent} from './safety-health-administration/sickness/create-sickness/create-sickness.component';
+import {CreateAccidentComponent} from './safety-health-administration/accident/create-accident/create-accident.component';
+import {ViewAccidentComponent} from './safety-health-administration/accident/view-accident/view-accident.component';
+import {UpdateAccidentComponent} from './safety-health-administration/accident/update-accident/update-accident.component';
+import {SaCategoryComponent} from './safety-health-administration/sa-classification/sa-category/sa-category.component';
+import {SaType} from './shared/models/saclassification/SaType';
+import {SaTypeComponent} from './safety-health-administration/sa-classification/sa-type/sa-type.component';
+import {CreatesacategoryComponent} from './safety-health-administration/sa-classification/createsacategory/createsacategory.component';
+import {UpdatesacategoryComponent} from './safety-health-administration/sa-classification/updatesacategory/updatesacategory.component';
+import {CreatesatypeComponent} from './safety-health-administration/sa-classification/createsatype/createsatype.component';
+import {UpdatesatypeComponent} from './safety-health-administration/sa-classification/updatesatype/updatesatype.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent},
@@ -100,6 +113,18 @@ const appRoutes: Routes = [
   { path: 'safetyHealthAdministration', component: SafetyHealthAdministrationComponent},
   { path: 'saClassificationList', component: ViewSaClassificationClassComponent},
   { path: 'newSaClassification', component: CreateSaClassificationClassComponent},
+  { path: 'updateSickness', component: UpdateSicknessComponent},
+  { path: 'sicknessList', component: ViewSicknessComponent},
+  { path: 'newSickness', component: CreateSicknessComponent},
+  { path: 'accidentList', component: ViewAccidentComponent},
+  { path: 'newAccident', component: CreateAccidentComponent},
+  { path: 'updateAccident', component: UpdateAccidentComponent},
+  { path: 'saCategoryList', component: SaCategoryComponent},
+  { path: 'createSaCategory', component: CreatesacategoryComponent},
+  { path: 'updateSaCategory', component: UpdatesacategoryComponent},
+  { path: 'saTypeList', component: SaTypeComponent},
+  { path: 'createSaType', component: CreatesatypeComponent},
+  { path: 'updateSaType', component: UpdatesatypeComponent},
   { path: 'ppe', component: PpeComponent, children: PPE_ROUTES},
   { path: 'ppeList', component: ViewPpeComponent},
   { path: 'newPpe', component: CreatePpeComponent},

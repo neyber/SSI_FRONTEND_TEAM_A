@@ -12,11 +12,11 @@
       <br/>
       <br/>
 
-      <table id="ppeTable" class="table table-bordered table-striped table-case">
+      <table id="sicknessTable" class="table table-bordered table-striped table-case">
         <thead>
         <th>Employee</th>
-        <th>Sickness description</th>
-        <th>Date sickness started</th>
+        <th>description</th>
+        <th>Date sickness occurred</th>
         <th>Where Occurred</th>
         <th>Category</th>
         <th>Total days employee was sick</th>
@@ -28,19 +28,19 @@
           <td>{{sicknessEmployee.description}}</td>
           <td>{{sicknessEmployee.dateSickness | date: 'shortDate'}}</td>
           <td>{{sicknessEmployee.whereOccurr}}</td>
-          <td>{{sicknessEmployee.saClassification.category}}</td>
-          <td>{{sicknessEmployee.saClassification.totalDaysOutOfWork + sicknessEmployee.saClassification.totalDaysRestrictedTransferredWork}}</td>
-          <td>{{sicknessEmployee.saClassification.type}}</td>
+          <td>{{sicknessEmployee.saCategoryResponse.category}}</td>
+          <td>{{sicknessEmployee.totalDaysOutOfWork + sicknessEmployee.totalDaysRestrictedTransferredWork}}</td>
+          <td>{{sicknessEmployee.saTypeResponse.type}}</td>
           <td>
             <p data-placement="top" data-toggle="tooltip" title="Edit">
-              <button type="button" [routerLink]="['../updateSickness']" [queryParams]="{sicknessId: sicknessEmployee.sicknessId, saClassificationId: sicknessEmployee.saClassification.saClassificationId, employeeId: sicknessEmployee.employee.employeeId}" class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit">
+              <button type="button" [routerLink]="['../updateSickness']" [queryParams]="{sicknessId: sicknessEmployee.sicknessId}" class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit">
                 <span class="glyphicon glyphicon-pencil"></span>
               </button>
             </p>
           </td>
           <td>
             <p data-placement="top" data-toggle="tooltip" title="Delete">
-              <button type="button" (click)="deleteSicknessEmployee(sicknessEmployee.id)" class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete">
+              <button type="button" (click)="deleteSicknessEmployee(sicknessEmployee.sicknessId)" class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete">
                 <span class="glyphicon glyphicon-trash"></span>
               </button>
             </p>

@@ -7,25 +7,72 @@
       <form #formSickness="ngForm" class="col-lg-6" id="form-sickness">
 
         <label>
-          Decription:
+          select Employee:
 
         </label>
-        <textarea #description="ngModel" name="description" [(ngModel)]="sickness.description" class="form-control" required></textarea>
+        <select disabled="disabled" #employeeId="ngModel" name="employeeId" [(ngModel)]="sickness.employeeId" class="form-control" required>
+
+          <option *ngFor="let employee of employees" [value]="employee.employeeId" >{{employee.firstName}} {{employee.lastName}}</option>
+        </select>
 
         <label>
-          Sickness date (YYYY-MM-DD)
+          Sickness Description:
 
         </label>
-        <input type="text"  #dateSickness="ngModel" name="dateSickness" [(ngModel)]="sickness.dateSickness" class="form-control" required />
+        <input type="text" #nombre1="ngModel" name="description" [(ngModel)]="sickness.description" class="form-control" required />
 
         <label>
-          Where Occurred
+          when it Occurred?:
 
         </label>
-        <input type="text" #whereOccurr="ngModel" name="whereOccurr" [(ngModel)]="sickness.whereOccurr" class="form-control" required />
+
+        <input type="date" class="form-control" id="BirthDate" name="BirthDate"
+               [ngModel]="sickness.dateSickness | date:'yyyy-MM-dd'" (ngModelChange)="sickness.dateSickness = $event"
+               [value]="sickness.dateSickness | date:'yyyy-MM-dd'" #BirthDate="ngModel" min="1900-01-01" required>
+
+        <label>
+          Where occurred the event?:
+
+        </label>
+        <input type="text" #nombre2="ngModel" name="whereOccurred" [(ngModel)]="sickness.whereOccurr" class="form-control" required />
+
+        <label>
+          Register the number of days the employee was injured or sick:
+        </label>
+        <br>
+        <label>
+          Total Days Out of Work
+
+        </label>
+        <input #totalDaysOutOfWork="ngModel" name="totalDaysOutOfWork" [(ngModel)]="sickness.totalDaysOutOfWork" class="form-control" required/>
+
+        <label>
+          Total Days Restricted/Transferred Work
+
+        </label>
+        <input #totalDaysRestrictedTransferredWork="ngModel" name="totalDaysRestrictedTransferredWork" [(ngModel)]="sickness.totalDaysRestrictedTransferredWork" class="form-control" required/>
+
+        <label>
+          Using these four categories, mark the most serious result for this case:
+        </label>
+
+        <select #saCategoryId="ngModel" name="saCategoryId" [(ngModel)]="sickness.saCategoryId" class="form-control" required>
+
+          <option *ngFor="let category of saCategories" [value]="category.saCategoryId" >{{category.category}}</option>
+        </select>
+
+        <label>
+          select the "injury" option or select a type of disease:
+        </label>
+
+        <select #saTypeId="ngModel" name="saTypeId" [(ngModel)]="sickness.saTypeId" class="form-control" required>
+
+          <option *ngFor="let type of saTypes" [value]="type.saTypeId" >{{type.type}}</option>
+        </select>
 
         <br/>
-        <input type="submit" value="Update" (click)="onSubmit(sickness.id)" class="btn btn-success"/>
+        <input type="submit" value="Update" (click)="onSubmit(sickness.sicknessId)" class="btn btn-success"/>
+        <input type="button" value="Cancel" class="btn btn-success" routerLink="../sicknessList"/>
 
       </form>
     </div>

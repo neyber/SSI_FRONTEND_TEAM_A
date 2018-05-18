@@ -1,0 +1,37 @@
+<div class="container">
+  <br>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+
+
+      <form #formCreateSaCategory="ngForm" class="col-lg-6" id="form-SaCategory">
+
+        <label>
+          Sickness/Accident Category:
+
+        </label>
+        <input type="text" #nombre1="ngModel" name="category" [(ngModel)]="saCategory.category" class="form-control" required />
+
+        <label>
+          Description:
+
+        </label>
+
+        <input type="text" #description="ngModel" name="description" [(ngModel)]="saCategory.description" class="form-control" required>
+
+        <label>
+          Reference:
+
+        </label>
+        <input type="text" #reference="ngModel" name="reference" [(ngModel)]="saCategory.reference" class="form-control" required />
+
+
+        <br/>
+        <input type="submit" value="Update" (click)="onSubmit(saCategory.saCategoryId)" class="btn btn-success"/>
+        <button type="button" class="btn btncancel" routerLink="../saCategoryList">Cancel</button>
+
+
+      </form>
+    </div>
+  </div>
+</div>
