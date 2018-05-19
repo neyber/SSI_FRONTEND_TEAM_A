@@ -14,12 +14,14 @@
           <th>Name</th>
           <th>Code</th>
           <th>Type</th>
+          <th>Periodicity</th>
         </thead>
         <tbody>
           <tr *ngFor="let audit of audits">
             <td>{{ audit.auditName }}</td>
             <td>{{ audit.auditCode }}</td>
             <td>{{ audit.auditType }}</td>
+            <td>{{ audit.periodicity }}</td>
             <td>
               <p data-placement="top" data-toggle="tooltip" title="Edit">
                 <button class="btn btn-primary btn-xs" [routerLink]="['../editAudit']" [queryParams]="{auditId: audit.auditId}" data-title="Edit" data-toggle="modal" data-target="#edit">

@@ -1,0 +1,63 @@
+<div class="container">
+  <br>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+
+
+      <form #formAudit="ngForm" class="col-lg-6" id="form-audit">
+        <label>
+          Policy Code
+        </label>
+        <input type="text" #policyCode="ngModel" name="policyCode" [(ngModel)]="safetyRule.policyCode" class="form-control" required />
+
+        <label>
+          Policy Name
+        </label>
+        <select type="text" #policyName="ngModel" name="policyName" [(ngModel)]="safetyRule.policyName"
+          class="form-control" required>
+          <option value="Seguridad en los lugares de trabajo">Seguridad en los lugares de trabajo</option>
+          <option value="Andamiadas y escaleras de mano">Andamiadas y escaleras de mano</option>
+          <option value="Aparatos elevadores y accesorios de izado">Aparatos elevadores y accesorios de izado</option>
+          <option value="Instalaciones, máquinas, equipos y herramientas manuales">Instalaciones, máquinas, equipos y herramientas manuales</option>
+          <option value="Trabajos a gran altura, inclusive en techumbres y tejados">Trabajos a gran altura, inclusive en techumbres y tejados</option>
+          <option value="Estructuras, armaduras, armazones, encofrados y construcciones">Estructuras, armaduras, armazones, encofrados y construcciones</option>
+          <option value="Trabajos de demolición">Trabajos de demolición</option>
+          <option value="Electricidad">Electricidad</option>
+          <option value="Explosivos">Explosivos</option>
+          <option value="Ropas y equipos de protección personal">Ropas y equipos de protección personal</option>
+        </select>
+
+        <label>
+          Compliance Parameter:
+        </label>
+        <select type="text" #complianceParameter="ngModel" name="complianceParameter" [(ngModel)]="safetyRule.complianceParameter" class="form-control" required>
+          <option value=10>10%</option>
+          <option value=20>20%</option>
+          <option value=30>30%</option>
+          <option value=40>40%</option>
+          <option value=50>50%</option>
+          <option value=60>60%</option>
+          <option value=70>70%</option>
+          <option value=80>80%</option>
+          <option value=90>90%</option>
+          <option value=100>100%</option>
+        </select>
+
+        <label>
+          Compliance Metric
+        </label>
+        <input type="text" #complianceMetric="ngModel" name="complianceMetric" [(ngModel)]="safetyRule.complianceMetric" class="form-control" required />
+
+        <label>
+          Audit:
+        </label>
+        <select #AuditId="ngModel" name="auditId" [(ngModel)]="safetyRule.auditId" class="form-control" required>
+          <option *ngFor="let audit of audits" [value]="audit.auditId">{{audit.auditName}}</option>
+        </select>
+
+        <br/>
+        <button type="button" class="btn btn-success" (click)="onSubmit()"> Create </button>
+      </form>
+    </div>
+  </div>
+</div>

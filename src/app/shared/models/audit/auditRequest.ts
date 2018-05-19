@@ -5,6 +5,9 @@ export class AuditRequest {
     public auditType: string,
     public auditScope: string,
     public auditObjective: string,
-    public auditCriteria: string
+    public auditCriteria: string,
+    public periodicity: string,
+    public employeeId: number,
+    public departmentId: number
   ) {}
 }
