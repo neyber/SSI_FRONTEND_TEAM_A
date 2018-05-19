@@ -8,32 +8,52 @@
         <label>
           Name
         </label>
-        <input type="text" #nombre="ngModel" name="auditName" [(ngModel)]="audit.auditName" class="form-control" required />
+        <input type="text" #auditName="ngModel" name="auditName" [(ngModel)]="audit.auditName" class="form-control" required />
 
         <label>
           Code
         </label>
-        <input type="text" #nombre="ngModel" name="auditCode" [(ngModel)]="audit.auditCode" class="form-control" required />
+        <input type="text" #auditCode="ngModel" name="auditCode" [(ngModel)]="audit.auditCode" class="form-control" required />
 
         <label>
-          Type
+          Type:
         </label>
-        <input type="text" #nombre="ngModel" name="auditType" [(ngModel)]="audit.auditType" class="form-control" required />
+        <select type="text" #auditType="ngModel" name="auditType" [(ngModel)]="audit.auditType" class="form-control" required>
+          <option value="INTERNAL">Internal</option>
+          <option value="EXTERNAL">External</option>
+        </select>
+
+        <label>
+          periodicity:
+        </label>
+        <select type="text" #periodicity="ngModel" name="periodicity" [(ngModel)]="audit.periodicity" class="form-control" required>
+          <option value="MONTHLY">MONTHLY</option>
+          <option value="QUARTERLY">QUARTERLY</option>
+          <option value="BIANNUAL">BIANNUAL</option>
+          <option value="ANNUAL">ANNUAL</option>
+        </select>
+        
+        <label>
+          Department:
+        </label>
+        <select #departmentId="ngModel" name="departmentId" [(ngModel)]="audit.departmentId" class="form-control" required>
+          <option *ngFor="let department of departments" [value]="department.departmentId">{{department.name}}</option>
+        </select>
 
         <label>
           Scope
         </label>
-        <textarea #descripcion="ngModel" name="auditScope" [(ngModel)]="audit.auditScope" class="form-control" required></textarea>
+        <textarea #auditScope="ngModel" name="auditScope" [(ngModel)]="audit.auditScope" class="form-control" required></textarea>
 
         <label>
           Objective
         </label>
-        <textarea #descripcion="ngModel" name="auditObjective" [(ngModel)]="audit.auditObjective" class="form-control" required></textarea>
+        <textarea #auditObjective="ngModel" name="auditObjective" [(ngModel)]="audit.auditObjective" class="form-control" required></textarea>
 
         <label>
           Criteria
         </label>
-        <textarea #descripcion="ngModel" name="auditCriteria" [(ngModel)]="audit.auditCriteria" class="form-control" required></textarea>
+        <textarea #auditCriteria="ngModel" name="auditCriteria" [(ngModel)]="audit.auditCriteria" class="form-control" required></textarea>
 
         <br/>
         <button type="button" class="btn btn-success" (click)="onSubmit(audit.auditId)"> Update </button>

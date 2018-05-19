@@ -29,9 +29,20 @@ export class ViewAuditComponent implements OnInit {
     if (confirm("Are you sure to delete?")) {
       this.auditService.deleteAudit(auditId).subscribe(
         res => {
-          console.log('Deleted');
+          this.loadData();
         });
     }
+  }
+
+  loadData() {
+    this.auditService.getListAudit().subscribe(
+      result => {
+        this.audits = result.data;
+      },
+      error => {
+        console.log('error');
+      }
+    );
   }
 
 }

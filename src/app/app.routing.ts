@@ -12,7 +12,6 @@ import { PersonnelComponent } from './personnel/personnel.component';
 import { PpeComponent } from './ppe/ppe.component';
 
 import { CATALOG_ROUTES } from './catalog/catalog.routes';
-import {AuditComponent} from './audit/audit.component';
 import {DepartmentComponent} from './personnel/department/department.component';
 import {RoleComponent} from './personnel/role/role.component';
 import {DEPARTMENT_ROUTES} from './personnel/department/department.routes';
@@ -28,9 +27,11 @@ import {CreateEmployeeComponent} from './personnel/employee/create-employee/crea
 
 import {REPORT_ROUTES} from './report/report.routes';
 
-import { AUDIT_ROUTES } from './audit/audit.routes';
-import { CreateAuditComponent } from './audit/create-audit/create-audit.component';
-import { UpdateAuditComponent } from './audit/update-audit/update-audit.component';
+import {AUDIT_ROUTES } from './audit/audit.routes';
+import {AuditComponent} from './audit/audit.component';
+import {CreateAuditComponent} from './audit/create-audit/create-audit.component';
+import {UpdateAuditComponent} from './audit/update-audit/update-audit.component';
+import {ViewAuditComponent} from './audit/view-audit/view-audit.component';
 import {SafetyHealthAdministrationComponent} from './safety-health-administration/safety-health-administration.component';
 import {ViewSaClassificationClassComponent} from './safety-health-administration/sa-classification/view-sa-classification-class/view-sa-classification-class.component';
 import {CreateSaClassificationClassComponent} from './safety-health-administration/sa-classification/create-sa-classification-class/create-sa-classification-class.component';
@@ -76,6 +77,10 @@ import {CreatesacategoryComponent} from './safety-health-administration/sa-class
 import {UpdatesacategoryComponent} from './safety-health-administration/sa-classification/updatesacategory/updatesacategory.component';
 import {CreatesatypeComponent} from './safety-health-administration/sa-classification/createsatype/createsatype.component';
 import {UpdatesatypeComponent} from './safety-health-administration/sa-classification/updatesatype/updatesatype.component';
+import { ViewSafetyRuleComponent } from './audit/view-safety-rule/view-safety-rule.component';
+import { CreateSafetyRuleComponent } from './audit/create-safety-rule/create-safety-rule.component';
+import { UpdateSafetyRuleComponent } from './audit/update-safety-rule/update-safety-rule.component';
+import { ReportAuditSafetyRuleComponent } from './audit/report-audit-safety-rule/report-audit-safety-rule.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent},
@@ -110,6 +115,11 @@ const appRoutes: Routes = [
   { path: 'audit', component: AuditComponent, children: AUDIT_ROUTES },
   { path: 'newAudit', component: CreateAuditComponent },
   { path: 'editAudit', component: UpdateAuditComponent },
+  { path: 'listAudit', component: ViewAuditComponent },
+  { path: 'listSafetyRule', component: ViewSafetyRuleComponent },
+  { path: 'newSafetyRule', component: CreateSafetyRuleComponent },
+  { path: 'editSafetyRule', component: UpdateSafetyRuleComponent },
+  { path: 'reportAuditSafetyRule', component: ReportAuditSafetyRuleComponent },
   { path: 'safetyHealthAdministration', component: SafetyHealthAdministrationComponent},
   { path: 'saClassificationList', component: ViewSaClassificationClassComponent},
   { path: 'newSaClassification', component: CreateSaClassificationClassComponent},

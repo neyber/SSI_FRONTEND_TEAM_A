@@ -88,7 +88,7 @@ import { ExistingPpeComponent } from './ppe/existing-ppe/existing-ppe.component'
 import { CreateExistingPpeComponent } from './ppe/existing-ppe/create-existing-ppe/create-existing-ppe.component';
 import { UpdateExistingPpeComponent } from './ppe/existing-ppe/update-existing-ppe/update-existing-ppe.component';
 import { ViewExistingPpeComponent } from './ppe/existing-ppe/view-existing-ppe/view-existing-ppe.component';
-import {ExistingPpeService} from 'app/shared/services/existingPpe/existing-ppe.service';
+import {ExistingPpeService} from '../app/shared/services/existingPpe/existing-ppe.service';
 import { ExistingPpeAssignedComponent } from './ppe/existing-ppe-assigned/existing-ppe-assigned.component';
 import { CreateExistingPpeAssignedComponent } from './ppe/existing-ppe-assigned/create-existing-ppe-assigned/create-existing-ppe-assigned.component';
 import { ViewExistingPpeAssignedComponent } from './ppe/existing-ppe-assigned/view-existing-ppe-assigned/view-existing-ppe-assigned.component';
@@ -116,7 +116,11 @@ import { CreatesatypeComponent } from './safety-health-administration/sa-classif
 import { UpdatesatypeComponent } from './safety-health-administration/sa-classification/updatesatype/updatesatype.component';
 import { CreatesacategoryComponent } from './safety-health-administration/sa-classification/createsacategory/createsacategory.component';
 import { UpdatesacategoryComponent } from './safety-health-administration/sa-classification/updatesacategory/updatesacategory.component';
-
+import { CreateSafetyRuleComponent } from './audit/create-safety-rule/create-safety-rule.component';
+import { ViewSafetyRuleComponent } from './audit/view-safety-rule/view-safety-rule.component';
+import { SafetyRuleService } from './shared/services/safety-rule/safety-rule.service';
+import { UpdateSafetyRuleComponent } from './audit/update-safety-rule/update-safety-rule.component';
+import { ReportAuditSafetyRuleComponent } from './audit/report-audit-safety-rule/report-audit-safety-rule.component';
 
 @NgModule({
   declarations: [
@@ -209,6 +213,10 @@ import { UpdatesacategoryComponent } from './safety-health-administration/sa-cla
     UpdatesatypeComponent,
     CreatesacategoryComponent,
     UpdatesacategoryComponent,
+    CreateSafetyRuleComponent,
+    ViewSafetyRuleComponent,
+    UpdateSafetyRuleComponent,
+    ReportAuditSafetyRuleComponent
 
   ],
   imports: [
@@ -243,7 +251,8 @@ import { UpdatesacategoryComponent } from './safety-health-administration/sa-cla
     SicknessService,
     SaCategoryService,
     SaTypeService,
-    AccidentService
+    AccidentService,
+    SafetyRuleService
   ],
   bootstrap: [AppComponent]
 })

@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="jumbotron">
+    <div class="page-header">
+      <h2>Report:
+        <small>Audits Due</small>
+      </h2>
+    </div>
+    <hr/>
+    <div class="row">
+      <div class="col-sm-10 col-md-10">
+        <div class="thumbnail" style="width: 1000px;">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">Audit Code</th>
+                <th scope="col">Policy Code</th>
+                <th scope="col">Accomplishment</th>
+                <th scope="col">Created Date</th>
+                <th scope="col">Periodicity</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let safetyRule of safetyRules">
+                <td>{{ safetyRule.audit.auditCode }}</td>
+                <td>{{ safetyRule.policyCode }}</td>
+                <td>
+                  <span *ngIf="safetyRule.accomplishment === true" class="glyphicon glyphicon-ok"></span>
+                  <span *ngIf="safetyRule.accomplishment === false" class="glyphicon glyphicon-remove"></span>
+                </td>
+                <td>{{ safetyRule.audit.createdDate | date: 'shortDate' }}</td>
+                <td>{{ safetyRule.audit.periodicity }}</td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

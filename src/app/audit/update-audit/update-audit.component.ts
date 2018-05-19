@@ -3,6 +3,8 @@ import { AuditService } from '../../shared/services/audit/audit.service';
 import { AuditRequest } from '../../shared/models/audit/auditRequest';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { Audit } from '../../shared/models/audit/audit';
+import { DepartmentService } from '../../shared/services/Personnel/department.service';
+import { Department } from '../../shared/models/Personnel/Department';
 
 @Component({
   selector: 'app-update-audit',
@@ -12,9 +14,10 @@ import { Audit } from '../../shared/models/audit/audit';
 export class UpdateAuditComponent implements OnInit {
 
   audit: AuditRequest;
+  public departments: Department[];
 
-  constructor(private auditService: AuditService, private router: Router, private activatedRoute: ActivatedRoute) {
-    this.audit = new AuditRequest('', '', '', '', '', '');
+  constructor(private auditService: AuditService, private departmentService: DepartmentService, private router: Router, private activatedRoute: ActivatedRoute) {
+    this.audit = new AuditRequest('', '', '', '', '', '', '', null, null);
   }
 
   ngOnInit() {
@@ -29,12 +32,21 @@ export class UpdateAuditComponent implements OnInit {
         }
       );
     });
+
+    this.departmentService.getDepartments().subscribe(
+      result => {
+        this.departments = result.data;
+      },
+      error => {
+        console.log('error');
+      }
+    );
   }
 
   onSubmit(auditId) {
     this.auditService.updateAudit(auditId, this.audit).subscribe(
       response => {
-        this.router.navigateByUrl('audit', { skipLocationChange: true });
+        this.router.navigateByUrl('listAudit', { skipLocationChange: true });
       },
       error => {
         console.log(error);
