@@ -121,6 +121,8 @@ import { ViewSafetyRuleComponent } from './audit/view-safety-rule/view-safety-ru
 import { SafetyRuleService } from './shared/services/safety-rule/safety-rule.service';
 import { UpdateSafetyRuleComponent } from './audit/update-safety-rule/update-safety-rule.component';
 import { ReportAuditSafetyRuleComponent } from './audit/report-audit-safety-rule/report-audit-safety-rule.component';
+import { AuditHistoryComponent } from './audit-history/audit-history.component';
+
 
 @NgModule({
   declarations: [
@@ -216,7 +218,8 @@ import { ReportAuditSafetyRuleComponent } from './audit/report-audit-safety-rule
     CreateSafetyRuleComponent,
     ViewSafetyRuleComponent,
     UpdateSafetyRuleComponent,
-    ReportAuditSafetyRuleComponent
+    ReportAuditSafetyRuleComponent,
+    AuditHistoryComponent
 
   ],
   imports: [
