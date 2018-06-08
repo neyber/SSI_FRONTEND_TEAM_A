@@ -6,16 +6,15 @@ import {Observable} from 'rxjs/Observable';
 @Injectable()
 export class AuditHistoryService {
 
-
-
   private headers;
-  PATH = 'workItems/';
+  PATH = 'existingPpes/';
+
 
   constructor(private httpClient: HttpClient) {
     this.headers = new HttpHeaders({'Content-Type': 'application/json'});
   }
 
-  getWorkItems(): Observable<any> {
+  getExistingPpe(): Observable<any> {
     return this.httpClient.get(global.url + this.PATH).map(res => res);
   }
 }
