@@ -7,14 +7,14 @@ import {Observable} from 'rxjs/Observable';
 export class AuditHistoryService {
 
   private headers;
-  PATH = 'existingPpes/';
+  PATH = 'auditHistory';
 
 
   constructor(private httpClient: HttpClient) {
     this.headers = new HttpHeaders({'Content-Type': 'application/json'});
   }
 
-  getExistingPpe(): Observable<any> {
+  getAuditHistory(): Observable<any> {
     return this.httpClient.get(global.url + this.PATH).map(res => res);
   }
 }
