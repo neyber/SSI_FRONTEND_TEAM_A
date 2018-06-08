@@ -123,6 +123,7 @@ import { UpdateSafetyRuleComponent } from './audit/update-safety-rule/update-saf
 import { ReportAuditSafetyRuleComponent } from './audit/report-audit-safety-rule/report-audit-safety-rule.component';
 import { AuditHistoryComponent } from './audit-history/audit-history.component';
 import {AuditHistoryService} from './shared/services/audit-history/audit-history.service';
+import {AccidentReportService} from './shared/services/accidentReport/accident-report.service';
 
 
 @NgModule({
@@ -257,7 +258,8 @@ import {AuditHistoryService} from './shared/services/audit-history/audit-history
     SaTypeService,
     AccidentService,
     SafetyRuleService,
-    AuditHistoryService
+    AuditHistoryService,
+    AccidentReportService
   ],
   bootstrap: [AppComponent]
 })
