@@ -20,14 +20,14 @@
             </tr>
             </thead>
             <tbody>
-            <tr *ngFor = "let acc of history">
+            <tr *ngFor = "let acc of auditHistory">
               <th scope="row"></th>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
+              <td>{{acc.tableName}}</td>
+              <td>{{acc.columnName}}</td>
+              <td>{{acc.createdDate}}</td>
+              <td>{{acc.oldValue}}</td>
+              <td>{{acc.newValue}}</td>
+              <td>{{acc.modifiedBy}}</td>
             </tr>
 
             </tbody>

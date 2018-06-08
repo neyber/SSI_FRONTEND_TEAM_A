@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {ExistingPpe} from '../shared/models/existingPpe/existingPpe';
 import {ExistingPpeService} from '../shared/services/existingPpe/existing-ppe.service';
 import {AuditHistoryService} from '../shared/services/audit-history/audit-history.service';
+import {AuditHistory} from '../shared/models/auditHistory/auditHistory';
 
 
 @Component({
@@ -11,7 +12,7 @@ import {AuditHistoryService} from '../shared/services/audit-history/audit-histor
 })
 export class AuditHistoryComponent implements OnInit {
   history: any;
-  existingPpes: ExistingPpe[];
+  auditHistory: AuditHistory[];
 
   constructor(private auditHistoryService: AuditHistoryService) {
 
@@ -19,15 +20,15 @@ export class AuditHistoryComponent implements OnInit {
 
   ngOnInit() {
 
-      this.loadPPEData();
+      this.loadHisData();
 
 
   }
-  loadPPEData() {
-    this.auditHistoryService.getExistingPpe().subscribe(
+  loadHisData() {
+    this.auditHistoryService.getAuditHistory().subscribe(
       result => {
-        this.existingPpes = result.data;
-        console.log("estos son mis valores de audit history"+JSON.stringify(this.existingPpes));
+        this.auditHistory = result.data;
+        console.log("estos son mis valores de audit history"+JSON.stringify(this.auditHistory));
         },
       error => {
         console.log('error');
