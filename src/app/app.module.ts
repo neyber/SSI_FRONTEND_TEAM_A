@@ -124,6 +124,7 @@ import { ReportAuditSafetyRuleComponent } from './audit/report-audit-safety-rule
 import { AuditHistoryComponent } from './audit-history/audit-history.component';
 import {AuditHistoryService} from './shared/services/audit-history/audit-history.service';
 import {AccidentReportService} from './shared/services/accidentReport/accident-report.service';
+import { ChartReportComponent } from './dwh-report/chart-report/chart-report.component';
 
 
 @NgModule({
@@ -221,7 +222,8 @@ import {AccidentReportService} from './shared/services/accidentReport/accident-r
     ViewSafetyRuleComponent,
     UpdateSafetyRuleComponent,
     ReportAuditSafetyRuleComponent,
-    AuditHistoryComponent
+    AuditHistoryComponent,
+    ChartReportComponent
 
   ],
   imports: [
