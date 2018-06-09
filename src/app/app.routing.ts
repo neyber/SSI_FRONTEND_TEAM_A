@@ -83,6 +83,7 @@ import { UpdateSafetyRuleComponent } from './audit/update-safety-rule/update-saf
 import { ReportAuditSafetyRuleComponent } from './audit/report-audit-safety-rule/report-audit-safety-rule.component';
 import {AuditHistoryComponent} from './audit-history/audit-history.component';
 import {ChartReportComponent} from './dwh-report/chart-report/chart-report.component';
+import { TabularReportComponent } from './dwh-report/tabular-report/tabular-report.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent},
@@ -158,6 +159,7 @@ const appRoutes: Routes = [
   { path: 'editWorkItemClassification', component: UpdateWorkItemClassComponent},
   { path: 'auditHistory', component: AuditHistoryComponent},
   { path: 'chartReport', component: ChartReportComponent},
+  { path: 'tabularReport', component: TabularReportComponent },
   { path: '**', component: HomeComponent }
 ];
 
