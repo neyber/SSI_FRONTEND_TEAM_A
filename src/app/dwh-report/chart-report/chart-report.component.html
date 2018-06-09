@@ -23,5 +23,10 @@
 
       </form>
     </div>
+
+    <div *ngIf="chart">
+      <canvas id="canvas">{{ chart }}</canvas>
+    </div>
+
   </div>
 </div>
