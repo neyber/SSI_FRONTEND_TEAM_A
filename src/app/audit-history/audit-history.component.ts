@@ -11,7 +11,7 @@ import {AuditHistory} from '../shared/models/auditHistory/auditHistory';
   styleUrls: ['./audit-history.component.scss']
 })
 export class AuditHistoryComponent implements OnInit {
-  history: any;
+  modifiedBy: any;
   auditHistory: AuditHistory[];
 
   constructor(private auditHistoryService: AuditHistoryService) {
@@ -25,10 +25,14 @@ export class AuditHistoryComponent implements OnInit {
 
   }
   loadHisData() {
+    //const i = 0;
     this.auditHistoryService.getAuditHistory().subscribe(
       result => {
+
         this.auditHistory = result.data;
-        console.log("estos son mis valores de audit history"+JSON.stringify(this.auditHistory));
+        //this.modifiedBy = result.data.modifiedBy;
+        console.log("estos son mis valores de audit history1"+ JSON.stringify(result.data.modifiedBy) );
+        console.log("estos son mis valores de audit history2"+ JSON.stringify(this.modifiedBy));
         },
       error => {
         console.log('error');
