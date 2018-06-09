@@ -42,7 +42,6 @@
             <table class="table table-bordered">
               <thead>
                 <tr>
-                  <th scope="col">#</th>
                   <th scope="col">Full Name</th>
                   <th scope="col">Gender</th>
                   <th scope="col">Role</th>
@@ -54,7 +53,6 @@
               </thead>
               <tbody>
                 <tr *ngFor="let rep of tabular">
-                  <th scope="row"></th>
                   <td>{{ rep.fullName }}</td>
                   <td>{{ rep.gender }}</td>
                   <td>{{ rep.role }}</td>
@@ -63,7 +61,6 @@
                   <td>{{ rep.day }}</td>
                   <td>{{ rep.quantity }}</td>
                 </tr>
-  
               </tbody>
             </table>
           </div>
