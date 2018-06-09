@@ -25,15 +25,12 @@ export class AuditHistoryComponent implements OnInit {
 
   }
   loadHisData() {
-    //const i = 0;
+   
     this.auditHistoryService.getAuditHistory().subscribe(
       result => {
 
         this.auditHistory = result.data;
-        //this.modifiedBy = result.data.modifiedBy;
-        console.log("estos son mis valores de audit history1"+ JSON.stringify(result.data.modifiedBy) );
-        console.log("estos son mis valores de audit history2"+ JSON.stringify(this.modifiedBy));
-        },
+         },
       error => {
         console.log('error');
       }
