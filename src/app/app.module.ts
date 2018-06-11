@@ -121,6 +121,12 @@ import { ViewSafetyRuleComponent } from './audit/view-safety-rule/view-safety-ru
 import { SafetyRuleService } from './shared/services/safety-rule/safety-rule.service';
 import { UpdateSafetyRuleComponent } from './audit/update-safety-rule/update-safety-rule.component';
 import { ReportAuditSafetyRuleComponent } from './audit/report-audit-safety-rule/report-audit-safety-rule.component';
+import { AuditHistoryComponent } from './audit-history/audit-history.component';
+import {AuditHistoryService} from './shared/services/audit-history/audit-history.service';
+import {AccidentReportService} from './shared/services/accidentReport/accident-report.service';
+import { ChartReportComponent } from './dwh-report/chart-report/chart-report.component';
+import { TabularReportComponent } from './dwh-report/tabular-report/tabular-report.component';
+
 
 @NgModule({
   declarations: [
@@ -216,7 +222,10 @@ import { ReportAuditSafetyRuleComponent } from './audit/report-audit-safety-rule
     CreateSafetyRuleComponent,
     ViewSafetyRuleComponent,
     UpdateSafetyRuleComponent,
-    ReportAuditSafetyRuleComponent
+    ReportAuditSafetyRuleComponent,
+    AuditHistoryComponent,
+    ChartReportComponent,
+    TabularReportComponent
 
   ],
   imports: [
@@ -252,7 +261,9 @@ import { ReportAuditSafetyRuleComponent } from './audit/report-audit-safety-rule
     SaCategoryService,
     SaTypeService,
     AccidentService,
-    SafetyRuleService
+    SafetyRuleService,
+    AuditHistoryService,
+    AccidentReportService
   ],
   bootstrap: [AppComponent]
 })

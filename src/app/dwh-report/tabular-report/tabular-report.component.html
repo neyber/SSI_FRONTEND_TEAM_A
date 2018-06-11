@@ -1,0 +1,73 @@
+<div class="container">
+  <br>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+
+
+      <form #formChartReport="ngForm" (ngSubmit)="onSubmit()" class="col-lg-6" id="form-tabular-report">
+        <label>
+          from date
+
+        </label>
+        <input type="date" #fromDate="ngModel" name="fromDate" [(ngModel)]="tabularReport.fromDate" min="1900-01-01" class="form-control"
+          required />
+
+        <label>
+          to date
+
+        </label>
+        <input type="date" #toDate="ngModel" name="toDate" [(ngModel)]="tabularReport.toDate" min="1900-01-01" class="form-control"
+          required />
+
+        <br/>
+        <input type="submit" value="Generate Report" class="btn btn-success" />
+        <!-- <input type="button" value="Cancel" routerLink="../existingPpeList" class="btn btn-cancel" /> -->
+
+      </form>
+    </div>
+  </div>
+  <br>
+
+  <div class="container">
+    <div class="jumbotron">
+      <div class="page-header">
+        <h2>DWH :
+          <small>Tabular Report</small>
+        </h2>
+      </div>
+      <hr/>
+      <div class="row">
+        <div class="col-sm-10 col-md-10">
+          <div class="thumbnail" style="width: 1000px;">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th scope="col">Full Name</th>
+                  <th scope="col">Gender</th>
+                  <th scope="col">Role</th>
+                  <th scope="col">Year</th>
+                  <th scope="col">Month</th>
+                  <th scope="col">Day</th>
+                  <th scope="col">Quantity</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let rep of tabular">
+                  <td>{{ rep.fullName }}</td>
+                  <td>{{ rep.gender }}</td>
+                  <td>{{ rep.role }}</td>
+                  <td>{{ rep.year }}</td>
+                  <td>{{ rep.month }}</td>
+                  <td>{{ rep.day }}</td>
+                  <td>{{ rep.quantity }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+
+</div>

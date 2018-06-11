@@ -64,6 +64,17 @@
                    </ul>
 
                  </li>
+
+                 <li><a [routerLink]="['/home']" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" role="button" aria-haspopup="true">
+                   <span class="flaticon icomoon  icon-checked-files"></span> DWH Reports</a>
+                   <ul class="dropdown-menu">
+                     <li><a [routerLink]="['/tabularReport']"><span class="flaticon icomoon  icon-checked-files"></span> Tabular </a></li>
+                     <li><a [routerLink]="['/chartReport']"><span class="flaticon icomoon  icon-checked-files"></span> Charts </a></li>
+
+                   </ul>
+
+                 </li>
+
                  <li><a [routerLink]="['/function']" style=""><span class="flaticon icomoon  icon-checked-files"></span> Function Manual</a></li>
 
                  <li class="dropdown">
@@ -99,23 +110,29 @@
                  </li>
 
                 <li class="dropdown">
-                  <a [routerLink]="['/audit']" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" role="button" aria-haspopup="true">
-                    <span class="flaticon icomoon icon-checked-files"></span> Audits </a>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a [routerLink]="['/listAudit']">
-                        <span class="flaticon icomoon  icon-checked-files"></span> Audit </a>
-                    </li>
-                    <li>
-                      <a [routerLink]="['/listSafetyRule']">
-                        <span class="flaticon icomoon  icon-checked-files"></span> Safety Rules </a>
-                    </li>
-                    <li>
-                      <a [routerLink]="['/reportAuditSafetyRule']">
-                        <span class="flaticon icomoon  icon-checked-files"></span> Report Audit Periodicity </a>
-                    </li>
+                    <a [routerLink]="['/audit']" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" role="button" aria-haspopup="true">
+                      <span class="flaticon icomoon icon-checked-files"></span> Audits </a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a [routerLink]="['/listAudit']">
+                          <span class="flaticon icomoon  icon-checked-files"></span> Audit </a>
+                      </li>
+                      <li>
+                        <a [routerLink]="['/listSafetyRule']">
+                          <span class="flaticon icomoon  icon-checked-files"></span> Safety Rules </a>
+                      </li>
+                      <li>
+                        <a [routerLink]="['/reportAuditSafetyRule']">
+                          <span class="flaticon icomoon  icon-checked-files"></span> Report Audit Periodicity </a>
+                      </li>
                   </ul>
                 </li>
+
+                 <li class="dropdown">
+                   <a [routerLink]="['/auditHistory']" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" role="button" aria-haspopup="true">
+                     <span class="flaticon icomoon icon-checked-files"></span> Audit History </a>
+
+                 </li>
 
                </ul>
 

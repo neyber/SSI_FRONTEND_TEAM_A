@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="jumbotron">
+    <div class="page-header">
+      <h2>Audit History : <small>List of changes</small></h2>
+    </div>
+    <hr/>
+    <div class="row">
+      <div class="col-sm-10 col-md-10">
+        <div class="thumbnail" style="width: 1000px;">
+          <table class="table table-bordered">
+            <thead>
+            <tr>
+
+              <th scope="col">Table Name</th>
+              <th scope="col">Column Name</th>
+              <th scope="col">Created Date</th>
+              <th scope="col">Old Value</th>
+              <th scope="col">New Value</th>
+              <th scope="col">Modified Date</th>
+              <th scope="col">Modified by</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor = "let acc of auditHistory">
+
+              <td>{{acc.tableName}}</td>
+              <td>{{acc.columnName}}</td>
+              <td>{{acc.createdDate | date}}</td>
+              <td>{{acc.oldValue}}</td>
+              <td>{{acc.newValue}}</td>
+              <td>{{acc.modifiedDate | date}}</td>
+              <td>{{acc.modifiedBy}}</td>
+            </tr>
+
+            </tbody>
+          </table>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+

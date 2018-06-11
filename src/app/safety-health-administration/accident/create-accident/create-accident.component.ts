@@ -58,7 +58,7 @@ export class CreateAccidentComponent implements OnInit {
   onSubmit() {
     this.accidentService.addAccident(this.accident).subscribe(
       response => {
-        this.router.navigateByUrl('sicknessList', {skipLocationChange: true});
+        this.router.navigateByUrl('accidentList', {skipLocationChange: true});
       },
       error => {
         console.log('error');
@@ -69,7 +69,7 @@ export class CreateAccidentComponent implements OnInit {
   createAccidentEmployee() {
     this.accidentService.addAccident(this.accident).subscribe(
       response => {
-        this.router.navigateByUrl('sicknessList', {skipLocationChange: true});
+        this.router.navigateByUrl('accidentList', {skipLocationChange: true});
       },
       error => {
         console.log('error');
