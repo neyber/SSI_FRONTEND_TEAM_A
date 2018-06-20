@@ -9,19 +9,19 @@
           Name
 
         </label>
-        <input type="text" #nombre="ngModel" name="name" [(ngModel)]="ppeClassification.name" class="form-control" required />
+        <input id="txtPpeClassificationName" type="text" #nombre="ngModel" name="name" [(ngModel)]="ppeClassification.name" class="form-control" required />
 
         <label>
           Description
 
         </label>
-        <textarea #descripcion="ngModel" name="description" [(ngModel)]="ppeClassification.description" class="form-control" required></textarea>
+        <textarea id="txtPpeClassificationDescription" #descripcion="ngModel" name="description" [(ngModel)]="ppeClassification.description" class="form-control" required></textarea>
 
         <br/>
 
         <br/>
-        <button type="button" class="btn btn-success" (click)="onSubmit(ppeClassification.ppeClassificationId)"> Update </button>
-        <input type="button" value="Cancel" routerLink="../ppeClassificationList" class="btn btn-cancel"/>
+        <button id="btnPpeClassificationUpdate" type="button" class="btn btn-success" (click)="onSubmit(ppeClassification.ppeClassificationId)"> Update </button>
+        <input id="btnPpeClassificationCancel" type="button" value="Cancel" routerLink="../ppeClassificationList" class="btn btn-cancel"/>
 
       </form>
     </div>
