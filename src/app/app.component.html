@@ -37,24 +37,24 @@
 
              <div class="navbar-collapse collapse" id="nav-main">
                <ul class="nav navbar-nav">
-                 <li><a [routerLink]="['/home']"><span class="flaticon icomoon icon-buildings"></span> Home</a></li>
+                 <li><a id='homeMenu' [routerLink]="['/home']"><span class="flaticon icomoon icon-buildings"></span> Home</a></li>
 
                  <li class="dropdown">
-                   <a [routerLink]="['/home']" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" role="button" aria-haspopup="true">
+                   <a id='workItemMenu' [routerLink]="['/home']" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" role="button" aria-haspopup="true">
                      <span class="flaticon icomoon icon-list-with-one-cross"></span> Work Items</a>
                        <ul class="dropdown-menu">
-                         <li><a [routerLink]="['/workItemClassificationList']"><span class="flaticon icomoon  icon-checked-files"></span> Work Item Classification </a></li>
-                         <li><a [routerLink]="['/workItemList']"><span class="flaticon icomoon  icon-checked-files"></span> Work Item </a></li>
-                         <li><a [routerLink]="['/catalog']"><span class="flaticon icomoon  icon-checked-files"></span> Inventory </a></li>
-                         <li><a [routerLink]="['/catalog']"><span class="flaticon icomoon  icon-checked-files"></span> Assign Work Item</a></li>
+                         <li><a id='workItemClassificationMenu' [routerLink]="['/workItemClassificationList']"><span class="flaticon icomoon  icon-checked-files"></span> Work Item Classification </a></li>
+                         <li><a id='workItemSubMenu' [routerLink]="['/workItemList']"><span class="flaticon icomoon  icon-checked-files"></span> Work Item </a></li>
+                         <li><a id='inventoryMenu' [routerLink]="['/catalog']"><span class="flaticon icomoon  icon-checked-files"></span> Inventory </a></li>
+                         <li><a id='workItemAssignMenu' [routerLink]="['/catalog']"><span class="flaticon icomoon  icon-checked-files"></span> Assign Work Item</a></li>
 
                       </ul>
                  </li>
 
-                 <li><a [routerLink]="['/report']" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" role="button" aria-haspopup="true">
+                 <li><a id='reportMenu' [routerLink]="['/report']" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" role="button" aria-haspopup="true">
                    <span class="flaticon icomoon  icon-checked-files"></span> Reports</a>
                    <ul class="dropdown-menu">
-                     <li><a routerLink="/report/tool" [routerLinkActive]="['/tool']"><span class="flaticon icomoon  icon-checked-files"></span> Equipment / Tools </a></li>
+                     <li><a id='reportMenu' routerLink="/report/tool" [routerLinkActive]="['/tool']"><span class="flaticon icomoon  icon-checked-files"></span> Equipment / Tools </a></li>
                      <li><a routerLink="/report/audit" [routerLinkActive]="['/audit']"><span class="flaticon icomoon  icon-checked-files"></span> Audit  </a></li>
                      <li><a routerLink="/report/sickness" [routerLinkActive]="['/sickness']"><span class="flaticon icomoon  icon-checked-files"></span> Accidents / Diseases </a></li>
                      <li><a routerLink="/report/function" [routerLinkActive]="['/function']"><span class="flaticon icomoon  icon-checked-files"></span> Function Manual </a></li>
@@ -75,21 +75,21 @@
 
                  </li>
 
-                 <li><a [routerLink]="['/function']" style=""><span class="flaticon icomoon  icon-checked-files"></span> Function Manual</a></li>
+                 <li><a [routerLink]="['/function']" style=""><span class="flaticon icomoon  icon-checked-files"></span>Manual</a></li>
 
                  <li class="dropdown">
-                   <a [routerLink]="['/personnel']" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" role="button" aria-haspopup="true">
+                   <a [routerLink]="['/personnel']" id='personnelMenu' class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" role="button" aria-haspopup="true">
                      <span class="flaticon icomoon  icon-checked-files"></span> Personnel</a>
                     <ul class="dropdown-menu">
                       <li><a [routerLink]="['/departmentList']"><span class="flaticon icomoon  icon-checked-files"></span> Department </a></li>
-                      <li><a [routerLink]="['/roleList']"><span class="flaticon icomoon  icon-checked-files"></span> Roles </a></li>
-                      <li><a [routerLink]="['/employeeList']"><span class="flaticon icomoon  icon-checked-files"></span> Employee </a></li>
+                      <li><a [routerLink]="['/roleList']" id="roleMenu"><span class="flaticon icomoon  icon-checked-files"></span> Roles </a></li>
+                      <li><a [routerLink]="['/employeeList']" id='employeeMenu'><span class="flaticon icomoon  icon-checked-files"></span> Employee </a></li>
                     </ul>
                  </li>
 
                  <li class="dropdown">
                    <a [routerLink]="['/safetyHealthAdministration']" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" role="button" aria-haspopup="true">
-                     <span class="flaticon icomoon  icon-checked-files"></span> Safety and Health Administration</a>
+                     <span class="flaticon icomoon  icon-checked-files"></span> Safety </a>
                    <ul class="dropdown-menu">
                      <li><a [routerLink]="['/sicknessList']"><span class="flaticon icomoon  icon-checked-files"></span> Sickness </a></li>
                      <li><a [routerLink]="['/accidentList']"><span class="flaticon icomoon  icon-checked-files"></span> Accident </a></li>
@@ -128,11 +128,11 @@
                   </ul>
                 </li>
 
-                 <li class="dropdown">
+                <!-- <li class="dropdown">
                    <a [routerLink]="['/auditHistory']" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" role="button" aria-haspopup="true">
                      <span class="flaticon icomoon icon-checked-files"></span> Audit History </a>
 
-                 </li>
+                 </li>-->
 
                </ul>
 
