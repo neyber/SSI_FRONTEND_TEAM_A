@@ -9,13 +9,13 @@
           Notes
 
         </label>
-        <textarea #assignedNotes="ngModel" name="assignedNotes" [(ngModel)]="existingPpeAssigned.assignedNotes" class="form-control" required></textarea>
+        <textarea id="txtExistingPpeAssignedAssignedNotes" #assignedNotes="ngModel" name="assignedNotes" [(ngModel)]="existingPpeAssigned.assignedNotes" class="form-control" required></textarea>
 
         <label>
           Assigned date
 
         </label>
-        <input type="date" #assignedDate="ngModel" name="assignedDate"
+        <input id="txtExistingPpeAssignedAssignedDate" type="date" #assignedDate="ngModel" name="assignedDate"
                [ngModel]="existingPpeAssigned.assignedDate | date:'yyyy-MM-dd'" (ngModelChange)="existingPpeAssigned.assignedDate = $event"
                [value]="existingPpeAssigned.assignedDate | date:'yyyy-MM-dd'" min="1900-01-01" class="form-control" required />
 
@@ -24,7 +24,7 @@
 
         </label>
 
-        <select #employeeId="ngModel" name="employeeId" [(ngModel)]="existingPpeAssigned.employeeId" class="form-control"  required>
+        <select id="cbxExistingPpeAssignedEmployee" #employeeId="ngModel" name="employeeId" [(ngModel)]="existingPpeAssigned.employeeId" class="form-control"  required>
 
           <option [ngValue]="null">--Select--</option>
           <option *ngFor="let employee of employees" [value]="employee.employeeId" >{{employee.firstName}} {{employee.lastName}}</option>
@@ -35,15 +35,15 @@
 
         </label>
 
-        <select #existingPpeId="ngModel" name="existingPpeId" [(ngModel)]="existingPpeAssigned.existingPpeId" class="form-control"  required>
+        <select id="cbxExistingPpeAssignedPpe" #existingPpeId="ngModel" name="existingPpeId" [(ngModel)]="existingPpeAssigned.existingPpeId" class="form-control"  required>
 
           <option [ngValue]="null">--Select--</option>
           <option *ngFor="let existingPpe of existingPpes" [value]="existingPpe.existingPpeId" >{{existingPpe.ppe.name}}</option>
         </select>
 
         <br/>
-        <input type="submit" value="Update" (click)="onSubmit(existingPpeAssigned.existingPpeAssignedId)" class="btn btn-success"/>
-        <input type="button" value="Cancel" routerLink="../existingPpeAssignedList" class="btn btn-cancel"/>
+        <input id="btnExistingPpeAssignedUpdate" type="submit" value="Update" (click)="onSubmit(existingPpeAssigned.existingPpeAssignedId)" class="btn btn-success"/>
+        <input id="btnExistingPpeAssignedCancel" type="button" value="Cancel" routerLink="../existingPpeAssignedList" class="btn btn-cancel"/>
 
       </form>
     </div>

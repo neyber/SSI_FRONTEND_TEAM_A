@@ -9,28 +9,28 @@
           Name
 
         </label>
-        <input type="text" #nombre="ngModel" name="name" [(ngModel)]="ppe.name" class="form-control" required />
+        <input id="txtPpeName" type="text" #nombre="ngModel" name="name" [(ngModel)]="ppe.name" class="form-control" required />
 
         <label>
           Description
 
         </label>
-        <textarea #descripcion="ngModel" name="description" [(ngModel)]="ppe.description" class="form-control" required></textarea>
+        <textarea id="txtPpeDescription" #descripcion="ngModel" name="description" [(ngModel)]="ppe.description" class="form-control" required></textarea>
 
         <label>
           Personal protection equipment classification
 
         </label>
 
-        <select #ppeClassificationId="ngModel" name="ppeClassificationId" [(ngModel)]="ppe.ppeClassificationId" class="form-control"  required>
+        <select id="cbxPpeClassification" #ppeClassificationId="ngModel" name="ppeClassificationId" [(ngModel)]="ppe.ppeClassificationId" class="form-control"  required>
 
           <option [ngValue]="null">--Select--</option>
           <option *ngFor="let ppec of ppeClassifications" [value]="ppec.ppeClassificationId" >{{ppec.name}}</option>
         </select>
 
         <br/>
-        <input type="submit" value="Save" class="btn btn-success"/>
-        <input type="button" value="Cancel" routerLink="../ppeList" class="btn btn-cancel"/>
+        <input id="btnPpeSave" type="submit" value="Save" class="btn btn-success"/>
+        <input id="btnPpeCancel" type="button" value="Cancel" routerLink="../ppeList" class="btn btn-cancel"/>
 
       </form>
     </div>

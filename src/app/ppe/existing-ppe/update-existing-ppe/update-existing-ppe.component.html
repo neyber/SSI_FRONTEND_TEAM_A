@@ -9,13 +9,13 @@
           Detail
 
         </label>
-        <input type="text" #detail="ngModel" name="detail" [(ngModel)]="existingPpe.detail" class="form-control" required />
+        <input id="txtExistingPpeDetail" type="text" #detail="ngModel" name="detail" [(ngModel)]="existingPpe.detail" class="form-control" required />
 
         <label>
           Purchase date
 
         </label>
-        <input type="date" #purchaseDate="ngModel" name="purchaseDate"
+        <input id="txtExistingPpePurchaseDate" type="date" #purchaseDate="ngModel" name="purchaseDate"
                [ngModel]="existingPpe.purchaseDate | date:'yyyy-MM-dd'" (ngModelChange)="existingPpe.purchaseDate = $event"
                [value]="existingPpe.purchaseDate | date:'yyyy-MM-dd'" min="1900-01-01" class="form-control" required />
 
@@ -23,27 +23,27 @@
           Life time days
 
         </label>
-        <input type="text" #lifeTimeDays="ngModel" name="lifeTimeDays" [(ngModel)]="existingPpe.lifeTimeDays" class="form-control" required />
+        <input id="txtExistingPpeLifeTimeDays" type="text" #lifeTimeDays="ngModel" name="lifeTimeDays" [(ngModel)]="existingPpe.lifeTimeDays" class="form-control" required />
 
         <label>
           Current lifeTime days
 
         </label>
-        <input type="text" #currentLifeTimeDays="ngModel" name="currentLifeTimeDays" [(ngModel)]="existingPpe.currentLifeTimeDays" class="form-control" required />
+        <input id="txtExistingPpeCurrentLifeTimeDays" type="text" #currentLifeTimeDays="ngModel" name="currentLifeTimeDays" [(ngModel)]="existingPpe.currentLifeTimeDays" class="form-control" required />
 
         <label>
           Personal protection equipment classification
 
         </label>
 
-        <select #ppeClassificationId="ngModel" name="ppeId" [(ngModel)]="existingPpe.ppeId" class="form-control"  required>
+        <select id="cbxExistingPPePpe" #ppeClassificationId="ngModel" name="ppeId" [(ngModel)]="existingPpe.ppeId" class="form-control"  required>
           <option [ngValue]="null">--Select--</option>
           <option *ngFor="let ppe of ppes" [value]="ppe.ppeId">{{ppe.name}}</option>
         </select>
 
         <br/>
-        <input type="submit" value="Update" (click)="onSubmit(existingPpe.existingPpeId)" class="btn btn-success"/>
-        <input type="button" value="Cancel" routerLink="../existingPpeList" class="btn btn-cancel"/>
+        <input id="btnExistingPPeUpdate" type="submit" value="Update" (click)="onSubmit(existingPpe.existingPpeId)" class="btn btn-success"/>
+        <input id="btnExistingPPeCancel" type="button" value="Cancel" routerLink="../existingPpeList" class="btn btn-cancel"/>
 
       </form>
     </div>
