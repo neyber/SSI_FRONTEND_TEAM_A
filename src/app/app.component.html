@@ -40,11 +40,11 @@
                  <li><a id='homeMenu' [routerLink]="['/home']"><span class="flaticon icomoon icon-buildings"></span> Home</a></li>
 
                  <li class="dropdown">
-                   <a id='workItemMenu' [routerLink]="['/home']" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" role="button" aria-haspopup="true">
+                   <a id='workItemMenu' [routerLink]="['/workItemList']" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" role="button" aria-haspopup="true">
                      <span class="flaticon icomoon icon-list-with-one-cross"></span> Work Items</a>
                        <ul class="dropdown-menu">
-                         <li><a id='workItemClassificationMenu' [routerLink]="['/workItemClassificationList']"><span class="flaticon icomoon  icon-checked-files"></span> Work Item Classification </a></li>
                          <li><a id='workItemSubMenu' [routerLink]="['/workItemList']"><span class="flaticon icomoon  icon-checked-files"></span> Work Item </a></li>
+                         <li><a id='workItemClassificationMenu' [routerLink]="['/workItemClassificationList']"><span class="flaticon icomoon  icon-checked-files"></span> Work Item Classification </a></li>
                          <li><a id='inventoryMenu' [routerLink]="['/catalog']"><span class="flaticon icomoon  icon-checked-files"></span> Inventory </a></li>
                          <li><a id='workItemAssignMenu' [routerLink]="['/catalog']"><span class="flaticon icomoon  icon-checked-files"></span> Assign Work Item</a></li>
 
@@ -54,7 +54,7 @@
                  <li><a id='reportMenu' [routerLink]="['/report']" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" role="button" aria-haspopup="true">
                    <span class="flaticon icomoon  icon-checked-files"></span> Reports</a>
                    <ul class="dropdown-menu">
-                     <li><a id='reportMenu' routerLink="/report/tool" [routerLinkActive]="['/tool']"><span class="flaticon icomoon  icon-checked-files"></span> Equipment / Tools </a></li>
+                     <li><a id='reportMenus' routerLink="/report/tool" [routerLinkActive]="['/tool']"><span class="flaticon icomoon  icon-checked-files"></span> Equipment / Tools </a></li>
                      <li><a routerLink="/report/audit" [routerLinkActive]="['/audit']"><span class="flaticon icomoon  icon-checked-files"></span> Audit  </a></li>
                      <li><a routerLink="/report/sickness" [routerLinkActive]="['/sickness']"><span class="flaticon icomoon  icon-checked-files"></span> Accidents / Diseases </a></li>
                      <li><a routerLink="/report/function" [routerLinkActive]="['/function']"><span class="flaticon icomoon  icon-checked-files"></span> Function Manual </a></li>
@@ -88,24 +88,24 @@
                  </li>
 
                  <li class="dropdown">
-                   <a [routerLink]="['/safetyHealthAdministration']" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" role="button" aria-haspopup="true">
+                   <a id="safetyHealthAdministrationId" [routerLink]="['/safetyHealthAdministration']" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" role="button" aria-haspopup="true">
                      <span class="flaticon icomoon  icon-checked-files"></span> Safety </a>
                    <ul class="dropdown-menu">
                      <li><a [routerLink]="['/sicknessList']"><span class="flaticon icomoon  icon-checked-files"></span> Sickness </a></li>
-                     <li><a [routerLink]="['/accidentList']"><span class="flaticon icomoon  icon-checked-files"></span> Accident </a></li>
-                     <li><a [routerLink]="['/saCategoryList']"><span class="flaticon icomoon  icon-checked-files"></span> Sickness/Accident Category  </a></li>
-                     <li><a [routerLink]="['/saTypeList']"><span class="flaticon icomoon  icon-checked-files"></span> Sickness/Accident Type </a></li>
+                     <li><a id="accidentMenu" [routerLink]="['/accidentList']"><span class="flaticon icomoon  icon-checked-files"></span> Accident </a></li>
+                     <li><a id="saCategoryId" [routerLink]="['/saCategoryList']"><span class="flaticon icomoon  icon-checked-files"></span> Sickness/Accident Category  </a></li>
+                     <li><a id="saTypeId" [routerLink]="['/saTypeList']"><span class="flaticon icomoon  icon-checked-files"></span> Sickness/Accident Type </a></li>
                    </ul>
                  </li>
 
                  <li class="dropdown">
-                   <a id="ppe" [routerLink]="['/ppe']" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" role="button" aria-haspopup="true">
+                   <a id="ppeMenu" [routerLink]="['/ppe']" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" role="button" aria-haspopup="true">
                     <span class="flaticon icomoon icon-checked-files"></span> PPE </a>
                      <ul class="dropdown-menu">
-                       <li><a id="ppeClassificationList" [routerLink]="['/ppeClassificationList']"><span class="flaticon icomoon  icon-checked-files"></span> PPE Classification </a></li>
-                       <li><a id="ppeList" [routerLink]="['/ppeList']"><span class="flaticon icomoon  icon-checked-files"></span> PPE </a></li>
-                       <li><a id="existingPpeList" [routerLink]="['/existingPpeList']"><span class="flaticon icomoon  icon-checked-files"></span> Inventory </a></li>
-                       <li><a id="existingPpeAssignedList" [routerLink]="['/existingPpeAssignedList']"><span class="flaticon icomoon  icon-checked-files"></span> Assign EPP </a></li>
+                       <li><a id="ppeClassificationSubMenu" [routerLink]="['/ppeClassificationList']"><span class="flaticon icomoon  icon-checked-files"></span> PPE Classification </a></li>
+                       <li><a id="ppeSubMenu" [routerLink]="['/ppeList']"><span class="flaticon icomoon  icon-checked-files"></span> PPE </a></li>
+                       <li><a id="existingPpeSubMenu" [routerLink]="['/existingPpeList']"><span class="flaticon icomoon  icon-checked-files"></span> Inventory </a></li>
+                       <li><a id="existingPpeAssignedSubMenu" [routerLink]="['/existingPpeAssignedList']"><span class="flaticon icomoon  icon-checked-files"></span> Assign EPP </a></li>
                      </ul>
                  </li>
 
