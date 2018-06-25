@@ -41,6 +41,13 @@
         </select>
 
         <label>
+          Employee:
+        </label>
+        <select #departmentId="ngModel" name="employeeId" [(ngModel)]="audit.employeeId" class="form-control" required>
+          <option *ngFor="let employee of employees" [value]="employee.employeeId">{{employee.firstName}}</option>
+        </select>
+
+        <label>
           Scope
         </label>
         <textarea #auditScope="ngModel" name="auditScope" [(ngModel)]="audit.auditScope" class="form-control" required></textarea>
