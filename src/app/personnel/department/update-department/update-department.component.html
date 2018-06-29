@@ -9,18 +9,18 @@
           Name
 
         </label>
-        <input type="text" #nombre="ngModel" name="name" [(ngModel)]="department.name" class="form-control" required />
+        <input id="nameInput" type="text" #nombre="ngModel" name="name" [(ngModel)]="department.name" class="form-control" required />
 
         <label>
           Description
 
         </label>
-        <textarea #descripcion="ngModel" name="description" [(ngModel)]="department.description" class="form-control" required></textarea>
+        <textarea id="descriptionInput" #descripcion="ngModel" name="description" [(ngModel)]="department.description" class="form-control" required></textarea>
 
         <br/>
 
-        <button type="button" class="btn btn-success" (click)="onSubmit(department.departmentId)">Update</button>
-        <button type="button" class="btn btncancel" routerLink="../departmentList">Cancel</button>
+        <button id="UpdateDepartmentBtn" type="button" class="btn btn-success" (click)="onSubmit(department.departmentId)">Update</button>
+        <button id="CancelDepartmentBtn" type="button" class="btn btncancel" routerLink="../departmentList">Cancel</button>
 
 
       </form>
