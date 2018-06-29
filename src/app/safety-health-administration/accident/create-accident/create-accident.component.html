@@ -9,7 +9,7 @@
           select Employee:
 
         </label>
-        <select #employeeId="ngModel" name="employeeId" [(ngModel)]="accident.employeeId" class="form-control" required>
+        <select id="employeeListId" #employeeId="ngModel" name="employeeId" [(ngModel)]="accident.employeeId" class="form-control" required>
 
           <option *ngFor="let employee of employees" [value]="employee.employeeId" >{{employee.firstName}} {{employee.lastName}}</option>
         </select>
@@ -18,20 +18,20 @@
           Accident Description:
 
         </label>
-        <input type="text" #nombre1="ngModel" name="description" [(ngModel)]="accident.description" class="form-control" required />
+        <input id="accidentDescriptionFieldId" type="text" #nombre1="ngModel" name="description" [(ngModel)]="accident.description" class="form-control" required />
 
         <label>
           when it Occurred?:
 
         </label>
 
-        <input type="date" #dob="ngModel" name="dateAccident" [(ngModel)]="accident.dateAccident" min="1900-01-01" class="form-control" required>
+        <input id="accidentDateFieldId" type="date" #dob="ngModel" name="dateAccident" [(ngModel)]="accident.dateAccident" min="1900-01-01" class="form-control" required>
 
         <label>
           Where occurred the event?:
 
         </label>
-        <input type="text" #nombre2="ngModel" name="whereOccurred" [(ngModel)]="accident.whereOccurr" class="form-control" required />
+        <input id="accidentWhereFieldId" type="text" #nombre2="ngModel" name="whereOccurred" [(ngModel)]="accident.whereOccurr" class="form-control" required />
 
         <label>
           Register the number of days the employee was injured or sick:
@@ -41,19 +41,19 @@
           Total Days Out of Work
 
         </label>
-        <input #totalDaysOutOfWork="ngModel" name="totalDaysOutOfWork" [(ngModel)]="accident.totalDaysOutOfWork" class="form-control" required/>
+        <input id="accidentDaysOutWorkFieldId" #totalDaysOutOfWork="ngModel" name="totalDaysOutOfWork" [(ngModel)]="accident.totalDaysOutOfWork" class="form-control" required/>
 
         <label>
           Total Days Restricted/Transferred Work
 
         </label>
-        <input #totalDaysRestrictedTransferredWork="ngModel" name="totalDaysRestrictedTransferredWork" [(ngModel)]="accident.totalDaysRestrictedTransferredWork" class="form-control" required/>
+        <input id="accidentDaysTransferredFieldId" #totalDaysRestrictedTransferredWork="ngModel" name="totalDaysRestrictedTransferredWork" [(ngModel)]="accident.totalDaysRestrictedTransferredWork" class="form-control" required/>
 
         <label>
           Using these four categories, mark the most serious result for this case:
         </label>
 
-        <select #saCategoryId="ngModel" name="saCategoryId" [(ngModel)]="accident.saCategoryId" class="form-control" required>
+        <select id="saCategoryListFieldId" #saCategoryId="ngModel" name="saCategoryId" [(ngModel)]="accident.saCategoryId" class="form-control" required>
 
           <option *ngFor="let category of saCategories" [value]="category.saCategoryId" >{{category.category}}</option>
         </select>
@@ -62,13 +62,13 @@
           select the "injury" option or select a type of disease:
         </label>
 
-        <select #saTypeId="ngModel" name="saTypeId" [(ngModel)]="accident.saTypeId" class="form-control" required>
+        <select id="saTypeListFieldId" #saTypeId="ngModel" name="saTypeId" [(ngModel)]="accident.saTypeId" class="form-control" required>
 
           <option *ngFor="let type of saTypes" [value]="type.saTypeId" >{{type.type}}</option>
         </select>
 
         <br/>
-        <input type="submit" value="Save" class="btn btn-success"/>
+        <input id="saveButtonId" type="submit" value="Save" class="btn btn-success"/>
         <button type="button" class="btn btncancel" routerLink="../accidentList">Cancel</button>
 
 

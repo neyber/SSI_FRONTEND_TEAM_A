@@ -4,7 +4,7 @@
     <div class="col-md-6 col-md-offset-3">
       <div class="col-md-12 text-left">
         <div class="btn-group" role="group" aria-label="Basic example">
-          <button type="button" class="btn btn-default" [routerLink]="['../newAudit']">New Audit</button>
+          <button id="NewAuditBtn" type="button" class="btn btn-default" [routerLink]="['../newAudit']">New Audit</button>
         </div>
       </div>
       <br/>
@@ -31,7 +31,7 @@
             </td>
             <td>
               <p data-placement="top" data-toggle="tooltip" title="Delete">
-                <button class="btn btn-danger btn-xs" (click)="deleteAudit(audit.auditId)" data-title="Delete" data-toggle="modal" data-target="#delete">
+                <button id="iconDeleteAudit" class="btn btn-danger btn-xs" (click)="deleteAudit(audit.auditId)" data-title="Delete" data-toggle="modal" data-target="#delete">
                   <span class="glyphicon glyphicon-trash"></span>
                 </button>
               </p>
