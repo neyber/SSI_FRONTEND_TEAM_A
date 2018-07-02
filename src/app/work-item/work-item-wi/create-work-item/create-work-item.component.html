@@ -22,7 +22,7 @@
 
         </label>
 
-        <select  id="saCategoryListFieldId" #workItemClassificationId="ngModel" name="workItemClassificationId" [(ngModel)]="workItem.workItemClassificationId" class="form-control"  required>
+        <select  id="wiClassificationFieldId" #workItemClassificationId="ngModel" name="workItemClassificationId" [(ngModel)]="workItem.workItemClassificationId" class="form-control"  required>
           <option [ngValue]="null">--Select--</option>
           <option *ngFor="let workItemClassification of workItemClassifications" [value]="workItemClassification.workItemClassificationId" >{{workItemClassification.name}}</option>
         </select>
