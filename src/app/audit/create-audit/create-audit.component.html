@@ -41,6 +41,13 @@
         </select>
 
         <label>
+          Employee:
+        </label>
+        <select #departmentId="ngModel" name="employeeId" [(ngModel)]="audit.employeeId" class="form-control" required>
+          <option *ngFor="let employee of employees" [value]="employee.employeeId">{{employee.firstName}}</option>
+        </select>
+
+        <label>
           Scope
         </label>
         <textarea #auditScope="ngModel" name="auditScope" [(ngModel)]="audit.auditScope" class="form-control" required></textarea>
@@ -56,7 +63,7 @@
         <textarea #auditCriteria="ngModel" name="auditCriteria" [(ngModel)]="audit.auditCriteria" class="form-control" required></textarea>
 
         <br/>
-        <button type="button" class="btn btn-success" (click)="onSubmit()"> Create </button>
+        <button id="saveAuditButton" type="button" class="btn btn-success" (click)="onSubmit()"> Create </button>
       </form>
     </div>
   </div>

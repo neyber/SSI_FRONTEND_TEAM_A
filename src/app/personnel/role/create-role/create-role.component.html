@@ -17,7 +17,7 @@
         <textarea #descripcion="ngModel" name="description" [(ngModel)]="role.description" class="form-control" required></textarea>
 
         <br/>
-        <button type="button" class="btn btn-success" (click)="onSubmit()"> Create </button>
+        <button id="saveRoleBtn" type="button" class="btn btn-success" (click)="onSubmit()"> Create </button>
         <button type="button" class="btn btncancel" routerLink="../roleList">Cancel</button>
 
       </form>
