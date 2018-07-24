@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {SaClassificationService} from '../../shared/services/saClassification/sa-classification.service';
-import {Accident} from '../../shared/models/accident/Accident';
+import {Accident} from '../../shared/models/accident/accident';
 
 @Component({
   selector: 'app-view-report-sickness',

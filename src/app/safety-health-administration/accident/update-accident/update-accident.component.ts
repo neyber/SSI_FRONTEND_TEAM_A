@@ -6,7 +6,7 @@ import {EmployeeService} from '../../../shared/services/Personnel/employee.servi
 import {SaTypeService} from '../../../shared/services/saClassification/sa-type.service';
 import {SaCategory} from '../../../shared/models/saclassification/SaCategory';
 import {ActivatedRoute, Router} from '@angular/router';
-import {Accident} from '../../../shared/models/accident/Accident';
+import {Accident} from '../../../shared/models/accident/accident';
 import {AccidentService} from '../../../shared/services/accident/accident.service';
 
 @Component({
